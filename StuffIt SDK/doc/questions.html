@@ -1,0 +1,311 @@
+<html><body>
+
+<h3>Questions and answers</h3>
+
+<p>This document answers some simple questions about using the StuffIt Engine
+SDK. It may also be useful as a quick introduction before you look at the samples
+provided in the SDK.
+
+<dl>
+
+<dt><hr><!---------------------------------------------------------------->
+
+<b>What is the simplest way to expand a StuffIt archive, for example,
+<b>archive.sit</b>?</b>
+
+<dd>The shortest possible C++ program that expands <b>archive.sit</b> is:
+
+<code><pre>
+    #include "stuffit5/Reader.h"
+
+    int main(void) {
+        stuffit5::Reader reader;
+        reader.open("archive.sit");
+        reader.decode();
+        reader.close();
+        return 0;
+    }
+</pre></code>
+
+<p>Here's what this program does:
+
+<ul><li><code>#include "stuffit5/Reader.h"</code> defines the reader class.
+This class provides member functions that classify (determine format), scan
+(verify) and decode (expand) archives.
+
+<li><code>reader.open("archive.sit");</code> opens the archive.
+
+<li><code>reader.decode();</code> decodes (expands) the archive.
+
+<li><code>reader.close();</code> closes the archive.
+
+</ul>
+
+<p>That's all there is to it, as long as you don't care about the details.
+
+<dt><hr><!---------------------------------------------------------------->
+
+<b>How are errors handled?</b>
+
+<dd>In the previous example, here's what can be done to handle potential
+errors in a simple way:
+
+<code><pre>
+    #include &lt;iostream>
+    #include "stuffit5/Reader.h"
+    #include "un/exception.h"
+
+    int main(int argc, char** argv) {
+        try {
+            stuffit5::Reader reader;
+            reader.open(argv[1]);
+            reader.decode();
+            reader.close();
+        }
+        catch (un::exception& e) {
+            std::cout << e.type() << " exception: " << e.reason() << "." << std::endl;
+            return 1;
+        }
+        catch (...) {
+            std::cout << "Oops, something's gone seriously wrong!" << std::endl;
+            return 2;
+        }
+        return 0;
+    }
+</pre></code>
+
+<p>What does this do?
+
+<ul><li>First, this program considers its first command-line argument to be the
+name of the archive to expand. This way, you can try to give it a non-existent
+file to see how it handles it.
+
+<li><code>#include "un/exception.h"</code> defines the base class of all
+exceptions thrown by the StuffIt Engine. The <code>catch (un::exception&
+e)</code> block reports the type of the exception (<code>e.type()</code>) and
+prints its message (<code>e.reason()</code>).
+
+<li><code>catch (...)</code> "eats" all other exceptions and says "Oops!"
+
+<li><code>return 0;</code>, <code>return 1;</code> and <code>return 2;</code>
+are a common courtesy to your operating system.
+
+</ul>
+
+<p>For example, if this program is called <b>expand</b> and you try to <b>expand
+sit.happens</b> and there is no file named <b>sit.happens</b>, the program will
+print
+
+<pre>
+    <i>Input exception: io::File::open() cannot open sit.happens.</i>
+</pre>
+
+<p>If you try <b>expand bad.zip</b> and <b>bad.zip</b> is a damaged Zip archive,
+it will come up with:
+
+<pre>
+    <i>Bad data exception: CRC mismatch in zip reader; data is invalid.</i>
+</pre>
+
+<dt><hr><!---------------------------------------------------------------->
+
+<b>Is it possible to separate error types?</b>
+
+<dd>Yes. In the previous case of a bad Zip archive, the exception that
+was caught was actually a <code>stuffit5::exception::BadData</code>. If
+you care to handle it separately, for example, and provide your own
+error message, it can be done as follows:
+
+<p>Add another header file:
+
+<code><pre>
+    #include "stuffit5/exception/BadData.h"
+</pre></code>
+
+<p>Then add the following <code>catch</code> block <i>before</i> the
+<code>catch (un::exception& e)</code> block (because
+<code>stuffit5::exception::BadData</code> is a subclass of
+<code>un::exception</code>, and we always want to catch more
+specific exceptions before the more generic ones):
+
+<code><pre>
+    catch (stuffit5::exception::BadData& e) {
+        std::cout << argv[1] << " archive is fubar!" << std::endl;
+    }
+</pre></code>
+
+<p>To learn more about the engine's exception hierarchy, look at the class hierarchy
+or at the class diagrams in the <b>Reference</b> section.
+
+<p>The <b>Samples</b> section also contains two samples, <b>stuff</b> and
+<b>unstuff</b>, that have detailed error reporting.
+
+<dt><hr><!---------------------------------------------------------------->
+
+<b>What is the simplest way to compress a file, let's say, <b>this.file</b>, and
+create a StuffIt archive?</b>
+
+<dd><p>The shortest possible C++ program that will put <b>this.file</b> into a
+new StuffIt archive is:
+
+<code><pre>
+    #include "stuffit5/Writer.h"
+
+    int main(void) {
+        stuffit5::Writer writer;
+        std::list&lt;std::string> toStuff;
+        toStuff.push_back("this.file");
+        writer.create(toStuff);
+        return 0;
+    }
+</pre></code>
+
+<p>Here's what this program does:
+
+<ul><li><code>#include "stuffit5/Writer.h"</code> defines the writer class.
+This class provides a member function that creates a new archive from one or
+more files or folders.
+
+<li><code>std::list&lt;std::string> toStuff;</code> and
+<code>toStuff.push_back("this.file");</code> create a list of strings (with one
+string in it, the name of our only file).
+
+<li><code>writer.create(toStuff);</code> creates the archive.
+
+</ul>
+
+<p>Now we have a StuffIt archive, <b>this.file.sit</b>.
+
+<dt><hr><!---------------------------------------------------------------->
+
+<b>In the previous example, how can I create a Zip archive named
+<b>something-else.zip</b> instead?</b>
+
+<dd>Add the following two lines after <code>stuffit5::Writer writer;</code>:
+
+<code><pre>
+    writer.archiveInfo().format(stuffit5::Format::zip);
+    writer.archiveInfo().name("something-else.zip");
+</pre></code>
+
+<dt><hr><!---------------------------------------------------------------->
+
+<b>How do I put multiple files and folders into an archive?</b>
+
+<dd>Build an <code>std::list</code> of <code>std::string</code>s that are the
+names or path names of all items you want at the root level of the archive, then
+call <code>create()</code>.
+
+<p>When you create an archive from a folder, all subfolders of that folder with
+their contents will be added to the archive, recursively.
+
+<dt><hr><!---------------------------------------------------------------->
+
+<b>How do I encode a file into BinHex format?</b>
+
+<dd>Add, after <code>stuffit5::Writer writer;</code>:
+
+<code><pre>
+    writer.archiveInfo().format(stuffit5::Format::hqx);
+</pre></code>
+
+<p>Archive formats and encoded file formats are almost equal; they are all created
+with the same writers. Only the <code>format</code> archive property is different.
+
+<p>There are also limitations inherent in the archive and encoded formats
+themselves. In this case, BinHex format cannot store folders in a BinHex file.
+
+<dt><hr><!---------------------------------------------------------------->
+
+<b>What are the development environment settings needed in Visual C++ 6.0
+to compile and run the short code samples given in this document?</b>
+
+<dd>Here's how you can try them:
+
+<ul><li>Create a new project (<b>File/New...</b> menu, <b>Project</b> tab) of
+type <b>Win32 Console Application</b> with a name of your choice in a directory
+of your choice.
+
+<li>Change the following settings under the <b>Project/Settings...</b> menu:
+
+<ul><li>In the <b>C/C++</b> tab, <b>Code Generation</b> category, <b>Use
+run-time library</b>, select <b>Debug Multithreaded DLL</b> for the
+<b>Win32 Debug</b> build configuration, and <b>Multithreaded DLL</b> for
+the <b>Win32 Release</b> build configuration.
+
+<li>In the <b>C/C++</b> tab, <b>Preprocessor</b> category, add the <b>src/</b>
+directory of the StuffIt Engine SDK to the <b>Additional include directories</b> field.
+This allows directives like <code>#include "stuffit5/Reader.h"</code> and
+<code>#include "un/exception.h"</code> to find the header files.</ul>
+
+<li>Create a <b>.cpp</b> source file containg a code example from this document
+and add it to the project (<b>Project/Add To Project/Files</b> menu).
+
+<li>Add the appropriate StuffIt Engine library to the project:
+Use the static library, <b>win32/bin/stuffit5.engine.lib</b>, to
+link the StuffIt Engine statically, or the export library,
+<b>win32/bin/stuffit5.engine-5.1.lib</b>, to link dynamically. If you
+link dynamically, you will need to have <b>win32/bin/stuffit5.engine-5.1.dll</b>,
+and two runtime libraries, <b>MSVCRT.DLL</b> and <b>MSVCP60.DLL</b> in
+the directory where the executable is going to be, or somewhere on the
+system path, as defined by the <b>PATH</b> environment variable.
+
+<li>And last: if you choose to link the StuffIt Engine statically, under the
+<b>Project/Settings...</b> menu, <b>Link</b> tab, <b>Input</b> category,
+<b>Ignore libraries</b> list <b>libcmt.lib</b> (when code for the
+<b>Multithreaded</b> runtime) or <b>msvcrt.lib</b> (when generating code for the
+<b>Multithreaded DLL</b> runtime). This is needed to avoid collisions between
+release and debug versions of runtime functions that would otherwise occur
+because a release build of a static library is being linked with a debug build
+of an executable. If you forget to do this, a warning will appear at link time:
+
+<pre>
+    LINK : warning LNK4098: defaultlib "LIBCMT" conflicts with use of other libs; use /NODEFAULTLIB:library
+</pre>
+
+or
+
+<pre>
+    LINK : warning LNK4098: defaultlib "MSVCRT" conflicts with use of other libs; use /NODEFAULTLIB:library
+</pre>
+
+</ul>
+
+<p>If this sounds like more trouble that it's worth, you may choose to proceed
+to the real samples described in the <b>Samples</b> section. Their preconfigured
+Visual C++ projects will compile and link immediately. However, keep in mind
+that these details will become important when you try to integrate the StuffIt
+Engine into other projects.
+
+<dt><hr><!---------------------------------------------------------------->
+
+<b>Why is a shared-runtime ("Multithreaded DLL") build required when
+linking with the StuffIt Engine?</b>
+
+<dd>The dynamically linked, shared runtime is preferred because it
+avoids subtle memory allocation issues due to the fact that statically
+linked runtimes maintain their own heaps, one per executable module.
+Things work okay with the statically linked runtimes until you need to
+allocate memory in one module and release in another. This is not as
+hard to encounter as it may sound; for example, using
+<code>std::string</code> as it is implemented in Visual C++ (with
+reference counting to share string representation and save memory) leads
+to these problems. However, on the negative side, the shared C++
+runtime, <b>MSVCP60.DLL</b>, depends on the shared C runtime,
+<b>MSVCRT.DLL</b> which you must install as a private copy - or else
+face the difficulties due to the fact that its name does not include the
+compiler version, and the common copy is certain to be in use by several
+running modules.
+
+</dl>
+
+<hr>
+
+<table><tr valign=top><td><img src="images/aladdin-logo.gif"></td>
+<td>Copyright &copy;1995-2001 <a href="http://www.aladdinsys.com/">Aladdin Systems, Inc.</a>
+<br>All Rights reserved.</font></td></tr></table>
+
+<p>$Id: questions.html,v 1.4 2001/03/16 01:48:52 serge Exp $
+
+</body></html>
+

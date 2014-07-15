@@ -1,0 +1,2019 @@
+&Cancel
+&Pause
+&Resume
+&Wait...
+Error
+Retry?
+Fatal Error
+Cabinet already exists
+Overwrite?
+Diskette
+Please insert a new disk to continue
+Insufficient space on target path
+Please insert the disk that contains cabinet
+Test
+Testing complete
+Error: Corrupt cabinet header
+General
+Compress
+Switches
+Multi-Part
+&OK
+&Apply
+Select &Priority:
+User Mode:
+Time Critical
+Highest
+Higher
+Normal
+Lower
+Lowest
+Idle
+[New]
+&Interactive
+&Save progress to log file:
+Compression Algorithm:
+&MSZIP (similar to ZIP)
+&LZX (superior compression)
+Compression &Strength (LZX only):
+Compression &history size:
+Note: Only the decompression speed of files distant from one another inside the cabinet is effected. Decompression of files next to one another, or compression speed is not effected.
+512 KB
+1 GB
+(Faster...Tighter)
+&Store folder information
+Store only &relative information
+R&eserve space in cabinets (typically for code signing)
+(&bytes)
+Create &multiple part cabinets
+(&bytes each)
+Note: If you intend to span to removable disks (such as floppy disks), just specify the capacity of the target media. You will be automatically prompted to change disks as they become full.
+Overwrite
+&Uncab into new folders bearing cab names
+&Suffix for new folders:
+&Preserve folder names
+Overwrite settings:
+A&lways overwrite
+A&sk (and rename) before overwrite
+N&ever overwrite
+EXE Maker
+When you convert your archive to an exe file, you will be able to decompress it on any computer by just running the exe file. You will not need an additional decompression tool.
+Please select the kind of self extracting exe you wish to create:
+&Windows Based
+&DOS Based
+Create self &extracting exe as:
+&Save As...
+Click "OK" when you are ready to convert.
+Converting now, one moment please...
+Create Self Extracting Exe As:
+Executable Files
+All Files
+Text Files
+Save Log File As:
+Please enter a valid name to save your file as.
+You need Windows NT 4 or Windows 2000 or Windows XP to create Windows-Based self extracting exe''s from cabinet files. Try to create a DOS-based self extracting exe instead.
+Do you wish to uncab
+File already exists in target location and is being skipped:
+Next part of cabinet not found!
+Please insert the disk that contains cabinet
+&Yes
+Yes to &All
+&No
+No to A&ll
+This file already exists, would you like to overwrite it?
+Overwrite File?
+Codex(TM) Commander
+the Codex Client for the Command Line Connoisseur
+Usage: mCox <command> <archive> [<files>/@<filelist>] [-<profile>/-<tool>]
+<Commands>
+Add files into archive (without recursing subdirectories)
+Add files into archive (recursing subdirectories)
+List files inside an archive
+Extract files from archive
+View (and update) a file inside an archive
+Convert an archive to other archive format(s)
+Execute archive specific tool on given archive
+Display information on configured plugins and associated file types
+Configure add profile for selected archive
+Configure extract profile for selected archive
+List available archive specific tools for selected archive
+Visit Codex Commander home page on the World Wide Web
+Loading plugins...
+file types supported.
+Parsing command line...
+failed.
+complete.
+Opening archive...
+file(s),
+bytes found,
+Finding tool
+for archive
+Finding files for tool
+Starting tool
+!error - no plugin found for archive
+Opening Codex Commander home page...
+Archive type specific tools using plugin
+!no tools found
+Conversion will be effected using:
+starting conversion...
+Viewing (and updating) file
+in archive
+Finding files to extract...
+Starting decompression using plugin
+Decompressing using profile
+Directory listing of archive
+File(s)
+byte(s)
+No compression capable plugin found for file type
+Starting compression using plugin
+Compressing using profile
+Plugin and associated file type information:
+&Close
+< &Back
+&Next >
+&Help
+Welcome to
+This wizard will enable you to compress files very easily. All you need to do is answer a few simple questions. Compressing files will make them smaller and place them inside a single file.
+Designed and engineered at
+Research Labs.
+This product features
+Version
+Please click "Next" to continue.
+Save Compressed File As:
+Add Files:
+Based on
+File not found
+Plug-in registration failed!
+Plug-In
+Registry not writable
+EXE Maker
+Make a cabinet archive self extracting
+Test Archive
+Test a cabinet archive for errors
+Plug-in registration succeeded!
+Plug-in unregistration failed!
+Plug-in unregistration succeeded!
+B&rowse...
+Please select a name for the compressed file you will be creating. You can type in its full target location, or save it visually.
+Please check the folders you would like to compress. Folders will be compressed with all their files inside.
+Compress
+subfolders as well
+Please select which individual files you would like to compress. Click "Add Files" to select the files. Selected files will be displayed in the list below.
+&Add Files...
+&Remove
+C&lear
+Please select which kind of compressed file you would like to create from the drop-down list:
+&Advanced Settings...
+Different kinds of compressed files have different compression properties. Experiment with the different types to find your favorite type.
+The best compression is generally provided by the 7Z file type. The ZIP file type is most commonly found on the internet and is popular among users.
+Congratulations! You are now ready to begin the compression process according to your preferences. Click "Back" if you would like to review or change your compression settings.
+The compression is now being carried out. Please wait for the compression module to finish. The Compression Wizard will then resume.
+Please wait for the compression process to complete.
+The operation has been completed!
+Click "Close" to end this Wizard, or click "Back" to start over and create a new compressed file.
+Thank you for using
+Welcome!
+Select File:
+Add Folders:
+Add Files:
+You have not selected any folders or files to be compressed.
+Please try again!
+Compress Type:
+Ready to Compress!
+Working: Please Wait!
+Finished!
+You have not installed any plugins supporting compression!
+Are you sure you want to remove all individual files selected for compression?
+All Compressed Files
+Select File to Decompress:
+Select Target Folder:
+This wizard will enable you to decompress files very easily. All you need to do is answer a few simple questions.
+Please choose the file you wish to decompress. You can type in its full location, browse for the file visually, or drag-and-drop from your favorite file browser, such as Windows Explorer.
+What is your purpose for decompressing this file?
+This file contains an application that can install itself. I would like to install this application.
+This file contains an application, but may not support automatic installation. I would like to install it anyway.
+I want to scan the items inside this file for viruses (if a virus is found, please obtain a clean copy of your file before using it).
+I just want to decompress the items inside this file.
+I just want to look at the contents of this file, I do not want to decompress it at all.
+Congratulations! You are now ready to begin the decompression process according to your preferences. Click "Back" if you would like to review or change your decompression settings.
+The decompression is now being carried out. Please wait for the decompression module to finish. The Extraction Wizard will then resume.
+Please wait for the decompression process to complete.
+Click "Close" to end this Wizard, or click "Back" to start over and decompress another file.
+Please choose into which folder you would like to decompress the items inside this compressed file:
+Please select how you would like to install the application contained inside this file:
+Install application into folder:
+Create Application Icons in the Start Menu:
+Create icons for all items
+Create icons for selected items only:
+Program Files
+Help Files
+Text Files
+Click folders to move into them. Press "Backspace" to move up to the previous folder.
+Please click "Back" to decompress, or "Close" to exit.
+No installed plug-in exists for this archive type.
+Would you like to visit mimarsinan.com to check if there is a new plug-in which supports this archive type?
+New Plug-In Required
+How To Decompress?
+How To Install?
+Decompress Into...
+File Contents:
+The selected folder could not be accessed. Please make sure you have inserted a disk (if applicable) or that the folder exists and you have access rights to it.
+Ready to Decompress!
+Working: Please Wait!
+Please first configure an anti-virus software to use. You may use CompreXX Studio or CompreXX Express for this task.
+Finished!
+You have not installed any plugins supporting decompression!
+Please drag and drop one file at a time!
+All Folders
+Selection Details
+Name
+Modified
+Size
+Shrunk
+Ratio
+Type
+New
+Open
+Compress
+Decompress
+AntiVirus
+Install
+Check-Out
+Convert
+Find
+Archives
+&File
+&View
+Arc&hives
+&Accessories
+&Options
+&Tools
+&Help
+&Open
+&New
+Save As...
+&Refresh
+&Close
+Create Shortcut
+Send As EMail...
+Compr&ess...
+&Decompress...
+&Find...
+&Quit
+&Explorer Bar
+All Folders
+&None
+Large Icons
+Small Icons
+List
+Detail
+&Arrange Icons
+by Name
+by Type
+by Size
+by Ratio
+&Threads
+&Messages
+&Manage Types...
+&Associate Files...
+(De)Compr&ession Profiles...
+Reload
+Plug-In &Information
+Compression &Sampler
+&Encode/Decode
+&Cut SFX
+&Desktop...
+&View Style...
+Archive &Places...
+&Folders...
+&Anti-Virus...
+&Technical
+&Anti-Virus...
+&Install...
+Check-&Out...
+&Convert...
+&Contents
+on the &Web
+&Home
+&Order Now
+&About
+About &Plug-Ins
+Full Expand
+Full Collapse
+Select All
+Deselect All
+Open Shortcuts
+Refresh Archive Place
+Refresh Archive Folder
+Large Icons
+Show Text Labels
+Hide Toolbar
+View
+Allow Selecting Files
+Select
+All Files
+Current File
+Current Folder
+Deselect
+Open All Shortcuts
+Refresh All Archive Places
+&Decompress...
+Select all files and folders inside selected folder
+Deselect all files and folders inside selected folder
+Select all files in all open archives
+Select all files in current archive
+Select all files in current folder
+Deselect all files in all open archives
+Deselect all files in current archive
+Deselect all files in current folder
+Create a new archive
+Open one or more archives and display contents
+Close an archive
+Decompress selected items in archives
+Compress files into an archive
+Scan archives for viruses or other harmful code
+Install archives which contain built in installation software
+Install archives which do not contain built in installation software
+Find files inside open archives
+Convert archives from one type to another
+Update contents of an archive
+Save selected archive in a new location (using a new name)
+EMail the selected archive
+Create a shortcut for the selected archive on the Desktop
+Arrange items by name
+Arrange items by type
+Arrange items by size
+Arrange items by compression ratio
+View items as large icons
+View items as small icons
+View items in a list
+View items in detail
+Allow selection of folders and files individually when highlighted
+Open all archives inside selected archive place
+Open all archives inside all archive places
+Refresh the contents of the selected archive place
+Refresh the contents of all your archive places
+Refresh the contents of selected archive folder
+Bind archive features with plug-in features
+Display large icons
+Display text labels for toolbar buttons
+Remove the toolbar
+Expand all objects beneath selected object
+Collapse all objects beneath selected object
+Move one level up in display
+Show/hide all archive folders
+End CompreXX Studio
+Show/hide all archive folders
+View and manage running tasks
+View messages from completed tasks
+Determine which archives to associate and which to exclude
+Customize your (de)compression settings, supply passwords
+Updates changes that have been made to archives and features
+Display information on loaded plug-ins
+Sample the compression ratios and times of available archive types
+Encode or decode a file using UUEncode, XXEncode, or MIME
+Convert a self extracting exe to a regular archive
+Configure how your desktop appears
+Configure how items are to be displayed
+Manage your favorite archive places
+Select your compression and decompression folders
+Configure an anti-virus program for use
+Review technical settings
+Display help contents and index
+Visit us on the web
+Visit our home page
+Order online for instant delivery
+Display program and copyright information
+Display information on installed plug-ins
+Save Archive As:
+Create New Archive:
+Open Archive:
+Cleaning Up:
+Saving Archive As:
+No plug-ins are available
+Program and copyright information on plug-in
+Modified:
+Size:
+Compressed Size:
+Compression Ratio:
+Desktop Tasks
+Desktop settings
+Visual settings
+Technical settings
+View installed plug-ins
+View supported archives
+Setup anti-virus
+Archive Tasks
+Create new archive
+Open existing archive
+Archive Places Tasks
+Open all archives
+Edit archive places
+Refresh archive places
+Archive Folder Tasks
+Open all archives in folder
+Refresh folder
+Archive Link Tasks
+Open archive
+Archive Tasks
+Add files
+Extract
+Install
+Check-out
+Anti-virus scan
+Convert
+Run tool
+Archive Types:
+Installed Plug-Ins:
+All Archives
+object(s) change state.
+Opening your favorite archives now...
+Mail services are unavailable. Please contact your system administrator regarding "MAPI", which is the name of the required mail services.
+Mail is already being sent, please wait until the current message is delivered.
+Please drop files directly onto the archive you wish to add them to!
+Sorry, a plug-in supporting file compression on this archive is not available!
+Archive "
+" extracted.
+Plugin library not accessible, please re-install.
+The plugin does not support compression settings configuration.
+The plugin does not support extraction settings configuration.
+Plug-In Information
+Plug-Ins:
+Features:
+Supported Archive Types:
+(expand for more information)
+<none>
+Settings
+Desktop
+View Style
+Places
+Folders
+Anti-Virus
+Technical
+Select Archive Folder to Add:
+Select Application to View Files:
+Browse for Compression Folder:
+Browse for Extraction Folder:
+You can customize how your archive desktop appears. You may choose between a single desktop or multiple desktops for different archives. You may also maintain archive places for your archives, to provide instant access to your archives.
+Use &Single Desktop
+Use &Multiple Desktops
+Enable Archive &Places
+Note: You will need to restart the Studio for this change to take effect.
+You may choose how your archives are to be displayed, and how you wish to select items inside them:
+&Hide the folders hierarchy
+Use web style activation (&single-click)
+&Enable selection of individual files for extraction
+The following are general visual settings suited to tailor the Visual Studio environment to your liking and preferences:
+Show &toolbar:
+Use small &icons in the toolbar
+Display text &labels in the toolbar
+Inform of the tasks that are co&mpleted
+Display the full path of files inside the &neighborhood
+Use e&xpert navigation in Compress and Decompress wizards
+Your Archive Places are the folders which you most frequently use for storing archives. You can maintain a full list of these folders to provide instant, automated access to all your favorite archive locations.
+Auto &Scan
+Add &Folder...
+Sto&p
+Friendly &Name:
+Note: Changes to these settings will be stored immediately.
+In order to verify that your archives are free from any viruses or other harmful code, you may use the built-in virus scanning feature before decompression. This feature requires a virus scanner to be installed on your computer.
+Anti-Virus Software: (checked items found, default scanner highlighted)
+A&uto Scan
+&New Software...
+&Settings...
+S&top
+Note: Changes to these settings will be stored immediately.
+You may choose to have tasks run in parallel or serial:
+&Parallel Mode
+Tasks that run parallel will start executing all together, and hence require a fast (perhaps multi-processor equipped) computer with good memory.
+&Serial Mode
+Tasks that run serially will execute one by one as each finishes. They are then suitable for weaker computers, but may take longer time overall to complete.
+You may choose which file viewer to use for files that do not have an associated application:
+Use &Notepad
+Use &Quick View
+Use Custom &Viewer:
+&Browse...
+If you use specific folders when compressing and decompressing archives, CompreXX Studio can help you work directly from those folders, without having to specify them each time.
+Always create archiv&es inside folder:
+&Browse...
+Always e&xtract archives into folder:
+B&rowse...
+Your Archive Places have changed, would you like to refresh?
+Searching:
+Favorite Archive Places:
+Are you sure you want to remove all favorite places?
+Click "Auto Scan" to automatically search your computer and find existing anti-virus software.
+Click "New Software" to specify additional software not in the list.
+To manually specify the location of a particular anti-virus software, select the item and click "Settings".
+You cannot check items that are not found on your computer.
+You cannot remove the last item in this list.
+Are you sure you want to remove this anti-virus software information?
+Please make sure your specified compression folder exists and is writable!
+Please make sure your specified extraction folder exists and is writable!
+Please make sure your custom viever exists!
+My
+Visual
+Desktop
+Places
+Files
+Internal error.
+Archive Folder
+Favorite Places
+Favorite Folder
+Archive Link
+Archive Folder
+Please contact MimarSinan International: http://www.mimarsinan.com
+Contains one or more archives that you have opened. Any archive file that is not present in your favorite folders is opened here.
+Contains one or more folders which are your favorite locations for storing archives. Use the favorite places to quickly access your frequently used archives.
+Contains links to all archives that are found in this favorite folder. Click the links to open the archives.
+A link to an archive under one of your favorite folders for storing archives. Click on the shortcut icon (in the explorer bar), or activate the icon (in the list view) to open the archive.
+A folder inside an archive. Contains the files (and folders) that are in this archive.
+Add To Compression &List
+Add to Compression List with &Subfolder(s)
+&Remove From Compression List
+Compr&ess Now!
+Select Files to Compress
+Edit Selected Files
+Select Archives for Compression
+Select Compression Output
+View
+Large Icons
+Small Icons
+List
+Details
+Save Archives Into:
+Save Archives As:
+&New Items
+&Edit Item Name
+&Remove Selected Items
+&Clear List...
+C&heck Selected
+&Uncheck Selected
+&Select All
+&Deselect All
+Arrange &Icons
+&Open Selected
+&Select Visually
+&Manually Type Item Name(s)
+by &Name
+by &Type
+(right-click the list for more options)
+&Remove From Compression List
+Clear Compression &List...
+Compression &Profiles for Archive:
+C&reate New Profile...
+Ed&it Profile...
+&Delete Profile
+You can compress your chosen files and folders in two ways.
+C&ompress all selected files into a single archive (per archive type selected):
+This option is meaningful for most archive formats, as long as the archives they create can contain more than one file in them (ZIP, CAB, etc.)
+Compress each selected file &individually into seperate archives:
+This option is used by archive formats which can only store one file inside the archives they create (GZIP, BZIP2, etc.)
+Create archives in ori&ginal locations
+Create archives in s&pecified folder:
+Free Space on Target Drive:
+[No plugins available for compressing present selection]
+Select the files and folders you wish to compress, and add them to the compression list or remove them from the compression list.
+Review and edit your selections for compression. Checked file(s) will be recursively compressed - including all matching items in subfolders.
+Choose the archive types you wish to create. Manage and select the compression profiles to be used for this session.
+Choose whether to compress into multiple target files or into a single target file per archive.
+Compress
+You cannot delete this profile.
+Please select a base file name to compress your selections into.
+Please select a folder to compress your selections into.
+Please select some items to compress!
+No plugins capable of compression available.
+Please install some plugins which support compression!
+Please select some archives to compress your files with!
+[No valid target folder selected]
+MB
+[N/A]
+Are you sure you want to remove all items from the compression list?
+select an archive to view profiles
+No archive selected!
+There is no plugin installed capable of extracting (for conversion) archive:
+Please install a plugin which supports extracting (for conversion) this archive type!
+This plugin is not capable of compression (for conversion):
+Please install a plugin which supports compression (for conversion) this archive type!
+Converting
+(Extraction Phase)
+(Compression Phase)
+Step
+of
+Unable to access extraction engine for archive type:
+Unable to access compression engine for archive type:
+, please reinstall the supporting plugin.
+Archive
+using Archive Type
+converted into
+Unable to start tool
+for plugin
+, please reinstall the plugin.
+Tool
+finished working on archive
+Internal error (menu). Please contact MimarSinan International.
+[no plug-in tools available]
+No plug-in tools found for current archive type
+The file you are trying to open is a program.
+It is possible it depends on other files in the archive to run properly.
+Would you like to open this program together with the rest of the archive? (recommended)
+There is no plugin installed capable of viewing files inside:
+Please install a plugin which supports viewing files in archives of this type!
+Preparing to view
+in archive
+Viewing-Updating
+Unable to access file viewing-updating subsystem, please re-install
+View-Update finished for file
+You do not have permission to check-out an archive to this folder:
+Please contact your system administrator to obtain write permission for this folder!
+There is no plugin installed capable of extracting archive:
+Please install a plugin which supports extracting this archive type!
+There is no plugin installed capable of supporting a check-out on archive:
+Please install a plugin which supports check-outs of this archive type!
+Checking out
+Creating icons for checked out file
+Unable to access icon creation subsystem, please re-install
+Check-out complete for file
+Installing
+Running
+in
+There is no plugin installed capable of supporting this operation on archive:
+Please install a plugin which supports this operation on this archive type!
+The archive you have selected:
+does not support automated installs. Please contact your vendor for an updated file.
+Preparing
+for operation:
+Unable to run
+Please contact your vendor for an updated file.
+Operation on archive
+initiated (or complete).
+The selected anti virus software does not exist on your computer:
+Please install it, or select another anti virus software to use.
+There is no plugin installed capable of supporting a virus scan on archive:
+Please install a plugin which supports virus scanning this archive type!
+Quarantining
+Virus Scanning
+Unable to open anti virus software:
+Please make sure it is installed properly, reinstalling if necessary.
+You may also choose a different anti virus software.
+Virus check complete for file
+Extracting
+extracted.
+No files found inside archive to extract!
+Compressing
+compressed.
+Error Configuring Compression Settings for Selected Archive Type
+Error Configuring Extraction Settings for Selected Archive Type
+Decompress
+Decompress files in &all archives
+Decompress f&iles in current archive
+Decompress files in current &folder
+Decompress &selected files only
+Files Ready for Decompression:
+Total Bytes:
+Free Space on Target Drive:
+Decompression Preferences
+Decompression Settings by Archives
+&Decompress Now!
+Decompression &Profiles for Archive:
+[No plug-ins available for extracting present selection]
+Bytes (less than
+MB)
+Select the target folder to extract files into (you can specify new folders which will be created automatically). Choose which items should be extracted.
+Configure how archives are to be decompressed. Manage different extraction settings in decompression profiles.
+Please select a target folder for extracting files!
+Please select some items to extract!
+No plugins capable of extraction available.
+Please install some plugins which support extracting files!
+Create New Decompression Profile
+&Please enter the name of your new profile below:
+&Create
+Ca&ncel
+A profile with the given name already exists, please choose a new profile name.
+Create New Profile
+Action Error
+Active Threads
+Below is a list of all the tasks that are currently executing as a part of CompreXX Studio. You can end task queues that are not responding or that you no longer need to use.
+&End Task Queue
+[No tasks running at this time]
+Are you sure you want to end this task?
+Task Manager
+Create New Compression Profile
+Searching...
+AntiVirus Software Settings
+(the &name of the anti-virus software)
+(the &file name of the anti-virus program)
+(command line &parameters for the program)
+(the &location where the anti-virus program exists)
+Select Location:
+Program file found in this folder.
+Program file does not exist in this folder.
+Please select the folder containing file
+You must enter a valid location where the anti-virus software resides.
+Install
+Some archives contain setup programs inside them which install the software that is shipped inside the archive. You can directly install such files.
+Install &All Open Archives
+Install &Selected Archive
+&Install Now!
+Please open/select some files to install!
+Anti Virus
+In order to make sure your archives do not contain viruses or other harmful code, you may decompress them into quarantine where they will be scanned by an anti virus program.
+Scan &All Open Archives
+Scan &Selected Archive
+Scan &Now!
+Please open/select some files to scan for viruses!
+Using:
+Check-Out
+You may check-out the contents of your archives. Checked-out files will be placed under their own folder, and icons for them will be created in your Start menu.
+Check-Out &All Open Archives
+Check-Out &Selected Archive
+&Create icons for all files
+C&reate icons for selected file types:
+Create icons for &program files
+Create icons for &help files
+Create icons for &text files
+&Target check-out base folder (you can specify new folders):
+(subfolders for different archives will be created automatically)
+Selected Files:
+Total Bytes:
+Free Space on Target Drive:
+Check-Out &Now!
+Target Check-Out Base Folder:
+[No valid target folder selected]
+Please select a target folder for checking-out files!
+Please open/select some files to check-out!
+Find: Files Inside Compressed Files
+Enter the &name of the compressed file you are looking for:
+&Find Now!
+Name
+In Compressed Folder
+Inside Archive
+Convert
+You may convert your existing archives to another archive format. For example, you can convert all your zip files to cab files in order to benefit from the increased compression that the cab compression provides, while retaining all of your existing data.
+Convert &All Archives
+Convert &Selected Archive
+Create new archives in:
+&Original locations
+Specified &folder:
+Convert &Now!
+Select ar&chive types to convert into:
+Select Folder:
+[No archive types available for converting into]
+No plugins capable of extraction found.
+Please install some plugins which support extracting archives!
+Please open/select some files to convert!
+Please select a target folder for storing new files in!
+No plugins capable of compression found.
+Please install some plugins which support compressing archives!
+Please select some archive types to convert into!
+Messages
+Below is a list of the operations that have completed. You may examine the list to determine which tasks have finished.
+C&lear
+E-Mailing Archive:
+delivered.
+could not be delivered successfully.
+One Moment Please
+Preparing file list...
+Please insert the disk containing Volume
+Archive header is corrupt, ignore and continue?
+Please insert the FIRST disk of this archive set.
+Please insert the LAST disk of this archive set.
+Please insert disk
+Please insert disk: #
+Test
+Testing complete
+Password:
+, or make sure it is in the same folder with the previous volume.
+Current Archive:
+Current File:
+Error:
+Message:
+This file is corrupt:
+Continue testing?
+Archive header is missing or corrupt.
+Extract
+Setup
+&Decrypt with password:
+&Extract into new folders bearing archive names:
+An error occured during the conversion:
+GZip archives may not contain more than one file inside them!
+Please compress the files one by one.
+The target GZip file already exists!
+Unable to delete
+Compression cancelled.
+has occured.
+Compression &Kind
+Maximum
+Normal
+Fast
+Super Fast
+&Delete original files after compression
+Delete
+Error with current disk in drive!
+Please insert a new formatted disk (does not need to be empty).
+Click OK to continue.
+Current disk in drive is write protected!
+Please remove the write protection from the disk.
+Please insert this disk to continue the operation:
+&Encrypt with password (leave blank to disable password):
+Compression Al&gorithm:
+Span
+C&hoose Action:
+Create New Rar
+Move to Existing Rar
+Add to Existing Rar
+Bring Existing Rar Up to Date
+Default
+Min...Max
+(Faster...Tighter)
+Compression &Level:
+&Dictionary Size:
+Use &Solid Compression (Slower)
+Note: Only updates, and decompression of files distant to one another is slowed down.
+&Encrypt with password:
+&Put Recovery Information
+Prepare target media:
+&Leave target media as-is
+Erase all files on &target media
+&Hide command line window
+&Enable span onto target media
+Span settings
+Size &Volumes Automatically
+Specify Volume &Size
+KB
+Make &independent solid archives
+Windows Based, &Graphical (recommended)
+&Windows Based
+&DOS Based
+OS/&2 Based
+File not found
+Make an archive self extracting
+Test Archive
+Test an archive for corruption
+Delete Selected Files
+Delete selected files inside the archive
+Lock File
+Lock the archive, preventing any further changes to it
+Protect Archive
+Add damage protection to the archive
+Test Archive (Advanced)
+Test the archive for errors using native testing tools
+EXE Maker (Advanced)
+Make the archive self extracting using native self extraction stubs
+Archive Comments
+Edit archive comments
+Repair Archive
+Repair a damaged archive
+Find Password
+Recover a forgotten password for a zip archive
+Comments
+You may &edit the comments for this archive below:
+Repair
+You may repair a rar file that has become damaged. The best of two available repair methods will be selected automatically.
+For higher success when repairing rar files, please make sure that you create rar files with recovery information, or use the "Protect File" tool which inserts such information.
+Save &repaired rar file as:
+Click "OK" when you are ready to begin repair.
+Repairing now, one moment please...
+Save Repaired Rar File As:
+File
+Repaired
+Recovery information found, highest chance of repair.
+Recovery information not found, lower chances of repair.
+Create New Ace
+Move to Existing Ace
+Add to Existing Ace
+Bring Existing Ace Up to Date
+Use Version &2.0 Compression (Better)
+Note: Version 2.0 compressed archives cannot be extracted with earlier versions of ACE.
+You may repair an ace file that has become damaged. The best of two available repair methods will be selected automatically.
+For higher success when repairing ace files, please make sure that you create ace files with recovery information, or use the "Protect File" tool which inserts such information.
+&Save repaired ace file as:
+Save Repaired Ace File As:
+Recovery complete.
+File not damaged, recovery unnecessary!
+Extract
+Listing
+Testing
+Analyzing
+[unknown operation underway]
+CRC Error
+Continue?
+Insufficient memory
+Unable to detect available space on network drive
+General failure
+Authenticity test of archive failed
+Unable to open archive for reading
+Error reading from archive
+Archive is broken
+No files specified for archive operation
+Archive is not an ACE archive
+Unrecognized archive version
+General archive failure
+Could not extract file, a directory with the same file name exists
+Error writing to extracted file
+Error creating output file
+Unknown compression method
+Insufficient disk space
+Unable to create target file
+General extraction failure
+General file operation failure
+General disk space failure
+General self extracting archive access error
+General failure on seek operation
+Please insert the disk containing the next volume:
+General failure on archive volume seek
+Skipping overwrite of file:
+General failure on archived file seek
+General failure on actual file seek
+Creating file list...
+Finished creating file list!
+Adding file(s) to file list...
+Warming up...
+Password:
+Fix
+Please select the zip archive to &fix:
+Save the repaired &zip archive as:
+&Open repaired archive
+&Repair Now
+&Browse...
+&Save As...
+Select Damaged Zip Archive
+Save Repaired Zip Archive As
+Zip Archives
+Self-Extracting Zip Archives
+Please select an archive to repair!
+%d out of %d files repaired successfully
+Password Recovery
+&Please select the password protected zip file:
+&Type a starting password, if you have any:
+&Select the type of passwords to try:
+&Recover Now
+Select Password Protected Zip File
+Numbers
+Letters (capitals only)
+Letters (no capitals)
+Letters
+Numbers and Letters
+Numbers and Letters (capitals only)
+Numbers and Letters (no capitals)
+All Characters
+No Numbers and Letters
+Password Hits:
+Forced Hits:
+Testing Password:
+St&op
+Password recovery finished
+Found password!
+An error occured!
+repaired
+Continue Operation?
+Extraction of this archive type not supported, or archive may be damaged:
+Volume
+not found in source location.
+Skipping overwrite of file:
+&File
+&New Archive...
+&Open Archive
+&Save Archive As...
+&Close Archive
+Create &Shortcut
+M&ail Archive...
+E&xit
+&Actions
+&Add...
+&Extract...
+&View...
+Select All
+Invert Selection
+Virus &Scan
+&UU/XX/Mime
+&CheckOut...
+&Install...
+[no plugin actions]
+&Options
+&Configuration...
+&Sort
+by &Name
+by &Type
+by &Date
+by &Size
+by &Compression Ratio
+by Pac&ked Size
+by &Path
+Set Installation Defaults...
+Vie&w Last Output...
+&Help
+&Contents
+&CompreXX Express Home Page
+&About CompreXX Express...
+Please install some plug-ins!
+Large Icons
+Flat Buttons
+Show Text
+New
+Open
+Add
+Extract
+View
+CheckOut
+AntiVirus
+Plugins
+Name
+Size
+Ratio
+Packed
+Modified
+Type
+Path
+Open Archive
+New Archive
+Save Archive
+closed
+Install
+Opened
+[no plug-in tools available]
+Open failed for
+No file selected for viewing.
+Mail services are unavailable. Please contact your system administrator regarding "MAPI", which is the name of the required mail services.
+Replace current option and folder settings with the original distribution default settings?
+Selected
+file(s),
+bytes
+Please create or open an archive before adding files!
+Sorry, a plug-in supporting file compression on this archive is not available!
+Sorry, a plug-in supporting file extraction on this archive is not available!
+bytes,
+bytes compressed, ratio
+Add
+Add &from
+File &name:
+Archive &type
+&Include subfolders
+&Add
+&Options
+New Folder
+Please select some files to add!
+Extract
+E&xtract to:
+Files
+&Selected files
+&All files
+&Options
+&Folders/drives:
+&Extract
+&New Folder...
+You can create a new folder automatically by typing the name in the "Extract To" field of the Extract dialog box.
+Create Folder
+Please select a folder to extract into!
+View Last Output
+Legend:
+CompreXX Express is available.
+CompreXX Express is working in the background, you may still start new operations.
+CompreXX Express is busy. Please wait for the running task to finish before continuing.
+&Clipboard Copy
+&Font
+Text successfuly copied to clipboard
+CheckOut
+All files will be extracted to a new folder inside the specified folder, and a program group will be built.
+&Folder:
+Create icons for:
+&All files
+&Selected file types:
+&Programs
+&Help files
+&Text files
+Please select a base check-out folder!
+File
+delivered.
+could not be delivered successfully.
+Configuration
+View
+Toolbar
+Folders
+Program Locations
+Plugins
+Mouse selection
+&Single click to open a file (point to select)
+&Never underline file names
+Underline file names when I &point at them
+Al&ways underline file names
+Doub&le click to open a file (single click to select)
+General
+&Full row select
+&Grid lines
+Toolbar Configuration
+Use &large toolbar buttons
+Show &button text
+&Flat toolbar buttons
+Add folder
+System &default
+Specified &folder:
+Extract folder
+System d&efault
+Specified f&older:
+Checkout &base folder
+The viewer is used for files that do not have any application "associated" with them.
+&Viewer:
+Optional virus scanner
+&Scan program:
+&Parameters:
+&Configure Virus Scanner Automatically...
+Note: The virus scanner settings will take effect immediately.
+CompreXX Express does not require any external programs to work with archives. Please click on "Plugins" for more information.
+Available Plugins
+&Plugins installed on your system:
+Total supported file types:
+&About Plug-In...
+CompreXX Express uses Codex Plug-Ins for archive functions. Each plugin supports one or more archives with specific functions available for each type.
+You may download Codex Plug-Ins at this website:
+To add new plugins, download and install them.
+To remove existing plugins, uninstall them.
+Browse
+Select Folder
+Total supported archive types:
+Configure Virus Scanner Automatically...
+CompreXX Express is now searching your computer for virus scanners. One moment please...
+Stop
+Would you like to use this virus scanner?
+No compatible virus scanners found. Please install some virus scanners or manually enter program settings.
+Extract archives into selecte&d folder:
+(you can specify &multiple new folders)
+Extract all archives simultaneously (&parallel)
+&Settings...
+Please select a folder to extract into!
+You have not installed any plugins supporting decompression!
+No plugins capable of extracting present selection!
+Compr&ess selected files using archive types:
+Sa&ve archive(s) as:
+(use no file extensions)
+Include sub&folders
+Create all archives simultaneously (&parallel)
+e-&Mail archives after compression is complete
+&Settings...
+Save &As...
+Save Archive(s) As:
+Please select some archives to compress your files with!
+Please choose a valid name to save your compressed files under!
+No plugins capable of compression!
+Archive Profiles
+Se&lect Archive:
+Select the Profile to Edit:
+Compressio&n Settings
+Compression Settings for T&ools
+R&ight-Click Compression Settings
+Decompression Se&ttings
+Decompression Settings &for Tools
+Ri&ght-Click Decompression Settings
+Profile Purpose:
+Profiles by &Purpose
+All Compr&ession Profiles
+All &Decompression Profiles
+Create &New Profile...
+Ed&it Profile...
+Delete Selected Pro&file
+Please choose your general compression and extraction settings, specified by purpose. You may choose different compression strengths, supply passwords, and customize other features supported by your plug-ins.
+You may manage multiple profiles to determine how you wish files are to be (de)compressed. First select the archive type, then select the profile you wish to manage. You may also create new profiles.
+No registered plugins found!
+Create New Profile
+Profile Name:
+A profile with the given name already exists, please choose a new profile name.
+You may not delete this profile.
+Please point at an item to view the purpose of that item.
+The compression settings are used whenever you create new archives or update existing ones. You may change all available settings to suit your preferences. This profile is called the "default" profile for compression.
+The decompression settings are used whenever you extract files from your archives. You may change all available settings to suit your preferences. This profile is called the "default" profile for decompression.
+The compression settings for tools are used internally for actions such as archive conversion and viewing/updating files inside archives. You should not change any settings other than passwords and compression strength. This profile is called the "structured" profile for compression.
+The decompression settings for tools are used internally for actions such as "Install", "Check-Out", "Anti-Virus", "Convert", and "View-Update". You are not recommended to change any settings other than passwords. This profile is called the "structured" profile for decompression.
+The right-click compression settings are used whenever you create or update archives inside Windows Explorer. You may change all available settings to suit your preferences. This profile is called the "shell" profile for compression.
+The right-click decompression settings are used whenever you extract archives inside Windows Explorer. You may change all available settings to suit your preferences. This profile is called the "shell" profile for decompression.
+The plugin:
+does not support this operation, you may not create/edit/delete profiles.
+Encode/Decode
+You may convert any file into a plain text file using an encoding algorithm. If you cannot email binary files as attachments, then you can convert them into plain text files and email them. You may also decode such files back into their original form.
+&Please select the file to convert:
+Please select the conversion action:
+&Encode into Plain Text
+&Decode from Plain Text into Binary
+Please select the type of encoding or decoding to use:
+&XX Encode/Decode
+&UU Encode/Decode
+&MIME (Base64) Encode/Decode)
+Please select how to save the &converted file:
+&Open file after conversion
+Converting now, one moment please...
+Please select a source file to convert!
+Invalid Source
+Please select a valid file name for your target file!
+Invalid Target
+Conversion complete.
+Cut SFX
+Use this utility to convert a self-extracting (or self-installing) archive back to it's original archive form.
+&Source executable file (program):
+&Target filename for contained archive:
+&Open file after conversion
+Cutting now, one moment please...
+Select Executable File:
+Save Archive As:
+Conversion complete
+Uninstall Checked-Out Archive
+Unable to open file:
+, please make sure your selected file viewer is working.
+File:
+has changed, would you like to update it?
+Compression Sampler Results
+The Compression Sampler is now finished. The results for each archive type are displayed below.
+Best Compression:
+Best Speed:
+Worst Compression:
+Worst Speed:
+Uncompressed Size:
+Compressed Size:
+Compression Ratio:
+Compression Time:
+failed
+seconds
+Compression Sampler
+The Compression Sampler will test each of your available archive types for the strength and speed of their compression.
+Sample Size:
+&Small
+&Medium
+&Large
+A random collection of files from your hard disk(s) will be used to test compression. Select how big a sample of files should be taken. Larger samples may give more accurate results, but take longer to process.
+Current Task:
+&Start Test
+No compressible archive types found, please install some new plug-ins supporting compression!
+Ready for Sampling
+Collecting random sample of files...
+Testing compression for archive type:
+none
+Archive Profiles
+Edit your (de)compression profiles.
+Plug-In Bindings
+Set up plug-ins for use as archive feature handlers.
+File Associations
+Associate archive types with, or prevent association with
+Unable to open
+Archive Settings. Please re-install.
+Invalid parameters in call for
+Shell Handlers
+Shell Extension Handlers Not Installed!
+Runtime Failure
+Unsupported Shell Extension Handler Requested!
+Invalid parameters in call for
+Plug-In Features
+Parameter 1:
+Parameter 2:
+Parameter 3:
+Parameter 4:
+Plug-In Server Not Found!
+Unsupported Plug-In Server Function Requested!
+For internal use only.
+Directive(s) not found.
+Lock
+Protect
+File not found
+Not a Microsoft SZDD compressed file
+unSZDD
+Overwrite options:
+&Ask
+Al&ways
+&Never
+&Extract into new subfolders with suffix:
+Source Archive:
+Extracting File:
+Overwrite File?
+Please compress files one at a time!
+This file already exists:
+Do you wish to overwrite it?
+Overwrite?
+Setup
+&Priority:
+&Block Size:
+(faster to better compression)
+Profile
+Create &new folders with suffix:
+Overwrite options:
+N&ever
+A&sk
+Al&ways
+&Compression
+Maximum
+Default
+Fastest
+None
+You do not have permission to change these settings.
+Please contact your system administrator for help.
+Licensed users:
+Delete check-out folder
+and icons?
+Uninstall
+Some files could not be removed. You may need to manually remove these checked-out files.
+Uninstall successfully completed.
+&Extract...
+Extract &Here
+Extract to &Subfolder(s)
+Unable to open
+. Please re-install.
+Extract files from selected archive(s), you may customize decompression settings
+Extract files from selected archive(s) to current folder (using the "Default" decompression profile)
+Extract files from selected archive(s) to subfolders of selected folder (using the "Shell" decompression profile)
+&Compress...
+Compress &into
+Compress and &e-Mail
+Compress selected files into (multiple) archives, you may customize compression settings
+Compress selected files into an archive of type
+(using the "Shell" compression profile)
+Compress and e-Mail selected files into an archive of type
+File Associations
+A newly installed application has changed file associations. Please select which file types to open with, and which to not open with
+Archive Type
+Opens With
+File Description
+Open with
+Open with &Other(s)
+Open &with nothing
+&Always open with
+&Never open with
+These files always open with
+. To prevent this association, click "Never Open with
+These files open with another application. To leave them as they are, click "Never Open with
+To associate them, click "Always Open with
+These files are supported only by
+These archives currently open with nothing.
+These archives currently open with other applications.
+There are still archive types with indeterminate assocations.
+Please select one of the following buttons for these archive types:
+Always open with
+Never open with
+Please first select an archive type from the list.
+Family Member
+Plug-In Bindings Editor
+Each Codex Plug-In supports one or more archive types in different ways.
+Enable one or more of these plug-in features for each of your archives below.
+&Archive Format:
+Basic &Features:
+Available &Plug-In(s):
+Advanced F&eatures:
+First, click an archive format. Then, click a feature. Finally, check the plug-in which you wish to activate for that feature. Only one plug-in may be active per feature.
+Unchecking features will disable them. Unchecking archive formats will remove support for those formats entirely.
+None available
+No plug-ins installed!
+At least one plug-in must be associated with a feature!
+Uncheck the feature itself if you wish to disable it.
+File Name
+In Folder
+Archive Error:
+Select folder for extracted files
+Archive
+Archive Contents
+Click "View" to open focused item.
+Click "Extract" to extract selected items.
+&View
+&Extract...
+All rights reserved.
+File Name
+Version
+About
+files inside archive
+No password protected files
+password protected files
+bytes
+Size:
+Folders:
+Files:
+of data
+Error when opening archive:
+Supporting Plug-In:
+Type:
+Archive
+Date Modified:
+Size:
+Open this archive to browse its contents in Explorer
+must be licensed after a trial period of 30 days.
+You may purchase a license on-line with immediate delivery:
+&Don't remind me again
+(ask your system administrator to enable this option)
+Only your system administrator may enter the license key.
+&Enter Key...
+Licensing Reminder
+Enter License Key
+Key:
+Please check your spelling and try again
+Your license has been activated
+Installed: ?
+Installed:
+Today:
+Days Used: Unknown
+Days Used: Installed Today
+Days Used:
+Please order a license today to continue legally using the product.
+Order a license now! You are in violation of the license agreement.
+Unable to obtain file contents!
+No error
+Invalid archive!
+Unknown error!
+Test Archive
+Test an archive for errors
+Delete Selected Files
+Delete selected files inside the archive
+EXE Maker
+Make an archive file self extracting
+&Priority:
+Pa&ssword:
+Extract with &Folder Names
+&Create new folders with suffix:
+Overwrite options:
+&Never
+&Ask
+Al&ways
+Auto &Rename
+General Settings
+Zip && GZip Types
+7-Zip Type
+Property
+Setting
+Time Critical
+High
+Normal
+Idle
+Interactive
+Skip All Queries
+Yes
+No
+Don't Compress, Just Store
+Maximum
+Custom
+Off
+On
+None
+Binary Tree with 2 bytes hashing
+Binary Tree with 2-3(full) bytes hashing
+Binary Tree with 2-3-4 bytes hashing
+Binary Tree with 2-3-4(big) bytes hashing
+Patricia Tree with 2-bits nodes, removing
+Patricia Tree with 2-bits nodes
+Patricia Tree with 2-bits nodes, 2-3 bytes hashing
+Patricia Tree with 3-bits nodes, 2-3 bytes hashing
+Patricia Tree with 4-bits nodes, 2-3 bytes hashing
+Hash Chain with 2-3 bytes hashing
+Hash Chain with 2-3-4 bytes hashing
+BCJ (32-bit x86 executable CALL, JUMP converter)
+BCJ2 (32-bit x86 executable CALL, JUMP, JCC converter [version 2])
+Priority
+User Mode
+Hide Command Line Window
+Compression Strength
+Fast Bytes for Deflate Algorithm
+Number of Passes for Deflate Algorithm
+Solid Compression
+Header Compression
+Compression Algorithm
+Dictionary Size for LZMA Algorithm
+Match Finder Method for LZMA Algorithm
+Fast Bytes for LZMA Algorithm
+Memory Size for PPMd Algorithm
+Model Order for PPMd Algorithm
+Converter Algorithm
+BCJ2 Converter Algorithm 1
+BCJ2 Converter Algorithm 2
+Please select "Custom" compression strength to modify this value.
+Value:
+Please select the "LZMA" compression algorithm to modify this value.
+Please select the "PPMd" compression algorithm to modify this value.
+Please select the "Deflate" compression algorithm to modify this value.
+Please select the "BCJ2" converter algorithm to modify this value.
+Windows Based, Com&pressed (recommended)
+&Windows Based
+&DOS Based
+Quick Start
+How to
+Create a New Archive
+Add Files to an Existing Archive
+Extract Files from an Archive
+View Archive Contents (Part 1)
+View Archive Contents (Part 2)
+Get Quick Archive Information
+View Archive Contents
+Pick a Task for Help:
+Portions by
+Please ask your system administrator to change this setting.
+Would you like to have archives behave like folders inside Explorer?
+If you click YES, archives will behave like browsable folders.
+If you Click NO, archives will behave like regular files which open with applications.
+You may also CANCEL to retain your current setting.
+Archive Folders now enabled: archives will behave like folders.
+Changes will be applied the next time you open Explorer.
+Archive Folders now disabled: archives will behave like regular files.
+Please run your favorite archive application to associate it with archives.
+Error opening archive
+Archive types supported:
+Plug-Ins loaded:
+Error Opening Archive
+Archive Tasks
+Add files
+Extract
+Install
+Check-out
+Anti-virus scan
+Convert
+Run Tool
+Selection Details
+&Open
+&Add files
+Add &Individual Files
+Add a Single &Folder
+Add a Folder with &Subfolders
+&Extract
+Extract &All Files
+Extract &Selected Files
+&Install
+&Check-out
+Anti-&virus scan
+Conver&t
+&Run tool
+&Select All
+Inv&ert Selection
+Vie&w
+Lar&ge Icons
+S&mall Icons
+&List
+&Details
+Arrange Icon&s By
+by &Name
+by &Type
+by Si&ze
+by &Ratio
+Select Files to Add to Archive
+Name
+Type
+Size
+Ratio
+Modified:
+Size:
+Compressed Size:
+Compression Ratio:
+Folder
+This folder is inside an archive. It is not a real file system folder. It contains some or all of the files that are located inside this archive.
+Browsing archive
+bytes
+Modified
+Shrunk
+Files cannot be extracted from this archive, please install a plug-in which supports decompression on archives of this type.
+Select Folder to Check-Out Archive Into:
+Please first configure an anti-virus software to use. You may use CompreXX Studio or CompreXX Express for this task.
+Select Folder to Extract Into:
+[no plug-in tools available]
+No plug-in tools found for current archive type
+This archive cannot be converted, please install a plug-in which supports conversion on archives of this type.
+Files cannot be added to this archive, please install a plug-in which supports compression on archives of this type.
+Select Single Folder to Add:
+Select Folder to Add with Subfolders:
+&Hide Archive Tasks
+S&how Archive Tasks
+Convert Archive Type
+&Please select the archive type(s) to convert this archive into:
+&Where shall the new archives be created?
+[no archive types available to convert into]
+Select Folder for Converted Archive(s):
+Please select where the new archives should be created.
+You cannot compress files on different (network) drives using the 7-Zip Plug-In.
+Plug-In Limitation
+details
+hide
+Internal Error: #
+Please contact technical support.
+Compress
+Extract
+Compression Settings
+Extraction Settings
+List Archive Contents
+[no favorite places defined]
+Unable to Open:
+This is just an illustration. To practice, open Explorer and try there.
+[no objects in this folder may be archived]
+Open with &Notepad
+Please enter your 20 digit key and email address.
+(&serial number)
+(&email address)
+Tip: You can paste the key.
+&Get Key...
+Enter Key
+Licensed to:
+Tip of the Day
+Did you know?
+&Show tips at startup
+&Next Tip
+Studio
+Express
+Compression Wizard
+Extraction Wizard
+Archive Folders
+Password for 256 bit AES Encryption
+File not found
+Write to Floppy
+Read from Floppy
+Read Image from Floppy
+Read a physical floppy disk into the current floppy disk image
+Write Image to Floppy
+Write the floppy disk image to a physical floppy disk
+Format Floppy Disk
+Format a physical floppy disk
+Set Disk Label
+View and set the label of the floppy disk image
+Format Floppy Disk
+Format a physical floppy disk
+Disk Image Setup
+Compression strength:
+fast
+good
+(applies only to compressible images)
+&Preserve folder names
+Disk Image
+Source Archive:
+Injecting File:
+Initializing...
+No floppy drives available!
+Format complete
+Format Disk
+Please choose disk capacity:
+1.68 MB
+DMF (1KB clusters)
+DMF (2KB clusters)
+160 KB
+180 KB
+320 KB
+360 KB
+1200 KB
+720 KB
+1440 KB
+2880 KB
+Please choose &target drive:
+Quick Format
+Format
+Select Drive
+Please select a floppy drive for this operation:
+Quick
+Floppy Image Label
+Please set the label for this disk image:
+Disk unImage Setup
+Overwrite options:
+Ask
+Always
+Never
+Extract into new subfolders with suffix:
+Preserve folder names
+Disk unImage
+Extracting File:
+Overwrite File?
+Don't compress
+Attachments to this message cannot be compressed, because you have not chosen a valid archive type:
+1. Click the Tools menu, and choose Options,
+2. Select the
+tab, and choose an available archive type.
+Outlook Add-In
+Compressed Attachments
+attachment
+This email contains a
+attachment. We recommended you
+download
+to extract the files inside this compressed attachment.
+integrates with Outlook 2000/2002/2003, transparently compressing your email
+attachments, just like this email you received. It also makes archives appear as
+regular folders in Explorer, so you can easily browse, compress, and extract
+your archives. It supports virtually all archive types for compression and literally all for
+extraction.
+If you already have a compression tool installed on your computer which can
+extract
+files, you do not need to
+download
+to extract this attachment.
+How to Extract the Attachments
+Default Archive
+Choose which archive type should be used in compressing attachments. ZIP is the most frequently used archive type, but has poor compression.
+Compress Attachments Into:
+&Settings...
+&Include information on how to extract the created attachment file
+Sample Compression
+If you are unsure about which archive type to use, run the Compression Sampler Tool. This tool will automatically test each of your available archive types for best speed and best compression results.
+&Run Compression Sampler
+About
+Data compression services provided by Codex Plug-In Technology, an open standards specification.
+About &Outlook Add-In...
+Note: Changes to these settings take effect immediately.
+Administrative rights required. Please contact your system administrator for help.
+Unable to change setting
+Recursive Extract
+Error setting current directory
+Error executing the Recursive Extract tool. Please reinstall the tool.
+Recursive Extract
+Extract all files from selected archive, including files inside nested archives in the archive
+In Explorer, right-click an archive, and select "Recursive Extract" to use this tool.
+Archives Extracted:
+Archive Nesting Depth:
+Recursive Extract Finished
+&Edit
+&Copy
+&Paste
+Copies the selected files to the Clipboard; to extract them, use the Paste command
+Inserts the files you have copied into the selected archive
+Split Archive
+Split the archive into smaller pieces
+Split
+You may split an existing Zip archive into pieces of equal sizes. Splitting an archive can make it easier to transport.
+Please select how big each split piece should be:
+(in bytes)
+Save &split zip file as:
+Click "OK" when you are ready to begin splitting.
+Splitting now, one moment please...
+1 MB
+1.44 MB
+1.68 MB
+2.88 MB
+100 MB
+250 MB
+650 MB
+700 MB
+Save Split Zip File As:
+Please select a valid split size
+Split complete!
+An update is available for your product! Would you like to download it?
+Open Archive
+New Archive
+Recommended Archive Types
+Other Archive Types
+Description
+Archive Type
+Powered by Plug-In
+7Z archives offer a wide variety of compression settings, and provide the smallest archives available today.
+7ZIP archives offer a wide variety of compression settings, and provide the smallest archives available today.
+ACE archives offer very good compression ratios, with advanced compression settings to choose from.
+ARC archives are an old archive type, still in use today.
+ARJ archives are an old archive type, still in use today.
+B64 archives are really binary encoded files, used on Macintosh computers. They may contain only one file per archive.
+BH archives are compressed using BlakHole technology, and offer compression comparable to ZIP archives.
+BZ archives offer a new compression method, with compression often beating that of ZIP archives. They may contain only one file per archive.
+BZ2 archives offer a new compression method, with compression often beating that of ZIP archives. They may contain only one file per archive.
+BZIP2 archives offer a new compression method, with compression often beating that of ZIP archives. They may contain only one file per archive.
+CAB archives are the standard compression used by Windows, and offer very good compression ratios.
+CIF archives are representations of CD-ROM disks, they are not really compressed.
+CPIO archives are used on the Linux platform.
+DEB archives are used on the Linux platform.
+DSK archives are representations of floppy disks, they are not really compressed.
+ENC archives are an old archive type, still in use today.
+FLP archives are representations of floppy disks, they are not really compressed.
+GZ archives are primarily used on the Linux platform. They may contain only one file per archive. They offer compression comparable to ZIP archives.
+GZIP archives are primarily used on the Linux platform. They may contain only one file per archive. They offer compression comparable to ZIP archives.
+HA archives are an old archive type, still in use today.
+HQX archives are used on the Macintosh platform. They may contain only one file per archive.
+IMA archives are representations of floppy disks, they are not really compressed.
+IMZ archives are representations of floppy disks in compressed form. Compression ratios are similar to ZIP.
+ISO archives are representations of CD-ROM disks, they are not really compressed.
+JAR archives contain Java software within themselves. They feature ZIP compression.
+LHA archives are an old archive type, still in use today.
+LZH archives are an old archive type, still in use today. LZH is one of the first compression methods in use.
+MIM archives are really binary encoded files, generally used in transferring binary files as regular text files over email. They are actually larger than the uncompressed files.
+PF archives are used on the Macintosh platform.
+RAR archives offer very good compression ratios, with advanced compression settings to choose from.
+RPM archives are used on the Linux platform. They represent software installation packages.
+SIT archives are the standard compression method used on Macintosh computers. They offer compression superior to ZIP.
+SPLIT archives are used on the Linux platform.
+TAR archives contain a collection of uncompressed files. They are used to pack multiple files into a single file before compression using archive types that may contain only a single file per archive, such as GZIP or BZIP2.
+TBZ archives represent a BZIP archive, which contains a TAR archive inside.
+TBZ2 archives represent a BZIP2 archive, which contains a TAR archive inside.
+TGZ archives represent a GZIP archive, which contains a TAR archive inside.
+UU archives are really binary encoded files, generally used in transferring binary files as regular text files over email. They are actually larger than the uncompressed files. They may contain only one file per archive.
+UUE archives are really binary encoded files, generally used in transferring binary files as regular text files over email. They are actually larger than the uncompressed files. They may contain only one file per archive.
+VFD archives are representations of floppy disks, they are not really compressed.
+WAR archives contain Java software within themselves. They feature ZIP compression.
+XXE archives are really binary encoded files, generally used in transferring binary files as regular text files over email. They are actually larger than the uncompressed files.
+Z archives are an old archive type, still in use today.
+ZIP archives have become the industry standard for compression over the years. However, the compression ZIP offers is seriously outdated today, as new formats with much superior compression rates have emerged.
+ZLIB archives may contain only one file per archive. They offer compression comparable to ZIP archives.
+ZOO archives are an old archive type, still in use today.
+??_ archives are the old compression type used on the Windows platform, now superseded by CAB.
+New Archive
+You have just created a new archive. You may add or remove files from this archive.
+readme.txt
+CompreXX Settings
+The icons below help you make changes to CompreXX. Click on an icon to start a task.
+Right-Click Menus
+You may customize which menu items appear when you right-click archives and/or files in Windows Explorer.
+Compression Right-Click Menus
+Displayed each time you right-click a collection of files.
+Show "&Compress..."
+Show "Compress &into"
+Show "Compress and e-&Mail"
+Extraction Right-Click Menus
+Displayed when you select archives and right-click.
+Show "&Extract..."
+Show "Extract &Here"
+Show "Extract to &Subfolders"
+Configure Codex Plug-In Technology based data (de)compression.
+Context Menu Commands...
+Select which actions are enabled on Windows Explorer context menus.
+Attachment Compression: On
+Attachment Compression: Off
+Password required
+The directory of this archive is encrypted.
+Please enter the correct password to access the archive.
+&Password:
+The files in this archive are encrypted.
+No error
+Archive seems to be ok, but not the recovery data
+File not found
+Path not found
+Too many open files
+File access denied
+Insufficient memory
+Disk is full
+Disk is write-protected
+Printer is out of paper
+Invalid dictionary size
+User aborted action
+Cannot acces temp dir
+Temp directory is full
+Cannot create directory in archive, directory already exists
+Cannot create directory in archive, the directory name contains invalid charaters
+Cannot create file in archive, the file name contains invalid characters
+Cannot copy an archive onto itself
+Both passwords for the file and header encryption are equal, this is not acceptable due to security reasons
+Header encryption requires at least standard encryption enabled
+The password to encrypt the headers is missing
+The private key to create SQX AV data is missing
+The AV Key file is invalid
+This SQX version cannot use the AV Key file, please load the latest update
+This SQX version cannot process the AV Data, please load the latest update
+This archive contains AV Data, but the AV Data does not match the archive: the archive was altered!
+This version of the archiver cannot process all data
+Archives with this version number can only be extracted
+External data recovery records do not match for a certain archive file
+Too many file blocks are damaged, we cannot repair this archive file
+Recovery data is damaged
+Cannot repair archive, need a higher archiver version
+Data recovery records do not match for a certain archive file
+Cannot find data recovery records
+No matching files in request
+Cannot create more volumes
+Cannot add files to a multi volume archive
+Cannot delete files from a multi volume archive
+Archive is part of a multivolume archive but is not the first volume
+Archive is missing a volume
+Cannot modify locked archive
+Cannot add comment bigger than 4K
+Canott update encrypted solid archive with password
+Unknown compression method
+Cannot extract--file is encrypted
+Bad CRC--file is probably corrupted
+Unable to create output file
+Bad archive file format
+File mask list is empty
+Not an SQX archive
+Function is not supported at all
+Function is not supported for this archive type
+The selected sfx stub was not installed
+&Priority:
+Create new &folders with suffix:
+&Extract damaged files
+P&reserve path names
+Overwrite options:
+&Never
+&Ask
+Alway&s
+Next disk required
+Please insert the next disk (#
+). If the file 
+is located elsewhere use the "Browse" button or type in the full path.
+&Path:
+&Browse...
+Folder/drives
+New disk required
+A new disk is required. If you want to save the volume
+elsewhere use the "Browse" button or type in the full path.
+&General
+Com&pression
+&Encryption
+&Priority:
+&Volume Size:
+&Dictionary:
+&Compression:
+&Recovery Data:
+&Multimedia compression
+&Executable compression
+&Solid compression
+&File password:
+Archive &directory password:
+No limit
+360 KB
+720 KB
+1200 KB
+1440 KB
+2 MB
+5 MB
+10 MB
+30 MB
+100 MB
+120 MB
+250 MB
+650 MB
+700 MB
+32 KB
+64 KB
+128 KB
+256 KB
+512 KB
+1024 KB
+2048 KB
+4096 KB
+Normal
+Good
+High
+Best
+None
+1 Percent
+2 Percent
+3 Percent
+4 Percent
+5 Percent
+1 Percent, external
+2 Percent, external
+3 Percent, external
+4 Percent, external
+5 Percent, external
+SQX archives offer very good compression ratios, with advanced compression settings to choose from.
+Delete Selected Files
+Delete selected files inside the archive
+Test Archive
+Test an archive for corruption
+Repair Archive
+Repair a damaged archive
+Archive Comments
+Edit archive comments
+Operation failed
+seems to be damaged!
+No errors were found in
+You may repair a SQX file that has become damaged.
+To be able to repair SQX archives, please make sure you include recovery information when compressing your SQX archives. You may include the recovery information either inside or outside the SQX file.
+Save &repaired SQX file as:
+Click "OK" when you are ready to begin repair.
+Repairing now, one moment please...
+Save Repaired SQX File As:
+Could not recover
+successfully recovered! The new archive
+contains the undamaged files.
+EXE Maker
+Make an SQX archive self extracting
+You have exceeded your license count. You cannot use this product on more than one computer with a single user license. Please acquire more licenses from your product vendor as needed.
+You are using a license key which has not been provided by the vendor of this product. Please obtain a legitimate license.
+Multiprocessor or Hyperthreading
+will now check the
+web site for updates to this product. Make sure you are connected to the Internet before clicking OK.
+Click Cancel if you do not wish to check for updates at this time.
+This product depends on WinRar for advanced rar archive functionality. WinRar is not associated in any way with
+and is a seperate product.
+The license agreement for WinRar will now be displayed.
+Please read the license agreement carefully. Close the license agreement window when you are finished to continue setup.
+Do you accept the preceding license agrement?
+Advanced rar archive functionality will not be available if you do not accept the license agreement.
+General failure in plugin for archive
+Archive Folders can display your compressed files as regular folders in Windows Explorer. This makes it easier to navigate them and find what you need.
+Please choose how you want your archives to work:
+Like regular folders, which I can browse &directly.
+Like regular files, opening in a seperate &application.
+&Slow Down
+&Speed Up
+Please enter the archive password:
+The archive file was not found
+Illegal path used in a wildcard expression
+The archive cannot be opened: unsupported archive or incorrect password
+An error occured in 7Zip
+Archive handler not installed
+Property error
+Unknown archive type
+Incorrect parameter value
+Empty file specification path
+Bad archive name
+Unable to delete file
+Unable to create temporary file
+Archive may not be updated
+Store Folder Information
+Full
+Relative
+None
+File could not be opened - try again?
+Compressed:
+Cannot create output folder
+Operation cancelled
+Decompression error
+Unable to open self extraction module
+Path compatibility flaw
+File open error
+Unsupported method
+CRC error: obtain a fresh copy of the file and try again
+Data error: check your password and try again
+General archive error
+Automatic file rename failure
+Move and/or delete file error
+Try again?
+Continue?
+GZIP/BZIP2 archives can compress only a single file at a time. Please try again (you may use TAR to merge multiple files into a single file).
+Archive has been tested successfully.
+Tip: If you rename the extension of the archive (the part that ends in .EXE) to the type you suspect the archive actually is (.ZIP or .RAR are most common), you can open it directly without using this tool.

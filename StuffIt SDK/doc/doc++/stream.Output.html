@@ -1,0 +1,157 @@
+<html><head><title>stream::Output</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2> class  stream::Output</font></b><blockquote>
+This abstract class is the superclass of all classes representing an output
+stream of characters
+</blockquote>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.14.10"></a>virtual  <b>~Output</b>() </b>
+ <dd><i>Destructor</i>
+<dt><a href="#DOC.14.1"></a>virtual  void  <b>begin</b>() </b>
+ <dd><i>Begins processing a data stream</i>
+<dt><a href="#DOC.14.2"></a>virtual  void  <b>end</b>() </b>
+ <dd><i>Completes processing a data stream</i>
+<dt><a href="#DOC.14.3"></a>virtual  void  <b>write</b>(char c) </b>
+ <dd><i>Writes a character to the stream</i>
+<dt><a href="#DOC.14.4"></a>virtual  void  <b>write</b>(const char* buf, size_t <!2><a href="stream.Output.html#DOC.14.8">size</a> ) </b>
+ <dd><i>Writes <code>size</code> characters from the specified array of
+characters to the stream</i>
+<dt><a href="#DOC.14.5"></a>virtual  void  <b>fill</b>(<!2><a href="#DOC.8">stream::size</a>  <!2><a href="stream.Output.html#DOC.14.8">size</a>  = 1, char c = '\0') </b>
+ <dd><i>Appends <code>size</code> characters of data to the stream</i>
+<dt><a href="#DOC.14.6"></a>virtual  <!2><a href="#DOC.8">stream::size</a>   <b>copy</b>(<!1><a href="stream.Input.html">stream::Input</a> & in, <!2><a href="#DOC.8">stream::size</a>  <!2><a href="stream.Output.html#DOC.14.8">size</a>  = <!2><a href="#DOC.9">stream::unknown_size</a> ) </b>
+ <dd><i>Copies the specified number of characters from an input stream</i>
+<dt><a href="#DOC.14.7"></a>virtual  <!2><a href="#DOC.8">stream::size</a>   <b>tell</b>() const  </b>
+ <dd><i>Returns the absolute (from the beginning of the stream) position at which
+the next write occurs</i>
+<dt><a href="#DOC.14.8"></a>virtual  <!2><a href="#DOC.8">stream::size</a>   <b>size</b>() const  </b>
+ <dd><i>Returns the size of the stream</i>
+<dt><a href="#DOC.14.9"></a>virtual  void  <b>resize</b>(<!2><a href="#DOC.8">stream::size</a>  <!2><a href="stream.Output.html#DOC.14.8">size</a> ) </b>
+ <dd><i>Resizes the stream</i>
+<dt><a href="#DOC.14.11"></a>virtual  void  <b>flush</b>() </b>
+ <dd><i>Flushes the output stream and forces any buffered output characters
+to be written out</i>
+<dt><a href="#DOC.14.12"></a>virtual  void  <b>close</b>() </b>
+ <dd><i>Closes the stream and releases all resources associated with the stream</i>
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+This abstract class is the superclass of all classes representing an output
+stream of characters.
+
+<p>This class may serve as an abstract interface for objects that provide
+externally driven output via <code>write()</code>.
+
+<p>Applications that need to define a subclass of <code>stream::Output</code>
+must always provide a method that writes one character to the output.
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="~Output">
+<A NAME ="DOC.14.10">
+<DT><TT><b> virtual  ~Output()</b></TT>
+<DD>Destructor
+<dl></DL><P>
+<A NAME="begin">
+<A NAME ="DOC.14.1">
+<DT><TT><b> virtual  void  begin()</b></TT>
+<DD>Begins processing a data stream. May be used to open or reset
+underlying storage or initialize a transform. 
+<dl></DL><P>
+<A NAME="end">
+<A NAME ="DOC.14.2">
+<DT><TT><b> virtual  void  end()</b></TT>
+<DD>Completes processing a data stream. May be used to close or flush
+underlying storage or complete a transform. 
+<dl></DL><P>
+<A NAME="write">
+<A NAME ="DOC.14.3">
+<DT><TT><b> virtual  void  write(char c)</b></TT>
+<DD>Writes a character to the stream. This method blocks until output is
+completed, fails, or an exception is thrown. A subclass must provide an
+implementation of this method.
+
+
+<dl><DT><b>Parameters:</b><DD><b>c</b> -  the character to write<br></DL><P>
+<A NAME="write">
+<A NAME ="DOC.14.4">
+<DT><TT><b> virtual  void  write(const char* buf, size_t <!2><a href="stream.Output.html#DOC.14.8">size</a> )</b></TT>
+<DD>Writes <code>size</code> characters from the specified array of
+characters to the stream.
+
+
+<dl><DT><b>Parameters:</b><DD><b>buf</b> -  the array of characters from which the data is written
+<br><b>size</b> -  the number of characters to write<br></DL><P>
+<A NAME="fill">
+<A NAME ="DOC.14.5">
+<DT><TT><b> virtual  void  fill(<!2><a href="#DOC.8">stream::size</a>  <!2><a href="stream.Output.html#DOC.14.8">size</a>  = 1, char c = '\0')</b></TT>
+<DD>Appends <code>size</code> characters of data to the stream
+<dl><DT><b>Parameters:</b><DD><b>size</b> -  the number of characters to append
+<br><b>c</b> -  the character used to fill the stream<br></DL><P>
+<A NAME="copy">
+<A NAME ="DOC.14.6">
+<DT><TT><b> virtual  <!2><a href="#DOC.8">stream::size</a>   copy(<!1><a href="stream.Input.html">stream::Input</a> & in, <!2><a href="#DOC.8">stream::size</a>  <!2><a href="stream.Output.html#DOC.14.8">size</a>  = <!2><a href="#DOC.9">stream::unknown_size</a> )</b></TT>
+<DD>Copies the specified number of characters from an input stream.
+<code>stream::unknown_size</code>) copies the entire input stream.
+
+<dl><dt><b>Returns:</b><dd>the number of characters copied
+<DT><b>Parameters:</b><DD><b>in</b> -  the input stream to copy from
+<br><b>size</b> -  (optional) the number of characters to copy, or <code>stream::unknown_size</code>
+<br></DL><P>
+<A NAME="tell">
+<A NAME ="DOC.14.7">
+<DT><TT><b> virtual  <!2><a href="#DOC.8">stream::size</a>   tell() const </b></TT>
+<DD>Returns the absolute (from the beginning of the stream) position at which
+the next write occurs.
+
+
+<dl><dt><b>Returns:</b><dd>the absolute position
+</DL><P>
+<A NAME="size">
+<A NAME ="DOC.14.8">
+<DT><TT><b> virtual  <!2><a href="#DOC.8">stream::size</a>   size() const </b></TT>
+<DD>Returns the size of the stream
+<dl><dt><b>Returns:</b><dd>the size of the stream
+</DL><P>
+<A NAME="resize">
+<A NAME ="DOC.14.9">
+<DT><TT><b> virtual  void  resize(<!2><a href="#DOC.8">stream::size</a>  <!2><a href="stream.Output.html#DOC.14.8">size</a> )</b></TT>
+<DD>Resizes the stream. Truncates or extends the container object
+(such as file) of a subclass. The contents of the extended portion are
+undefined. When truncating, this method can truncate the container
+object only at the current stream position; it cannot <i>shorten</i>
+the container object.
+
+
+<dl><dt><b>Throws:</b><dd><b><!1><a href="stream.Exception.html">stream::Exception</a> </b>  if the stream cannot be resized<br><DT><b>Parameters:</b><DD><b>size</b> -  the new size of the stream
+<br></DL><P>
+<A NAME="flush">
+<A NAME ="DOC.14.11">
+<DT><TT><b> virtual  void  flush()</b></TT>
+<DD>Flushes the output stream and forces any buffered output characters
+to be written out
+<dl></DL><P>
+<A NAME="close">
+<A NAME ="DOC.14.12">
+<DT><TT><b> virtual  void  close()</b></TT>
+<DD>Closes the stream and releases all resources associated with the stream
+<dl></DL><P></DL>
+<hr>
+ <DL><DT><b>This class has no subclasses.</b></DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.20 $, $Date: 2001/03/14 21:15:16 $
+</DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

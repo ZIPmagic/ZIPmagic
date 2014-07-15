@@ -1,0 +1,51 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = mTVEx.dll mAceDelete.exe mAceLock.exe mAceProtect.exe mAceTest.exe \
+  mcace.exe mcrar.exe mRarDelete.exe mRarLock.exe mRarProtect.exe mRarTest.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+mTVEx.dll: mTVEx.dpr
+  $(DCC)
+
+mAceDelete.exe: mAceDelete.dpr
+  $(DCC)
+
+mAceLock.exe: mAceLock.dpr
+  $(DCC)
+
+mAceProtect.exe: mAceProtect.dpr
+  $(DCC)
+
+mAceTest.exe: mAceTest.dpr
+  $(DCC)
+
+mcace.exe: mcace.dpr
+  $(DCC)
+
+mcrar.exe: mcrar.dpr
+  $(DCC)
+
+mRarDelete.exe: mRarDelete.dpr
+  $(DCC)
+
+mRarLock.exe: mRarLock.dpr
+  $(DCC)
+
+mRarProtect.exe: mRarProtect.dpr
+  $(DCC)
+
+mRarTest.exe: mRarTest.dpr
+  $(DCC)
+
+

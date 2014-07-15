@@ -1,0 +1,10 @@
+# Microsoft Developer Studio Generated Dependency File, included by rr.mak
+
+..\..\..\src\sample\rr\rr.cpp : \
+	"..\..\..\src\stuffit5\Archive.h"\
+	"..\..\..\src\stuffit5\common.h"\
+	"..\..\..\src\un\config.h"\
+	"..\..\..\src\un\exception.h"\
+	"..\..\..\src\un\property.h"\
+	"..\..\..\src\un\warnings.h"\
+	

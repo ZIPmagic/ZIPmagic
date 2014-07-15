@@ -1,0 +1,137 @@
+<html><body>
+
+<h3>Samples</h3>
+
+<p>Sample code that demonstrates simple and detailed use of the StuffIt Engine
+SDK features is located in <a href="../src/app/"><b>src/app/</b></a> and
+<a href="../src/sample/"><b>src/sample/</b></a>.
+
+<p>The following sample Visual C++ 6.0 projects are provided:
+
+<p><table width=100% bgcolor=#ffffff cellpadding=2 cellspacing=1 border=0>
+
+<tr bgcolor=#c0c0c0>
+<td valign=top><a href="../src/app/stuff/"><b>stuff</b></a></td>
+
+<td>A console application that creates multiple archive formats and provides
+event callback trace and multiple options. Written in C++ and uses the C++
+StuffIt Engine interface. Shares option classes with <b>unstuff</b>;
+see the <a href="../src/app/option/">src/app/option/</a>.
+
+<p>See also: the <a href="stuff.html"><b>reference document</b></a>.</td></tr>
+
+<tr bgcolor=#c0c0c0>
+<td valign=top><a href="../src/app/unstuff/"><b>unstuff</b></a></td>
+
+<td>A console application that expands multiple archive formats and provides
+event callback trace and multiple options. Written in C++ and uses the C++
+StuffIt Engine interface. Shares option classes with <b>unstuff</b>;
+see the <a href="../src/app/option/">src/app/option/</a>.
+
+<p>See also: the <a href="unstuff.html"><b>reference document</b></a>.</td></tr>
+
+<tr bgcolor=#c0c0c0>
+<td valign=top><a href="../src/sample/expand1/"><b>expand1</b></td>
+
+<td>A simple console application that expands multiple archive formats. No
+options. Written in C++ and uses the C++ StuffIt Engine interface.</td></tr>
+
+<tr bgcolor=#c0c0c0>
+<td valign=top><a href="../src/sample/expand2/"><b>expand2</b></a></td>
+
+<td>A simple console application that expands multiple archive formats. Same
+functionality as <b>expand1</b>. No options. Written in C and uses the C StuffIt
+Engine interface. (Note that we do not recommend using the C interface; the C++
+interface should be favored in new applications using the SDK.)</td></tr>
+
+<tr bgcolor=#c0c0c0>
+<td valign=top><a href="../src/sample/stuff1/"><b>stuff1</b></a></td>
+
+<td>A console application that creates StuffIt 5 archives. No options. Written
+in C++ and uses the C++ StuffIt Engine interface.</td></tr>
+
+<tr bgcolor=#c0c0c0>
+<td valign=top><a href="../src/sample/stuff2/"><b>stuff2</b></a></td>
+
+<td>A console application that creates StuffIt 5 archives. Same functionality
+as <b>stuff1</b>. No options. Written in C and uses the C StuffIt Engine
+interface.  (Note that we do not recommend using the C interface; the C++
+interface should be favored in new applications using the SDK.)</td></tr>
+
+<tr bgcolor=#c0c0c0>
+<td valign=top><a href="../src/sample/zip/"><b>zip</b></a></td>
+
+<td>A console application that creates Zip archives. Option to adjust
+compression level. Uses one event callback. Written in C++ and uses the C++
+StuffIt Engine interface.</td></tr>
+
+</table>
+
+<p>The Visual C++ 6.0 project files are located in <a href="../win32/">win32/</a>.
+They link with the static SDK library, <b>stuffit5.engine.lib</b>, or the SDK export
+library, <b>stuffit5.engine-5.1.lib</b>, located in <a href="../win32/bin/">win32/bin/</a>.
+The export library contains exported symbols of the dynamic SDK library,
+<b>stuffit5.engine-5.1.dll</b>, also located in <a href="../win32/bin/">win32/bin/</a>.
+
+<p>The <b>samples.dsw</b> workspace file contains all sample projects.
+
+<h4>Notes</h4>
+
+<ol><li>The following build configurations are defined in all sample projects:
+
+<ul><li>Win32 Release,
+<li>Win32 Debug,
+<li>Win32 Release Static, and
+<li>Win32 Debug Static.</ul>
+
+All build configurations use the same multithreaded dynamic (DLL) C and C++
+runtime (see <b>Project/Settings...</b> menu, <b>C/C++</b> tab, <b>Code Generation</b>
+category, <b>Use run-time library</b> setting).
+
+<li>Projects are configured to generate executable files in <b>win32/bin/</b> and <b>win32/D/</b>,
+for release and debug configurations dynamically linked with the StuffIt Engine; and
+<b>win32/binS/</b> and <b>win32/binDS/</b>, for configurations statically linked with the StuffIt
+Engine. Intermediate files are placed in further <i>sub</i>directories of each of these four
+directories. The names of the subdirectories correspond to the names of the sample projects; for
+example, internediate files of the dynamically linked release configuration of the <b>expand1</b>
+project are going to be in <b>win32/bin/expand1</b>.
+
+<li>All projects link with either the static StuffIt Engine library or with the
+dynamic library's export library; both of which are located in <a
+href="../win32/bin/">win32/bin/</a>.
+
+<li>Statically linked projects need a link option adjustment for debug builds. In the
+<b>Project/Settings...</b> menu, <b>Link</b> tab, <b>Input</b> category, <b>Ignore libraries</b>
+must list <b>libcmt.lib</b> to avoid collisions between release and debug versions of runtime
+functions that would otherwise occur because a release build of a library is being linked with a
+debug build of an executable.
+
+<li>All linked projects must be linked with the multithreaded dynamic (DLL) runtime library. These
+projects are already configured appropriately: in the <b>Project/Settings...</b> menu, <b>C/C++</b>
+tab, <b>Code Generation</b> category, <b>Use run-time library</b> must be <b>Multithreaded</b> in
+release builds and <b>Debug Multithreaded</b> in debug builds. Visual C++ default code generation is
+single-threaded, so you may have to do the equivalent adjustment in new projects that link with the
+static SDK library.
+
+<li>Note that all headers located in <a href="../src/">src/</a> and its subdirectories are included
+with their path names relative to <b>src/</b>; for example,
+
+<code><pre>
+    #include "stuffit5/event/ReaderEventHandler.h"
+</pre></code>
+
+The include path in the <b>Project/Settings...</b> menu, <b>C/C++</b> tab, <b>Preprocessor</b>
+category, <b>Additional include directories</b> contains only <b>../src</b>.
+
+</ol>
+
+<hr>
+
+<table><tr valign=top><td><img src="images/aladdin-logo.gif"></td>
+<td>Copyright &copy;1995-2001 <a href="http://www.aladdinsys.com/">Aladdin Systems, Inc.</a>
+<br>All Rights reserved.</font></td></tr></table>
+
+<p>$Id: samples.html,v 1.3 2001/03/16 01:13:14 serge Exp $
+
+</body></html>
+

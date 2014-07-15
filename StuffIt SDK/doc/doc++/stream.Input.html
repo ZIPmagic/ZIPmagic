@@ -1,0 +1,146 @@
+<html><head><title>stream::Input</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2> class  stream::Input</font></b><blockquote>
+This abstract class is the superclass of all classes representing an input
+stream of characters
+</blockquote>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.13.9"></a>virtual  <b>~Input</b>() </b>
+ <dd><i>Destructor</i>
+<dt><a href="#DOC.13.1"></a>virtual  void  <b>begin</b>() </b>
+ <dd><i>Begins processing a data stream</i>
+<dt><a href="#DOC.13.2"></a>virtual  void  <b>end</b>() </b>
+ <dd><i>Completes processing a data stream</i>
+<dt><a href="#DOC.13.3"></a>virtual  int  <b>read</b>() </b>
+ <dd><i>Reads the next character of data from the stream</i>
+<dt><a href="#DOC.13.4"></a>virtual  size_t  <b>read</b>(char* buf, size_t <!2><a href="stream.Input.html#DOC.13.8">size</a> ) </b>
+ <dd><i>Reads up to <code>size</code> characters from the stream into an array of
+characters</i>
+<dt><a href="#DOC.13.5"></a>virtual  <!2><a href="#DOC.8">stream::size</a>   <b>skip</b>(<!2><a href="#DOC.8">stream::size</a>  <!2><a href="stream.Input.html#DOC.13.8">size</a>  = 1) </b>
+ <dd><i>Skips over and discards <code>size</code> characters of data from the
+stream</i>
+<dt><a href="#DOC.13.6"></a>virtual  <!2><a href="#DOC.8">stream::size</a>   <b>copy</b>(<!1><a href="stream.Output.html">stream::Output</a> & out, <!2><a href="#DOC.8">stream::size</a>  <!2><a href="stream.Input.html#DOC.13.8">size</a>  = <!2><a href="#DOC.9">stream::unknown_size</a> ) </b>
+ <dd><i>Copies the specified number of characters to an output stream</i>
+<dt><a href="#DOC.13.7"></a>virtual  <!2><a href="#DOC.8">stream::size</a>   <b>tell</b>() const  </b>
+ <dd><i>Returns the absolute (from the beginning of the stream) position
+at which the next read occurs</i>
+<dt><a href="#DOC.13.8"></a>virtual  <!2><a href="#DOC.8">stream::size</a>   <b>size</b>() const  </b>
+ <dd><i>Returns the size of the stream, or <code>stream::unknown_size</code> when
+size is unknown</i>
+<dt><a href="#DOC.13.10"></a>virtual  void  <b>close</b>() </b>
+ <dd><i>Closes the stream and releases all resources associated with the stream</i>
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+This abstract class is the superclass of all classes representing an input
+stream of characters.
+
+<p>This class may serve as an abstract interface for objects that provide
+externally driven input via <code>read()</code>.
+
+<p>Applications that need to define a subclass of <code>stream::Input</code>
+must always provide a method that returns the next character of input.
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="~Input">
+<A NAME ="DOC.13.9">
+<DT><TT><b> virtual  ~Input()</b></TT>
+<DD>Destructor
+<dl></DL><P>
+<A NAME="begin">
+<A NAME ="DOC.13.1">
+<DT><TT><b> virtual  void  begin()</b></TT>
+<DD>Begins processing a data stream. May be used to open or reset
+underlying storage or initialize a transform. 
+<dl></DL><P>
+<A NAME="end">
+<A NAME ="DOC.13.2">
+<DT><TT><b> virtual  void  end()</b></TT>
+<DD>Completes processing a data stream. May be used to close or flush
+underlying storage or complete a transform. 
+<dl></DL><P>
+<A NAME="read">
+<A NAME ="DOC.13.3">
+<DT><TT><b> virtual  int  read()</b></TT>
+<DD>Reads the next character of data from the stream. Returns
+<code>stream::eof</code> at the end of the stream.
+
+<dl><dt><b>Returns:</b><dd>the character read, or <code>stream::eof</code>
+</DL><P>
+<A NAME="read">
+<A NAME ="DOC.13.4">
+<DT><TT><b> virtual  size_t  read(char* buf, size_t <!2><a href="stream.Input.html#DOC.13.8">size</a> )</b></TT>
+<DD>Reads up to <code>size</code> characters from the stream into an array of
+characters. Returns the number of characters read which can be less than <code>size</code>
+at the end of the stream.
+
+
+<dl><dt><b>Returns:</b><dd>the number of characters read into the array
+<DT><b>Parameters:</b><DD><b>buf</b> -  array of characters into which the data is read
+<br><b>size</b> -  maximum number of characters to read
+<br></DL><P>
+<A NAME="skip">
+<A NAME ="DOC.13.5">
+<DT><TT><b> virtual  <!2><a href="#DOC.8">stream::size</a>   skip(<!2><a href="#DOC.8">stream::size</a>  <!2><a href="stream.Input.html#DOC.13.8">size</a>  = 1)</b></TT>
+<DD>Skips over and discards <code>size</code> characters of data from the
+stream. This method may skip over a smaller number of characters, possibly
+<code>0</code>. The actual number of characters skipped is returned.
+
+<p>This method reads data into an array until <code>size</code> characters have
+been read or the end of the stream has been reached. Subclasses are
+encouraged to provide a more efficient implementation of this method.
+
+
+<dl><dt><b>Returns:</b><dd>the actual number of characters skipped
+<DT><b>Parameters:</b><DD><b>size</b> -  the number of characters to skip
+<br></DL><P>
+<A NAME="copy">
+<A NAME ="DOC.13.6">
+<DT><TT><b> virtual  <!2><a href="#DOC.8">stream::size</a>   copy(<!1><a href="stream.Output.html">stream::Output</a> & out, <!2><a href="#DOC.8">stream::size</a>  <!2><a href="stream.Input.html#DOC.13.8">size</a>  = <!2><a href="#DOC.9">stream::unknown_size</a> )</b></TT>
+<DD>Copies the specified number of characters to an output stream.
+<code>stream::unknown_size</code>) copies the entire stream.
+
+<dl><dt><b>Returns:</b><dd>the number of characters copied
+<DT><b>Parameters:</b><DD><b>out</b> -  output stream to copy to
+<br><b>size</b> -  (optional) the number of characters to copy, or <code>stream::unknown_size</code>
+<br></DL><P>
+<A NAME="tell">
+<A NAME ="DOC.13.7">
+<DT><TT><b> virtual  <!2><a href="#DOC.8">stream::size</a>   tell() const </b></TT>
+<DD>Returns the absolute (from the beginning of the stream) position
+at which the next read occurs
+<dl><dt><b>Returns:</b><dd>the absolute position
+</DL><P>
+<A NAME="size">
+<A NAME ="DOC.13.8">
+<DT><TT><b> virtual  <!2><a href="#DOC.8">stream::size</a>   size() const </b></TT>
+<DD>Returns the size of the stream, or <code>stream::unknown_size</code> when
+size is unknown
+<dl><dt><b>Returns:</b><dd>the size of the stream
+</DL><P>
+<A NAME="close">
+<A NAME ="DOC.13.10">
+<DT><TT><b> virtual  void  close()</b></TT>
+<DD>Closes the stream and releases all resources associated with the stream
+<dl></DL><P></DL>
+<hr>
+ <DL><DT><b>This class has no subclasses.</b></DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.17 $, $Date: 2001/03/14 21:15:16 $
+</DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

@@ -1,0 +1,122 @@
+<html><head><title>stuffit5::FolderInfo</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2> class  stuffit5::FolderInfo</font></b><blockquote>
+Folder information
+</blockquote>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Fields</h5><DD><dt><a href="#DOC.93.1"></a><!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   <b>name</b> </b>
+ <dd><i>Current <i>absolute</i> path name of the folder being processed</i>
+<dt><a href="#DOC.93.2"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;std::wstring&gt;   <b>unicodeName</b> </b>
+ <dd><i>Current Unicode <i>folder</i> name (not the <i>path</i> name) of the
+folder being processed</i>
+</DL><DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.93.3"></a> <b>FolderInfo</b>() </b>
+ <dd><i>Default constructor</i>
+<dt><a href="#DOC.93.4"></a>void  <b>reset</b>() </b>
+ <dd><i>Resets all properties, marks all optional properties as unavailable</i>
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+Folder information.
+
+<p>Each <code>stuffit5::Reader</code> and <code>stuffit5::Writer</code> has one
+instance of this class that stores information about each folder being read or written.
+
+<p>This class allows access to folder <i>properties</i> through accessor and mutator
+functions. Some of the properties are optional.
+
+<p>Folder properties are available during archive decoding and creation. They are
+available at the time of <code>FolderInfo</code>, <code>FolderDecodeBegin</code> and
+<code>FolderEncodeBegin</code> event callbacks.
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="FolderInfo">
+<A NAME ="DOC.93.3">
+<DT><TT><b>  FolderInfo()</b></TT>
+<DD>Default constructor
+<dl></DL><P>
+<A NAME="name">
+<A NAME ="DOC.93.1">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   name</b></TT>
+<DD>Current <i>absolute</i> path name of the folder being processed.
+
+<p><b>In a reader:</b> The accessor returns (during scan and decoding
+phases) the absolute path name of the output folder being scanned or
+decoded by the reader, at the time of the call. Undefined when no
+archive scanning or decoding is taking place.
+
+<p>The mutator assigns the path name of the folder that is being decoded
+by the reader; it sets the final path name of the folder. The path name
+may be absolute or relative to the current directory. This can be used
+to control the name of each output folder. It has effect only during the
+decoding phase and only if it used before the output folder is created.
+For example, it can be used in the <code>FolderDecodeBegin</code> event
+callback to rename output folders, or to redirect them to a location
+different from the destination folder the reader has been assigned.
+
+<p><b>In a writer:</b> The accessor returns, during the archive creation
+phase, the path name of the input folder being added to the archive by
+the writer. Undefined when no archive creation is taking place.
+
+<p>The mutator assigns the new path name of the folder that is being
+added to the archive by the writer. The path name may be absolute or
+relative. If the input folder is not open yet, the last chance to change
+its name or location (i.e., replace the "proposed" folder and add a
+different file) is during the <code>FolderEncodeBegin</code> event
+callback.
+<dl></DL><P>
+<A NAME="unicodeName">
+<A NAME ="DOC.93.2">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;std::wstring&gt;   unicodeName</b></TT>
+<DD>Current Unicode <i>folder</i> name (not the <i>path</i> name) of the
+folder being processed.
+
+<p><b>In a reader:</b> The accessor returns (during the scan and the
+decoding phases) the Unicode name of the output folder being scanned or
+decoded by the reader, at the time of the call. Undefined when no
+archive scanning or decoding is taking place. Unicode folder names are
+available only in StuffIt5 archives that store Unicode names.
+
+<p>The mutator assigns the name of the output folder. It has effect only
+during the decoding phase and only if it used before the output folder is
+open. For example, it can be used in the <code>FolderDecodeBegin</code>
+event callback to rename output folders, or to redirect them to a location
+different from the destination folder the reader has been assigned.
+
+<p><b>In a writer:</b> The mutator assigns the Unicode folder name. The
+name is not a complete path name, but just the folder name to be stored in
+the archive. The name can be changed during the
+<code>FolderEncodeBegin</code> event callback.
+
+<p>The complete path name is available through the <code>name()</code>
+property, and contains the UTF8-encoded folder name from the archive; the
+folder name part may be replaced (through the <code>name</code> mutator by
+a name acceptable to the target system and based on the Unicode folder
+name.
+<dl></DL><P>
+<A NAME="reset">
+<A NAME ="DOC.93.4">
+<DT><TT><b> void  reset()</b></TT>
+<DD>Resets all properties, marks all optional properties as unavailable
+<dl></DL><P></DL>
+<hr>
+ <DL><DT><b>This class has no subclasses.</b></DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.10.2.1 $, $Date: 2001/07/05 23:32:33 $
+</DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

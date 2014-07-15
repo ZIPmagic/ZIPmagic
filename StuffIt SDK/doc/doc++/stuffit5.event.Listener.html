@@ -1,0 +1,96 @@
+<html><head><title>stuffit5::event::Listener</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2> class  stuffit5::event::Listener</font></b><blockquote>
+Event handler base class
+</blockquote>
+<hr>
+<h4>Inheritance:</h4>
+<applet code="ClassDiagram.class" width=600 height=821>
+<param name=classes value="Cstuffit5::event::Listener,Mstuffit5.event.Listener.html,Cstuffit5::event::ProgressSizeMoveListener,Mstuffit5.event.ProgressSizeMoveListener.html,Cstuffit5::event::ProgressSizeEndListener,Mstuffit5.event.ProgressSizeEndListener.html,Cstuffit5::event::ProgressSizeBeginListener,Mstuffit5.event.ProgressSizeBeginListener.html,Cstuffit5::event::ProgressScanStepListener,Mstuffit5.event.ProgressScanStepListener.html,Cstuffit5::event::ProgressScanEndListener,Mstuffit5.event.ProgressScanEndListener.html,Cstuffit5::event::ProgressScanBeginListener,Mstuffit5.event.ProgressScanBeginListener.html,Cstuffit5::event::ProgressFilesMoveListener,Mstuffit5.event.ProgressFilesMoveListener.html,Cstuffit5::event::ProgressFilesEndListener,Mstuffit5.event.ProgressFilesEndListener.html,Cstuffit5::event::ProgressFilesBeginListener,Mstuffit5.event.ProgressFilesBeginListener.html,Cstuffit5::event::FolderScanStepListener,Mstuffit5.event.FolderScanStepListener.html,Cstuffit5::event::FolderInfoListener,Mstuffit5.event.FolderInfoListener.html,Cstuffit5::event::FolderEncodeEndListener,Mstuffit5.event.FolderEncodeEndListener.html,Cstuffit5::event::FolderEncodeBeginListener,Mstuffit5.event.FolderEncodeBeginListener.html,Cstuffit5::event::FolderDecodeEndListener,Mstuffit5.event.FolderDecodeEndListener.html,Cstuffit5::event::FolderDecodeBeginListener,Mstuffit5.event.FolderDecodeBeginListener.html,Cstuffit5::event::FileScanStepListener,Mstuffit5.event.FileScanStepListener.html,Cstuffit5::event::FileNewNameListener,Mstuffit5.event.FileNewNameListener.html,Cstuffit5::event::FileInfoListener,Mstuffit5.event.FileInfoListener.html,Cstuffit5::event::FileEncodeEndListener,Mstuffit5.event.FileEncodeEndListener.html,Cstuffit5::event::FileEncodeBeginListener,Mstuffit5.event.FileEncodeBeginListener.html,Cstuffit5::event::FileDeleteListener,Mstuffit5.event.FileDeleteListener.html,Cstuffit5::event::FileDecodeEndListener,Mstuffit5.event.FileDecodeEndListener.html,Cstuffit5::event::FileDecodeBeginListener,Mstuffit5.event.FileDecodeBeginListener.html,Cstuffit5::event::FileChangedNameListener,Mstuffit5.event.FileChangedNameListener.html,Cstuffit5::event::ErrorListener,Mstuffit5.event.ErrorListener.html,Cstuffit5::event::ArchiveSizeListener,Mstuffit5.event.ArchiveSizeListener.html,Cstuffit5::event::ArchiveNextListener,Mstuffit5.event.ArchiveNextListener.html,Cstuffit5::event::ArchiveInfoListener,Mstuffit5.event.ArchiveInfoListener.html,Cstuffit5::event::ArchiveDecodeEndListener,Mstuffit5.event.ArchiveDecodeEndListener.html,Cstuffit5::event::ArchiveDecodeBeginListener,Mstuffit5.event.ArchiveDecodeBeginListener.html,Cstuffit5::event::ArchiveCreateEndListener,Mstuffit5.event.ArchiveCreateEndListener.html,Cstuffit5::event::ArchiveCreateBeginListener,Mstuffit5.event.ArchiveCreateBeginListener.html,Cstuffit5::event::ArchiveChangedNameListener,Mstuffit5.event.ArchiveChangedNameListener.html">
+<param name=before value="M,M|_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,Mr_">
+<param name=after value="M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M">
+<param name=indent value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+<param name=arrowdir value="down">
+</applet>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Fields</h5><DD><dt><a href="#DOC.453.2"></a><!1><a href="un.property.html">un::property</a>  &lt;bool&gt;   <b>orphan</b> </b>
+ <dd><i><code>true</code> if the listener is not "owned" by anybody and must be
+deleted when removed from the list of listeners</i>
+</DL><DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.453.1"></a>virtual  <b>~Listener</b>() </b>
+ <dd><i>Destructor</i>
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+Event handler base class.
+
+<p>This class is a base class of engine event handlers that process event
+callbacks through their virtual member functions.
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="~Listener">
+<A NAME ="DOC.453.1">
+<DT><TT><b> virtual  ~Listener()</b></TT>
+<DD>Destructor
+<dl></DL><P>
+<A NAME="orphan">
+<A NAME ="DOC.453.2">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;bool&gt;   orphan</b></TT>
+<DD><code>true</code> if the listener is not "owned" by anybody and must be
+deleted when removed from the list of listeners
+<dl></DL><P></DL>
+<hr>
+<dl><dt><b>Subclasses:
+</b><dd><a href="stuffit5.event.ProgressSizeMoveListener.html">stuffit5::event::ProgressSizeMoveListener</a><br>
+<a href="stuffit5.event.ProgressSizeEndListener.html">stuffit5::event::ProgressSizeEndListener</a><br>
+<a href="stuffit5.event.ProgressSizeBeginListener.html">stuffit5::event::ProgressSizeBeginListener</a><br>
+<a href="stuffit5.event.ProgressScanStepListener.html">stuffit5::event::ProgressScanStepListener</a><br>
+<a href="stuffit5.event.ProgressScanEndListener.html">stuffit5::event::ProgressScanEndListener</a><br>
+<a href="stuffit5.event.ProgressScanBeginListener.html">stuffit5::event::ProgressScanBeginListener</a><br>
+<a href="stuffit5.event.ProgressFilesMoveListener.html">stuffit5::event::ProgressFilesMoveListener</a><br>
+<a href="stuffit5.event.ProgressFilesEndListener.html">stuffit5::event::ProgressFilesEndListener</a><br>
+<a href="stuffit5.event.ProgressFilesBeginListener.html">stuffit5::event::ProgressFilesBeginListener</a><br>
+<a href="stuffit5.event.FolderScanStepListener.html">stuffit5::event::FolderScanStepListener</a><br>
+<a href="stuffit5.event.FolderInfoListener.html">stuffit5::event::FolderInfoListener</a><br>
+<a href="stuffit5.event.FolderEncodeEndListener.html">stuffit5::event::FolderEncodeEndListener</a><br>
+<a href="stuffit5.event.FolderEncodeBeginListener.html">stuffit5::event::FolderEncodeBeginListener</a><br>
+<a href="stuffit5.event.FolderDecodeEndListener.html">stuffit5::event::FolderDecodeEndListener</a><br>
+<a href="stuffit5.event.FolderDecodeBeginListener.html">stuffit5::event::FolderDecodeBeginListener</a><br>
+<a href="stuffit5.event.FileScanStepListener.html">stuffit5::event::FileScanStepListener</a><br>
+<a href="stuffit5.event.FileNewNameListener.html">stuffit5::event::FileNewNameListener</a><br>
+<a href="stuffit5.event.FileInfoListener.html">stuffit5::event::FileInfoListener</a><br>
+<a href="stuffit5.event.FileEncodeEndListener.html">stuffit5::event::FileEncodeEndListener</a><br>
+<a href="stuffit5.event.FileEncodeBeginListener.html">stuffit5::event::FileEncodeBeginListener</a><br>
+<a href="stuffit5.event.FileDeleteListener.html">stuffit5::event::FileDeleteListener</a><br>
+<a href="stuffit5.event.FileDecodeEndListener.html">stuffit5::event::FileDecodeEndListener</a><br>
+<a href="stuffit5.event.FileDecodeBeginListener.html">stuffit5::event::FileDecodeBeginListener</a><br>
+<a href="stuffit5.event.FileChangedNameListener.html">stuffit5::event::FileChangedNameListener</a><br>
+<a href="stuffit5.event.ErrorListener.html">stuffit5::event::ErrorListener</a><br>
+<a href="stuffit5.event.ArchiveSizeListener.html">stuffit5::event::ArchiveSizeListener</a><br>
+<a href="stuffit5.event.ArchiveNextListener.html">stuffit5::event::ArchiveNextListener</a><br>
+<a href="stuffit5.event.ArchiveInfoListener.html">stuffit5::event::ArchiveInfoListener</a><br>
+<a href="stuffit5.event.ArchiveDecodeEndListener.html">stuffit5::event::ArchiveDecodeEndListener</a><br>
+<a href="stuffit5.event.ArchiveDecodeBeginListener.html">stuffit5::event::ArchiveDecodeBeginListener</a><br>
+<a href="stuffit5.event.ArchiveCreateEndListener.html">stuffit5::event::ArchiveCreateEndListener</a><br>
+<a href="stuffit5.event.ArchiveCreateBeginListener.html">stuffit5::event::ArchiveCreateBeginListener</a><br>
+<a href="stuffit5.event.ArchiveChangedNameListener.html">stuffit5::event::ArchiveChangedNameListener</a><br>
+</DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.2.2.1 $, $Date: 2001/07/05 23:32:37 $
+</DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

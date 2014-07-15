@@ -1,0 +1,143 @@
+<html><head><title>un::auto_ptr</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2>template &lt;typename T&gt;   class  un::auto_ptr</font></b><blockquote>
+A smart pointer class that stores a pointer to a dynamically allocated
+object
+</blockquote>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Fields</h5><DD><dt><a href="#DOC.495.8"></a>typedef  T  <b>element_type</b> </b>
+ <dd><i>Provides the type of the stored pointer</i>
+</DL><DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.495.1"></a>explicit  <b>auto_ptr</b>(T* p = 0) </b>
+ <dd><i>Default constructor</i>
+<dt><a href="#DOC.495.2"></a>explicit  <b>auto_ptr</b>(T& r) </b>
+ <dd><i>Construct from a reference instead of a pointer, as a convenience to callers
+that deal in references</i>
+<dt><a href="#DOC.495.3"></a> <b>~auto_ptr</b>() </b>
+ <dd><i>Destructor</i>
+<dt><a href="#DOC.495.4"></a>void  <b>reset</b>(T* p = 0) </b>
+ <dd><i>Deletes the object and stores a new pointer</i>
+<dt><a href="#DOC.495.5"></a>T&  <b>operator*</b>() const  </b>
+ <dd><i>Returns a reference to the object</i>
+<dt><a href="#DOC.495.6"></a>T*  <b>operator-&gt;</b>() const  </b>
+ <dd><i>Returns a pointer to the object</i>
+<dt><a href="#DOC.495.7"></a>T*  <b>operator)</b>() const  </b>
+ <dd><i>Returns a pointer to the object</i>
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+A smart pointer class that stores a pointer to a dynamically allocated
+object. (Dynamically allocated objects are those allocated with the C++ scalar
+<code>new</code>). This class deletes the object that the pointer points to, in
+the destructor or explicitly with <code>reset()</code>.
+
+<p>This class uses scalar C++ <code>delete</code> and therefore will not work
+correctly with arrays. <code>un::auto_array</code> should be used for
+pointers to arrays.
+
+<p>This class is a simple solution for pointers that do not have shared ownership.
+It has a private copy constructor and a private assignment operator, which disallow
+transfer of ownership of the stored pointer. <code>un::counted_ptr</code>
+should be used for shared ownership pointers.
+
+<p>This class should not have any time or space overhead over built-in pointers.
+
+<p>This class is a template parameterized on <code>T</code>, the type of the
+object it points to. To work correctly, <code>T</code>'s destructor must not
+throw exceptions.
+
+<p>This class is similar to <code>std::auto_ptr</code> but does not implement
+ownership and transfer of ownership semantics.
+
+<p><b>References:</b>
+
+<ul><li>David Dodgson, <i>Evolution of the C++ Standard Library</i>, ACM SIGPLAN
+Notices, v. 31, n. 12 (December 1996), p. 22-26.
+
+<li>T. A. Cargill, <i>Localized Ownership: Managing Dynamic Objects in C++</i>,
+in Pattern Languages of Program Design - 2 / edited by J. Vlissides, J. O.
+Coplien, and N. Kerth, Reading, MA : Addison-Wesley, 1996, p. 518.
+
+<li>Greg Colvin &lt;gregor@@netcom.com&gt;, <i>Specifications for auto_ptr and
+counted_ptr</i>, posted to comp.std.c++ on Thursday, May 25, 1995.
+
+<li>C++ Boost Smart Pointer Library by Greg Colvin and Beman Dawes.
+http://www.boost.org.</ul>
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="element_type">
+<A NAME ="DOC.495.8">
+<DT><TT><b> typedef  T  element_type</b></TT>
+<DD>Provides the type of the stored pointer
+<dl></DL><P>
+<A NAME="auto_ptr">
+<A NAME ="DOC.495.1">
+<DT><TT><b> explicit  auto_ptr(T* p = 0)</b></TT>
+<DD>Default constructor. Creates a <code>un::auto_ptr</code>, storing a
+copy of <code>p</code>, which must be a pointer to a dynamically
+allocated object of type <code>T</code> or a 0. 
+<dl></DL><P>
+<A NAME="auto_ptr">
+<A NAME ="DOC.495.2">
+<DT><TT><b> explicit  auto_ptr(T& r)</b></TT>
+<DD>Construct from a reference instead of a pointer, as a convenience to callers
+that deal in references. The caller should avoid storing and using the original
+reference - which becomes invalid after delete. 
+<dl></DL><P>
+<A NAME="~auto_ptr">
+<A NAME ="DOC.495.3">
+<DT><TT><b>  ~auto_ptr()</b></TT>
+<DD>Destructor. Deletes the object pointed to by the stored pointer.
+Note that the C++ scalar <code>delete</code> on a pointer with a value
+of 0 is harmless. 
+<dl></DL><P>
+<A NAME="reset">
+<A NAME ="DOC.495.4">
+<DT><TT><b> void  reset(T* p = 0)</b></TT>
+<DD>Deletes the object and stores a new pointer. If <code>p</code> is
+not equal to the stored pointer, deletes the object pointed to by the
+stored pointer and then stores a copy of <code>p</code>, which must be a
+pointer to a dynamically allocated object or a 0.
+
+<dl><DT><b>Parameters:</b><DD><b>p</b> -  the new value of the pointer<br></DL><P>
+<A NAME="operator*">
+<A NAME ="DOC.495.5">
+<DT><TT><b> T&  operator*() const </b></TT>
+<DD>Returns a reference to the object
+<dl><dt><b>Returns:</b><dd>a reference to the object that the stored pointer points to
+</DL><P>
+<A NAME="operator->">
+<A NAME ="DOC.495.6">
+<DT><TT><b> T*  operator-&gt;() const </b></TT>
+<DD>Returns a pointer to the object
+<dl><dt><b>Returns:</b><dd>a pointer to the object that the stored pointer points to
+</DL><P>
+<A NAME="operator)">
+<A NAME ="DOC.495.7">
+<DT><TT><b> T*  operator)() const </b></TT>
+<DD>Returns a pointer to the object
+<dl><dt><b>Returns:</b><dd>a pointer to the object that the stored pointer points to
+</DL><P></DL>
+<hr>
+ <DL><DT><b>This class has no subclasses.</b></DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.3 $, $Date: 2001/03/06 01:37:25 $
+
+<DT><b>See Also:</b><DD>un::counted_ptr
+<br><!1><a href="un.auto_array.html">un::auto_array</a> <br></DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

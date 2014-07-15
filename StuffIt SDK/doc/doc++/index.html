@@ -1,0 +1,782 @@
+<html><head><title>StuffIt Engine SDK(tm) Reference</title></head><body>
+
+<table><tr valign=top>
+
+<td><img src="images/engine-logo.gif"></td>
+
+<td><h2>StuffIt Engine SDK<sup>tm</sup> Reference</h2>
+<p><b>Version: 5.1</b>
+<table><tr valign=top><td><img src="images/aladdin-logo.gif"></td>
+<td>Copyright &copy;1995-2001 <a href="http://www.aladdinsys.com">Aladdin Systems, Inc.</a>
+<br>All Rights reserved.</font></td></tr></table>
+</td>
+
+</tr></table>
+
+
+<h3>Table of Contents</h3>
+<h4>Classes</h4>
+<UL>
+<li><a href="algorithm.Key.html">algorithm::<b>Key</b></a>
+Stores a cryptographic key
+<li><a href="algorithm.Password.html">algorithm::<b>Password</b></a>
+Stores a password
+<li><a href="algorithm.RandomizedKey.html">algorithm::<b>RandomizedKey</b></a>
+Stores a randomized cryptographic key
+<li><a href="format.data.OSType.html">format::data::<b>OSType</b></a>
+Macintosh <code>OSType</code>
+<li><a href="format.Exception.html">format::<b>Exception</b></a>
+A format exception
+<li><a href="format.Header.html">format::<b>Header</b></a>
+
+<li><a href="io.Exception.html">io::<b>Exception</b></a>
+Exception class used to transmit error information from I/O classes
+<li><a href="stream.Exception.html">stream::<b>Exception</b></a>
+A stream exception
+<li><a href="stream.Input.html">stream::<b>Input</b></a>
+This abstract class is the superclass of all classes representing an input
+stream of characters
+<li><a href="stream.Output.html">stream::<b>Output</b></a>
+This abstract class is the superclass of all classes representing an output
+stream of characters
+<li><a href="stuffit5.Archive.html">stuffit5::<b>Archive</b></a>
+StuffIt Engine archive
+<li><a href="stuffit5.ArchiveInfo.html">stuffit5::<b>ArchiveInfo</b></a>
+Archive information
+<li><a href="stuffit5.event.ArchiveChangedNameDispatcher.html">stuffit5::event::<b>ArchiveChangedNameDispatcher</b></a>
+This class generates event notifications for <code>ArchiveChangedNameEvent</code>
+<li><a href="stuffit5.event.ArchiveChangedNameForwarder.html">stuffit5::event::<b>ArchiveChangedNameForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ArchiveChangedNameListener.html">stuffit5::event::<b>ArchiveChangedNameListener</b></a>
+Event handler for archive name change
+<li><a href="stuffit5.event.ArchiveCreateBeginDispatcher.html">stuffit5::event::<b>ArchiveCreateBeginDispatcher</b></a>
+This class generates event notifications for <code>ArchiveCreateBeginEvent</code>
+<li><a href="stuffit5.event.ArchiveCreateBeginForwarder.html">stuffit5::event::<b>ArchiveCreateBeginForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ArchiveCreateBeginListener.html">stuffit5::event::<b>ArchiveCreateBeginListener</b></a>
+Event handler for the beginning of archive creation
+<li><a href="stuffit5.event.ArchiveCreateEndDispatcher.html">stuffit5::event::<b>ArchiveCreateEndDispatcher</b></a>
+This class generates event notifications for <code>ArchiveCreateEndEvent</code>
+<li><a href="stuffit5.event.ArchiveCreateEndForwarder.html">stuffit5::event::<b>ArchiveCreateEndForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ArchiveCreateEndListener.html">stuffit5::event::<b>ArchiveCreateEndListener</b></a>
+Event handler for the end of archive creation
+<li><a href="stuffit5.event.ArchiveDecodeBeginDispatcher.html">stuffit5::event::<b>ArchiveDecodeBeginDispatcher</b></a>
+This class generates event notifications for <code>ArchiveDecodeBeginEvent</code>
+<li><a href="stuffit5.event.ArchiveDecodeBeginForwarder.html">stuffit5::event::<b>ArchiveDecodeBeginForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ArchiveDecodeBeginListener.html">stuffit5::event::<b>ArchiveDecodeBeginListener</b></a>
+Event handler for the beginning of archive decoding
+<li><a href="stuffit5.event.ArchiveDecodeEndDispatcher.html">stuffit5::event::<b>ArchiveDecodeEndDispatcher</b></a>
+This class generates event notifications for <code>ArchiveDecodeEndEvent</code>
+<li><a href="stuffit5.event.ArchiveDecodeEndForwarder.html">stuffit5::event::<b>ArchiveDecodeEndForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ArchiveDecodeEndListener.html">stuffit5::event::<b>ArchiveDecodeEndListener</b></a>
+Event handler for the end of archive decoding
+<li><a href="stuffit5.event.ArchiveInfoDispatcher.html">stuffit5::event::<b>ArchiveInfoDispatcher</b></a>
+This class generates event notifications for <code>ArchiveInfoEvent</code>
+<li><a href="stuffit5.event.ArchiveInfoForwarder.html">stuffit5::event::<b>ArchiveInfoForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ArchiveInfoListener.html">stuffit5::event::<b>ArchiveInfoListener</b></a>
+Event handler for archive information
+<li><a href="stuffit5.event.ArchiveNextDispatcher.html">stuffit5::event::<b>ArchiveNextDispatcher</b></a>
+This class generates event notifications for <code>ArchiveNextEvent</code>
+<li><a href="stuffit5.event.ArchiveNextForwarder.html">stuffit5::event::<b>ArchiveNextForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ArchiveNextListener.html">stuffit5::event::<b>ArchiveNextListener</b></a>
+Event handler for the next segment of a multi-segment archive
+<li><a href="stuffit5.event.ArchiveSizeDispatcher.html">stuffit5::event::<b>ArchiveSizeDispatcher</b></a>
+This class generates event notifications for <code>ArchiveSizeEvent</code>
+<li><a href="stuffit5.event.ArchiveSizeForwarder.html">stuffit5::event::<b>ArchiveSizeForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ArchiveSizeListener.html">stuffit5::event::<b>ArchiveSizeListener</b></a>
+Event handler for archive size
+<li><a href="stuffit5.event.ErrorDispatcher.html">stuffit5::event::<b>ErrorDispatcher</b></a>
+This class generates event notifications for <code>ErrorEvent</code>
+<li><a href="stuffit5.event.ErrorForwarder.html">stuffit5::event::<b>ErrorForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ErrorListener.html">stuffit5::event::<b>ErrorListener</b></a>
+Event handler for recoverable error conditions
+<li><a href="stuffit5.event.FileChangedNameDispatcher.html">stuffit5::event::<b>FileChangedNameDispatcher</b></a>
+This class generates event notifications for <code>FileChangedNameEvent</code>
+<li><a href="stuffit5.event.FileChangedNameForwarder.html">stuffit5::event::<b>FileChangedNameForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FileChangedNameListener.html">stuffit5::event::<b>FileChangedNameListener</b></a>
+Event handler for file name change
+<li><a href="stuffit5.event.FileDecodeBeginDispatcher.html">stuffit5::event::<b>FileDecodeBeginDispatcher</b></a>
+This class generates event notifications for <code>FileDecodeBeginEvent</code>
+<li><a href="stuffit5.event.FileDecodeBeginForwarder.html">stuffit5::event::<b>FileDecodeBeginForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FileDecodeBeginListener.html">stuffit5::event::<b>FileDecodeBeginListener</b></a>
+Event handler for the beginning of file decoding
+<li><a href="stuffit5.event.FileDecodeEndDispatcher.html">stuffit5::event::<b>FileDecodeEndDispatcher</b></a>
+This class generates event notifications for <code>FileDecodeEndEvent</code>
+<li><a href="stuffit5.event.FileDecodeEndForwarder.html">stuffit5::event::<b>FileDecodeEndForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FileDecodeEndListener.html">stuffit5::event::<b>FileDecodeEndListener</b></a>
+Event handler for the end of file decoding
+<li><a href="stuffit5.event.FileDeleteDispatcher.html">stuffit5::event::<b>FileDeleteDispatcher</b></a>
+This class generates event notifications for <code>FileDeleteEvent</code>
+<li><a href="stuffit5.event.FileDeleteForwarder.html">stuffit5::event::<b>FileDeleteForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FileDeleteListener.html">stuffit5::event::<b>FileDeleteListener</b></a>
+Event handler for incomplete files or archives
+<li><a href="stuffit5.event.FileEncodeBeginDispatcher.html">stuffit5::event::<b>FileEncodeBeginDispatcher</b></a>
+This class generates event notifications for <code>FileEncodeBeginEvent</code>
+<li><a href="stuffit5.event.FileEncodeBeginForwarder.html">stuffit5::event::<b>FileEncodeBeginForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FileEncodeBeginListener.html">stuffit5::event::<b>FileEncodeBeginListener</b></a>
+Event handler for the beginning of file encoding
+<li><a href="stuffit5.event.FileEncodeEndDispatcher.html">stuffit5::event::<b>FileEncodeEndDispatcher</b></a>
+This class generates event notifications for <code>FileEncodeEndEvent</code>
+<li><a href="stuffit5.event.FileEncodeEndForwarder.html">stuffit5::event::<b>FileEncodeEndForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FileEncodeEndListener.html">stuffit5::event::<b>FileEncodeEndListener</b></a>
+Event handler for the end of file encoding
+<li><a href="stuffit5.event.FileInfoDispatcher.html">stuffit5::event::<b>FileInfoDispatcher</b></a>
+This class generates event notifications for <code>FileInfoEvent</code>
+<li><a href="stuffit5.event.FileInfoForwarder.html">stuffit5::event::<b>FileInfoForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FileInfoListener.html">stuffit5::event::<b>FileInfoListener</b></a>
+Event handler for file information
+<li><a href="stuffit5.event.FileNewNameDispatcher.html">stuffit5::event::<b>FileNewNameDispatcher</b></a>
+This class generates event notifications for <code>FileNewNameEvent</code>
+<li><a href="stuffit5.event.FileNewNameForwarder.html">stuffit5::event::<b>FileNewNameForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FileNewNameListener.html">stuffit5::event::<b>FileNewNameListener</b></a>
+Event handler for an unnamed file
+<li><a href="stuffit5.event.FileScanStepDispatcher.html">stuffit5::event::<b>FileScanStepDispatcher</b></a>
+This class generates event notifications for <code>FileScanStepEvent</code>
+<li><a href="stuffit5.event.FileScanStepForwarder.html">stuffit5::event::<b>FileScanStepForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FileScanStepListener.html">stuffit5::event::<b>FileScanStepListener</b></a>
+Event handler for file scan progress
+<li><a href="stuffit5.event.FolderDecodeBeginDispatcher.html">stuffit5::event::<b>FolderDecodeBeginDispatcher</b></a>
+This class generates event notifications for <code>FolderDecodeBeginEvent</code>
+<li><a href="stuffit5.event.FolderDecodeBeginForwarder.html">stuffit5::event::<b>FolderDecodeBeginForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FolderDecodeBeginListener.html">stuffit5::event::<b>FolderDecodeBeginListener</b></a>
+Event handler for the beginning of folder decoding
+<li><a href="stuffit5.event.FolderDecodeEndDispatcher.html">stuffit5::event::<b>FolderDecodeEndDispatcher</b></a>
+This class generates event notifications for <code>FolderDecodeEndEvent</code>
+<li><a href="stuffit5.event.FolderDecodeEndForwarder.html">stuffit5::event::<b>FolderDecodeEndForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FolderDecodeEndListener.html">stuffit5::event::<b>FolderDecodeEndListener</b></a>
+Event handler for the end of folder decoding
+<li><a href="stuffit5.event.FolderEncodeBeginDispatcher.html">stuffit5::event::<b>FolderEncodeBeginDispatcher</b></a>
+This class generates event notifications for <code>FolderEncodeBeginEvent</code>
+<li><a href="stuffit5.event.FolderEncodeBeginForwarder.html">stuffit5::event::<b>FolderEncodeBeginForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FolderEncodeBeginListener.html">stuffit5::event::<b>FolderEncodeBeginListener</b></a>
+Event handler for the beginning of folder encoding
+<li><a href="stuffit5.event.FolderEncodeEndDispatcher.html">stuffit5::event::<b>FolderEncodeEndDispatcher</b></a>
+This class generates event notifications for <code>FolderEncodeEndEvent</code>
+<li><a href="stuffit5.event.FolderEncodeEndForwarder.html">stuffit5::event::<b>FolderEncodeEndForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FolderEncodeEndListener.html">stuffit5::event::<b>FolderEncodeEndListener</b></a>
+Event handler for the end of folder encoding
+<li><a href="stuffit5.event.FolderInfoDispatcher.html">stuffit5::event::<b>FolderInfoDispatcher</b></a>
+This class generates event notifications for <code>FolderInfoEvent</code>
+<li><a href="stuffit5.event.FolderInfoForwarder.html">stuffit5::event::<b>FolderInfoForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FolderInfoListener.html">stuffit5::event::<b>FolderInfoListener</b></a>
+Event handler for folder information
+<li><a href="stuffit5.event.FolderScanStepDispatcher.html">stuffit5::event::<b>FolderScanStepDispatcher</b></a>
+This class generates event notifications for <code>FolderScanStepEvent</code>
+<li><a href="stuffit5.event.FolderScanStepForwarder.html">stuffit5::event::<b>FolderScanStepForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.FolderScanStepListener.html">stuffit5::event::<b>FolderScanStepListener</b></a>
+Event handler for folder scan progress
+<li><a href="stuffit5.event.Listener.html">stuffit5::event::<b>Listener</b></a>
+Event handler base class
+<li><a href="stuffit5.event.ProgressFilesBeginDispatcher.html">stuffit5::event::<b>ProgressFilesBeginDispatcher</b></a>
+This class generates event notifications for <code>ProgressFilesBeginEvent</code>
+<li><a href="stuffit5.event.ProgressFilesBeginForwarder.html">stuffit5::event::<b>ProgressFilesBeginForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ProgressFilesBeginListener.html">stuffit5::event::<b>ProgressFilesBeginListener</b></a>
+Event handler for the beginning of file count in archive decoding or
+creation
+<li><a href="stuffit5.event.ProgressFilesEndDispatcher.html">stuffit5::event::<b>ProgressFilesEndDispatcher</b></a>
+This class generates event notifications for <code>ProgressFilesEndEvent</code>
+<li><a href="stuffit5.event.ProgressFilesEndForwarder.html">stuffit5::event::<b>ProgressFilesEndForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ProgressFilesEndListener.html">stuffit5::event::<b>ProgressFilesEndListener</b></a>
+Event handler for the end of file count in archive decoding or creation
+<li><a href="stuffit5.event.ProgressFilesMoveDispatcher.html">stuffit5::event::<b>ProgressFilesMoveDispatcher</b></a>
+This class generates event notifications for <code>ProgressFilesMoveEvent</code>
+<li><a href="stuffit5.event.ProgressFilesMoveForwarder.html">stuffit5::event::<b>ProgressFilesMoveForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ProgressFilesMoveListener.html">stuffit5::event::<b>ProgressFilesMoveListener</b></a>
+Event handler for the progress of file count in archive decoding or
+creation
+<li><a href="stuffit5.event.ProgressScanBeginDispatcher.html">stuffit5::event::<b>ProgressScanBeginDispatcher</b></a>
+This class generates event notifications for <code>ProgressScanBeginEvent</code>
+<li><a href="stuffit5.event.ProgressScanBeginForwarder.html">stuffit5::event::<b>ProgressScanBeginForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ProgressScanBeginListener.html">stuffit5::event::<b>ProgressScanBeginListener</b></a>
+Event handler for the beginning of archive scan
+<li><a href="stuffit5.event.ProgressScanEndDispatcher.html">stuffit5::event::<b>ProgressScanEndDispatcher</b></a>
+This class generates event notifications for <code>ProgressScanEndEvent</code>
+<li><a href="stuffit5.event.ProgressScanEndForwarder.html">stuffit5::event::<b>ProgressScanEndForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ProgressScanEndListener.html">stuffit5::event::<b>ProgressScanEndListener</b></a>
+Event handler for the end of archive scan
+<li><a href="stuffit5.event.ProgressScanStepDispatcher.html">stuffit5::event::<b>ProgressScanStepDispatcher</b></a>
+This class generates event notifications for <code>ProgressScanStepEvent</code>
+<li><a href="stuffit5.event.ProgressScanStepForwarder.html">stuffit5::event::<b>ProgressScanStepForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ProgressScanStepListener.html">stuffit5::event::<b>ProgressScanStepListener</b></a>
+Event handler for the progress of archive scan
+<li><a href="stuffit5.event.ProgressSizeBeginDispatcher.html">stuffit5::event::<b>ProgressSizeBeginDispatcher</b></a>
+This class generates event notifications for <code>ProgressSizeBeginEvent</code>
+<li><a href="stuffit5.event.ProgressSizeBeginForwarder.html">stuffit5::event::<b>ProgressSizeBeginForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ProgressSizeBeginListener.html">stuffit5::event::<b>ProgressSizeBeginListener</b></a>
+Event handler for the beginning of archive decoding or creation
+<li><a href="stuffit5.event.ProgressSizeEndDispatcher.html">stuffit5::event::<b>ProgressSizeEndDispatcher</b></a>
+This class generates event notifications for <code>ProgressSizeEndEvent</code>
+<li><a href="stuffit5.event.ProgressSizeEndForwarder.html">stuffit5::event::<b>ProgressSizeEndForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ProgressSizeEndListener.html">stuffit5::event::<b>ProgressSizeEndListener</b></a>
+Event handler for the end of archive decoding or creation
+<li><a href="stuffit5.event.ProgressSizeMoveDispatcher.html">stuffit5::event::<b>ProgressSizeMoveDispatcher</b></a>
+This class generates event notifications for <code>ProgressSizeMoveEvent</code>
+<li><a href="stuffit5.event.ProgressSizeMoveForwarder.html">stuffit5::event::<b>ProgressSizeMoveForwarder</b></a>
+Forwarding event listener
+<li><a href="stuffit5.event.ProgressSizeMoveListener.html">stuffit5::event::<b>ProgressSizeMoveListener</b></a>
+Event handler for the progress of archive decoding or creation
+<li><a href="stuffit5.event.ReaderEventDispatcher.html">stuffit5::event::<b>ReaderEventDispatcher</b></a>
+Reader event dispatcher: combines multiple reader event dispatcher interfaces
+<li><a href="stuffit5.event.WriterEventDispatcher.html">stuffit5::event::<b>WriterEventDispatcher</b></a>
+Writer event dispatcher: combines multiple writer event dispatcher interfaces
+<li><a href="stuffit5.exception.BadArgument.html">stuffit5::exception::<b>BadArgument</b></a>
+Invalid input or input arguments
+<li><a href="stuffit5.exception.BadData.html">stuffit5::exception::<b>BadData</b></a>
+Invalid (corrupt) data
+<li><a href="stuffit5.exception.BadFormat.html">stuffit5::exception::<b>BadFormat</b></a>
+Invalid archive format
+<li><a href="stuffit5.exception.BadPassword.html">stuffit5::exception::<b>BadPassword</b></a>
+Incorrect password
+<li><a href="stuffit5.exception.Evacuation.html">stuffit5::exception::<b>Evacuation</b></a>
+Exception class used to interrupt normal processing from within
+the callback or event mechanism
+<li><a href="stuffit5.exception.Exception.html">stuffit5::exception::<b>Exception</b></a>
+StuffIt Engine exception
+<li><a href="stuffit5.exception.Input.html">stuffit5::exception::<b>Input</b></a>
+Failure to open an input (file) stream or to read from an input stream
+<li><a href="stuffit5.exception.Output.html">stuffit5::exception::<b>Output</b></a>
+Failure to create an output (file) stream or to write to an output stream
+<li><a href="stuffit5.exception.UnsupportedFormat.html">stuffit5::exception::<b>UnsupportedFormat</b></a>
+An unsupprted format
+<li><a href="stuffit5.exception.UnsupportedMethod.html">stuffit5::exception::<b>UnsupportedMethod</b></a>
+Unsupported method
+<li><a href="stuffit5.FileInfo.html">stuffit5::<b>FileInfo</b></a>
+File information
+<li><a href="stuffit5.FolderInfo.html">stuffit5::<b>FolderInfo</b></a>
+Folder information
+<li><a href="stuffit5.Reader.html">stuffit5::<b>Reader</b></a>
+StuffIt Engine reader
+<li><a href="stuffit5.Writer.html">stuffit5::<b>Writer</b></a>
+StuffIt Engine writer
+<li><a href="un.auto_array.html">un::<b>auto_array</b></a>
+A smart pointer class that stores a pointer to a dynamically allocated array
+of objects
+<li><a href="un.auto_ptr.html">un::<b>auto_ptr</b></a>
+A smart pointer class that stores a pointer to a dynamically allocated
+object
+<li><a href="un.exception.html">un::<b>exception</b></a>
+Exception superclass
+<li><a href="un.opt_property.html">un::<b>opt_property</b></a>
+An optional property that may or may not be available at different times
+<li><a href="un.property.html">un::<b>property</b></a>
+A property is an aspect of an object
+<li><a href="un.structure.html">un::<b>structure</b></a>
+
+<li><a href="un.tokenizer.html">un::<b>tokenizer</b></a>
+This class parses the given string into tokens separated by the
+specified delimiter character or characters
+<li><a href="util.command.Command.html">util::command::<b>Command</b></a>
+A class representing a command-line option
+<li><a href="util.command.CommandElement.html">util::command::<b>CommandElement</b></a>
+
+<li><a href="util.command.CommandElementLess.html">util::command::<b>CommandElementLess</b></a>
+This class is a <code>binary_function</code> that defines its only member operator as returning x &lt; y
+<li><a href="util.command.CommandException.html">util::command::<b>CommandException</b></a>
+Exception class used to transmit CommandLine error information
+<li><a href="util.command.CommandLine.html">util::command::<b>CommandLine</b></a>
+
+<li><a href="util.command.CommandLineTest.html">util::command::<b>CommandLineTest</b></a>
+A command line test
+<li><a href="util.command.CommandSynonym.html">util::command::<b>CommandSynonym</b></a>
+
+<li><a href="util.System.html">util::<b>System</b></a>
+Implements miscellaneous system (OS-specific) operations
+</ul>
+<h4>Functions, Macros</h4>
+<UL>
+<li><!2><a href="#DOC.494">auto_array_test</a> Class test
+<li><!2><a href="#DOC.496">auto_ptr_test</a> Class test
+<li><!2><a href="#DOC.500">property_test</a> Class test
+<li><a href="stuffit5.Error.description.html">stuffit5::Error::<b>description</b></a>
+Error description
+<li><a href="stuffit5.Error.name.html">stuffit5::Error::<b>name</b></a>
+Error name
+<li><a href="stuffit5.Format.description.html">stuffit5::Format::<b>description</b></a>
+Format description
+<li><a href="stuffit5.Format.name.html">stuffit5::Format::<b>name</b></a>
+Format name
+<li><a href="stuffit5.Version.build.html">stuffit5::Version::<b>build</b></a>
+Build number of the engine
+<li><!2><a href="#DOC.267">stuffit5::Version::day</a> Build day
+<li><a href="stuffit5.Version.debug.html">stuffit5::Version::<b>debug</b></a>
+Debug level of the engine
+<li><!2><a href="#DOC.268">stuffit5::Version::hour</a> Build hour (24-hour "military" format)
+<li><a href="stuffit5.Version.majorv.html">stuffit5::Version::<b>majorv</b></a>
+Major version number of the engine
+<li><a href="stuffit5.Version.minorv.html">stuffit5::Version::<b>minorv</b></a>
+Minor version number of the engine
+<li><!2><a href="#DOC.269">stuffit5::Version::minute</a> Build minute
+<li><!2><a href="#DOC.266">stuffit5::Version::month</a> Build month
+<li><a href="stuffit5.Version.patchlevel.html">stuffit5::Version::<b>patchlevel</b></a>
+Patch level of the engine
+<li><!2><a href="#DOC.270">stuffit5::Version::readable</a> Human-readable string representation of StuffIt Engine version number and
+build date and time
+<li><!2><a href="#DOC.265">stuffit5::Version::year</a> Build year
+<li><!2><a href="#DOC.19">stuffit5_Archive_close</a> Closes an archive
+<li><!2><a href="#DOC.17">stuffit5_Archive_delete</a> Deletes an archive object
+<li><!2><a href="#DOC.20">stuffit5_Archive_getReturnReceipt</a> Returns the value of the return-receipt flag (sit5 format only)
+<li><!2><a href="#DOC.16">stuffit5_Archive_new</a> Creates a new archive object
+<li><!2><a href="#DOC.18">stuffit5_Archive_open</a> Opens an archive
+<li><!2><a href="#DOC.21">stuffit5_Archive_setReturnReceipt</a> Assigns the value of the return-receipt flag (sit5 format only)
+<li><!2><a href="#DOC.32">stuffit5_ArchiveInfo_getCompressedSize</a> C interface to <code>stuffit5::ArchiveInfo::compressedSize()</code>
+<li><!2><a href="#DOC.27">stuffit5_ArchiveInfo_getFormat</a> C interface to <code>stuffit5::ArchiveInfo::format()</code>
+<li><!2><a href="#DOC.29">stuffit5_ArchiveInfo_getItems</a> C interface to <code>stuffit5::ArchiveInfo::items()</code>
+<li><!2><a href="#DOC.23">stuffit5_ArchiveInfo_getName</a> C interface to <code>stuffit5::ArchiveInfo::name()</code>
+<li><!2><a href="#DOC.25">stuffit5_ArchiveInfo_getPosition</a> C interface to <code>stuffit5::ArchiveInfo::position()</code>
+<li><!2><a href="#DOC.30">stuffit5_ArchiveInfo_getRootName</a> C interface to <code>stuffit5::ArchiveInfo::rootName()</code>
+<li><!2><a href="#DOC.36">stuffit5_ArchiveInfo_getSegmentID</a> C interface to <code>stuffit5::ArchiveInfo::segmentID()</code>
+<li><!2><a href="#DOC.38">stuffit5_ArchiveInfo_getSegmentNumber</a> C interface to <code>stuffit5::ArchiveInfo::segmentNumber()</code>
+<li><!2><a href="#DOC.34">stuffit5_ArchiveInfo_getUncompressedSize</a> C interface to <code>stuffit5::ArchiveInfo::uncompressedSize()</code>
+<li><!2><a href="#DOC.31">stuffit5_ArchiveInfo_hasCompressedSize</a> C interface to <code>stuffit5::ArchiveInfo::compressedSize()</code>
+<li><!2><a href="#DOC.35">stuffit5_ArchiveInfo_hasSegmentID</a> C interface to <code>stuffit5::ArchiveInfo::segmentID()</code>
+<li><!2><a href="#DOC.37">stuffit5_ArchiveInfo_hasSegmentNumber</a> C interface to <code>stuffit5::ArchiveInfo::segmentNumber()</code>
+<li><!2><a href="#DOC.33">stuffit5_ArchiveInfo_hasUncompressedSize</a> C interface to <code>stuffit5::ArchiveInfo::uncompressedSize()</code>
+<li><!2><a href="#DOC.39">stuffit5_ArchiveInfo_isEncrypted</a> C interface to <code>stuffit5::ArchiveInfo::isEncrypted()</code>
+<li><!2><a href="#DOC.28">stuffit5_ArchiveInfo_setFormat</a> C interface to <code>stuffit5::ArchiveInfo::format()</code>
+<li><!2><a href="#DOC.24">stuffit5_ArchiveInfo_setName</a> C interface to <code>stuffit5::ArchiveInfo::name()</code>
+<li><!2><a href="#DOC.26">stuffit5_ArchiveInfo_setPosition</a> C interface to <code>stuffit5::ArchiveInfo::position()</code>
+<li><!2><a href="#DOC.76">stuffit5_Error_description</a> C interface to <code>stuffit5::Error::description()</code>
+<li><!2><a href="#DOC.75">stuffit5_Error_name</a> C interface to <code>stuffit5::Error::name()</code>
+<li><!2><a href="#DOC.84">stuffit5_FileInfo_getCompressedSize</a> C interface to <code>stuffit5::FileInfo::compressedSize()</code>
+<li><!2><a href="#DOC.90">stuffit5_FileInfo_getMacCreator</a> C interface to <code>stuffit5::FileInfo::macCreator()</code>
+<li><!2><a href="#DOC.88">stuffit5_FileInfo_getMacType</a> C interface to <code>stuffit5::FileInfo::macType()</code>
+<li><!2><a href="#DOC.78">stuffit5_FileInfo_getName</a> C interface to <code>stuffit5::FileInfo::name()</code>
+<li><!2><a href="#DOC.86">stuffit5_FileInfo_getUncompressedSize</a> C interface to <code>stuffit5::FileInfo::uncompressedSize()</code>
+<li><!2><a href="#DOC.81">stuffit5_FileInfo_getUnicodeName</a> C interface to <code>stuffit5::FileInfo::unicodeName()</code>
+<li><!2><a href="#DOC.83">stuffit5_FileInfo_hasCompressedSize</a> C interface to <code>stuffit5::FileInfo::compressedSize()</code>
+<li><!2><a href="#DOC.89">stuffit5_FileInfo_hasMacCreator</a> C interface to <code>stuffit5::FileInfo::macCreator()</code>
+<li><!2><a href="#DOC.87">stuffit5_FileInfo_hasMacType</a> C interface to <code>stuffit5::FileInfo::macType()</code>
+<li><!2><a href="#DOC.85">stuffit5_FileInfo_hasUncompressedSize</a> C interface to <code>stuffit5::FileInfo::uncompressedSize()</code>
+<li><!2><a href="#DOC.80">stuffit5_FileInfo_hasUnicodeName</a> C interface to <code>stuffit5::FileInfo::unicodeName()</code>
+<li><!2><a href="#DOC.91">stuffit5_FileInfo_isEncrypted</a> C interface to <code>stuffit5::FileInfo::isEncrypted()</code>
+<li><!2><a href="#DOC.92">stuffit5_FileInfo_outputIsMacBinary</a> C interface to <code>stuffit5::FileInfo::outputIsMacBinary()</code>
+<li><!2><a href="#DOC.79">stuffit5_FileInfo_setName</a> C interface to <code>stuffit5::FileInfo::name()</code>
+<li><!2><a href="#DOC.82">stuffit5_FileInfo_setUnicodeName</a> C interface to <code>stuffit5::FileInfo::unicodeName()</code>
+<li><!2><a href="#DOC.94">stuffit5_FolderInfo_getName</a> C interface to <code>stuffit5::FolderInfo::name()</code>
+<li><!2><a href="#DOC.97">stuffit5_FolderInfo_getUnicodeName</a> C interface to <code>stuffit5::FolderInfo::unicodeName()</code>
+<li><!2><a href="#DOC.96">stuffit5_FolderInfo_hasUnicodeName</a> C interface to <code>stuffit5::FolderInfo::unicodeName()</code>
+<li><!2><a href="#DOC.95">stuffit5_FolderInfo_setName</a> C interface to <code>stuffit5::FolderInfo::name()</code>
+<li><!2><a href="#DOC.98">stuffit5_FolderInfo_setUnicodeName</a> C interface to <code>stuffit5::FolderInfo::unicodeName()</code>
+<li><!2><a href="#DOC.172">stuffit5_Format_description</a> C interface to <code>stuffit5::Format::description()</code>
+<li><!2><a href="#DOC.171">stuffit5_Format_name</a> C interface to <code>stuffit5::Format::name()</code>
+<li><!2><a href="#DOC.212">stuffit5_Reader_archiveInfo</a> C interface to <code>stuffit5::Reader::archiveInfo()</code>
+<li><!2><a href="#DOC.189">stuffit5_Reader_canClassify</a> C interface to <code>stuffit5::Reader::canClassify()</code>
+<li><!2><a href="#DOC.190">stuffit5_Reader_canDecode</a> C interface to <code>stuffit5::Reader::canDecode()</code>
+<li><a href="stuffit5_Reader_classify.html"><b>stuffit5_Reader_classify</b></a>
+Determines archive format (<i>classifies</i> the archive)
+<li><a href="stuffit5_Reader_close.html"><b>stuffit5_Reader_close</b></a>
+Closes the currently open archive
+<li><a href="stuffit5_Reader_decode.html"><b>stuffit5_Reader_decode</b></a>
+Decodes the archive
+<li><!2><a href="#DOC.183">stuffit5_Reader_delete</a> Deletes a reader
+<li><!2><a href="#DOC.213">stuffit5_Reader_fileInfo</a> C interface to <code>stuffit5::Reader::fileInfo()</code>
+<li><!2><a href="#DOC.214">stuffit5_Reader_folderInfo</a> C interface to <code>stuffit5::Reader::folderInfo()</code>
+<li><!2><a href="#DOC.203">stuffit5_Reader_getClassifierSpan</a> C interface to <code>stuffit5::Reader::classifierSpan()</code>
+<li><!2><a href="#DOC.201">stuffit5_Reader_getDestinationFolder</a> C interface to <code>stuffit5::Reader::destinationFolder()</code>
+<li><a href="stuffit5_Reader_getError.html"><b>stuffit5_Reader_getError</b></a>
+Returns the last error code set by the reader
+<li><!2><a href="#DOC.199">stuffit5_Reader_getMacBinaryOutput</a> C interface to <code>stuffit5::Reader::macBinaryOutput()</code>
+<li><!2><a href="#DOC.207">stuffit5_Reader_getNewFileName</a> C interface to <code>stuffit5::Reader::newFileName()</code>
+<li><!2><a href="#DOC.194">stuffit5_Reader_getTextConversion</a> C interface to <code>stuffit5::Reader::textConversion()</code>
+<li><!2><a href="#DOC.197">stuffit5_Reader_getTextType</a> C interface to <code>stuffit5::Reader::textType()</code>
+<li><!2><a href="#DOC.191">stuffit5_Reader_getUseMacDrive</a> C interface to <code>stuffit5::Reader::useMacDrive()</code>
+<li><!2><a href="#DOC.209">stuffit5_Reader_getUserData</a> C interface to <code>stuffit5::Reader::userData()</code>
+<li><!2><a href="#DOC.193">stuffit5_Reader_hasTextConversion</a> C interface to <code>stuffit5::Reader::textConversion()</code>
+<li><!2><a href="#DOC.196">stuffit5_Reader_hasTextType</a> C interface to <code>stuffit5::Reader::textType()</code>
+<li><a href="stuffit5_Reader_new.html"><b>stuffit5_Reader_new</b></a>
+Creates a new reader
+<li><a href="stuffit5_Reader_open.html"><b>stuffit5_Reader_open</b></a>
+Opens an archive
+<li><a href="stuffit5_Reader_scan.html"><b>stuffit5_Reader_scan</b></a>
+Scans the archive
+<li><!2><a href="#DOC.204">stuffit5_Reader_setClassifierSpan</a> C interface to <code>stuffit5::Reader::classifierSpan()</code>
+<li><!2><a href="#DOC.202">stuffit5_Reader_setDestinationFolder</a> C interface to <code>stuffit5::Reader::destinationFolder()</code>
+<li><!2><a href="#DOC.206">stuffit5_Reader_setKey</a> C interface to <code>stuffit5::Reader::key()</code>
+<li><!2><a href="#DOC.200">stuffit5_Reader_setMacBinaryOutput</a> C interface to <code>stuffit5::Reader::macBinaryOutput()</code>
+<li><!2><a href="#DOC.208">stuffit5_Reader_setNewFileName</a> C interface to <code>stuffit5::Reader::newFileName()</code>
+<li><!2><a href="#DOC.205">stuffit5_Reader_setPassword</a> C interface to <code>stuffit5::Reader::password()</code>
+<li><!2><a href="#DOC.195">stuffit5_Reader_setTextConversion</a> C interface to <code>stuffit5::Reader::textConversion()</code>
+<li><!2><a href="#DOC.198">stuffit5_Reader_setTextType</a> C interface to <code>stuffit5::Reader::textType()</code>
+<li><!2><a href="#DOC.192">stuffit5_Reader_setUseMacDrive</a> C interface to <code>stuffit5::Reader::useMacDrive()</code>
+<li><!2><a href="#DOC.210">stuffit5_Reader_setUserData</a> C interface to <code>stuffit5::Reader::userData()</code>
+<li><!2><a href="#DOC.274">stuffit5_Version_build</a> C equivalent of <code>stuffit5::Version::build</code>
+<li><!2><a href="#DOC.278">stuffit5_Version_day</a> C equivalent of <code>stuffit5::Version::day</code>
+<li><!2><a href="#DOC.275">stuffit5_Version_debug</a> C equivalent of <code>stuffit5::Version::lf</code>
+<li><!2><a href="#DOC.279">stuffit5_Version_hour</a> C equivalent of <code>stuffit5::Version::hour</code>
+<li><!2><a href="#DOC.271">stuffit5_Version_majorv</a> C equivalent of <code>stuffit5::Version::majorv</code>
+<li><!2><a href="#DOC.272">stuffit5_Version_minorv</a> C equivalent of <code>stuffit5::Version::minorv</code>
+<li><!2><a href="#DOC.280">stuffit5_Version_minute</a> C equivalent of <code>stuffit5::Version::minute</code>
+<li><!2><a href="#DOC.277">stuffit5_Version_month</a> C equivalent of <code>stuffit5::Version::month</code>
+<li><!2><a href="#DOC.273">stuffit5_Version_patchlevel</a> C equivalent of <code>stuffit5::Version::patchlevel</code>
+<li><!2><a href="#DOC.281">stuffit5_Version_readable</a> C equivalent of <code>stuffit5::Version::readable</code>
+<li><!2><a href="#DOC.276">stuffit5_Version_year</a> C equivalent of <code>stuffit5::Version::year</code>
+<li><!2><a href="#DOC.308">stuffit5_Writer_archiveInfo</a> C interface to <code>stuffit5::Writer::archiveInfo()</code>
+<li><a href="stuffit5_Writer_canCreate.html"><b>stuffit5_Writer_canCreate</b></a>
+Determines if a writer is capable of creating a format
+<li><a href="stuffit5_Writer_create.html"><b>stuffit5_Writer_create</b></a>
+Creates a new archive
+<li><a href="stuffit5_Writer_delete.html"><b>stuffit5_Writer_delete</b></a>
+Deletes an archive writer
+<li><!2><a href="#DOC.309">stuffit5_Writer_fileInfo</a> C interface to <code>stuffit5::Writer::fileInfo()</code>
+<li><!2><a href="#DOC.310">stuffit5_Writer_folderInfo</a> C interface to <code>stuffit5::Writer::folderInfo()</code>
+<li><!2><a href="#DOC.303">stuffit5_Writer_getArchiveComment</a> C interface to <code>stuffit5::Writer::archiveComment()</code>
+<li><!2><a href="#DOC.300">stuffit5_Writer_getArchiveSize</a> C interface to <code>stuffit5::Writer::archiveSize()</code>
+<li><!2><a href="#DOC.293">stuffit5_Writer_getCompressionLevel</a> C interface to <code>stuffit5::Writer::compressionLevel()</code>
+<li><a href="stuffit5_Writer_getError.html"><b>stuffit5_Writer_getError</b></a>
+Returns the last error code set by the writer
+<li><!2><a href="#DOC.296">stuffit5_Writer_getKeySize</a> C interface to <code>stuffit5::Writer::keySize()</code>
+<li><!2><a href="#DOC.291">stuffit5_Writer_getTextType</a> C interface to <code>stuffit5::Writer::textType()</code>
+<li><!2><a href="#DOC.288">stuffit5_Writer_getUseMacDrive</a> C interface to <code>stuffit5::Writer::useMacDrive()</code>
+<li><!2><a href="#DOC.305">stuffit5_Writer_getUserData</a> C interface to <code>stuffit5::Writer::userData()</code>
+<li><!2><a href="#DOC.302">stuffit5_Writer_hasArchiveComment</a> C interface to <code>stuffit5::Writer::archiveComment()</code>
+<li><!2><a href="#DOC.299">stuffit5_Writer_hasArchiveSize</a> C interface to <code>stuffit5::Writer::archiveSize()</code>
+<li><!2><a href="#DOC.290">stuffit5_Writer_hasTextType</a> C interface to <code>stuffit5::Writer::textType()</code>
+<li><a href="stuffit5_Writer_new.html"><b>stuffit5_Writer_new</b></a>
+Creates a new archive writer
+<li><!2><a href="#DOC.304">stuffit5_Writer_setArchiveComment</a> C interface to <code>stuffit5::Writer::archiveComment()</code>
+<li><!2><a href="#DOC.301">stuffit5_Writer_setArchiveSize</a> C interface to <code>stuffit5::Writer::archiveSize()</code>
+<li><!2><a href="#DOC.294">stuffit5_Writer_setCompressionLevel</a> C interface to <code>stuffit5::Writer::compressionLevel()</code>
+<li><!2><a href="#DOC.298">stuffit5_Writer_setKey</a> C interface to <code>stuffit5::Writer::key()</code>
+<li><!2><a href="#DOC.297">stuffit5_Writer_setKeySize</a> C interface to <code>stuffit5::Writer::keySize()</code>
+<li><!2><a href="#DOC.295">stuffit5_Writer_setPassword</a> C interface to <code>stuffit5::Writer::password()</code>
+<li><!2><a href="#DOC.292">stuffit5_Writer_setTextType</a> C interface to <code>stuffit5::Writer::textType()</code>
+<li><!2><a href="#DOC.289">stuffit5_Writer_setUseMacDrive</a> C interface to <code>stuffit5::Writer::useMacDrive()</code>
+<li><!2><a href="#DOC.306">stuffit5_Writer_setUserData</a> C interface to <code>stuffit5::Writer::userData()</code>
+</ul>
+<h4>Variables</h4>
+<UL>
+<li><a href="engineNameListEnd.html"><b>engineNameListEnd</b></a>
+Null file list entry
+<li><!2><a href="#DOC.10">stream::end</a> End of stream indicator used by some <code>stream::</code> classes
+<li><!2><a href="#DOC.11">stream::eof</a> End of file character used by <code>stream::</code> classes
+<li><!2><a href="#DOC.8">stream::size</a> Stream size type for read, write, and position operations
+<li><!2><a href="#DOC.9">stream::unknown_size</a> Unknown size indicator used by some <code>stream::</code> classes
+<li><a href="stuffit5.CompressionLevel.automatic.html">stuffit5::CompressionLevel::<b>automatic</b></a>
+Compression level is automatically selected
+<li><!2><a href="#DOC.41">stuffit5::CompressionLevel::type</a> Underlying type
+<li><!2><a href="#DOC.47">stuffit5::Error::aborted</a> Operation aborted by the caller: <code>false</code> was returned from an event callback
+<li><a href="stuffit5.Error.badArgument.html">stuffit5::Error::<b>badArgument</b></a>
+Bad input or input argument(s)
+<li><a href="stuffit5.Error.badData.html">stuffit5::Error::<b>badData</b></a>
+Bad file data
+<li><a href="stuffit5.Error.badFormat.html">stuffit5::Error::<b>badFormat</b></a>
+Bad archive format
+<li><a href="stuffit5.Error.badPassword.html">stuffit5::Error::<b>badPassword</b></a>
+Bad password
+<li><!2><a href="#DOC.61">stuffit5::Error::descriptions</a> Descriptions storage
+<li><a href="stuffit5.Error.first.html">stuffit5::Error::<b>first</b></a>
+The first (lowest) error code
+<li><a href="stuffit5.Error.inputError.html">stuffit5::Error::<b>inputError</b></a>
+Input error
+<li><a href="stuffit5.Error.last.html">stuffit5::Error::<b>last</b></a>
+The last (highest) error code
+<li><!2><a href="#DOC.60">stuffit5::Error::names</a> Names storage
+<li><a href="stuffit5.Error.none.html">stuffit5::Error::<b>none</b></a>
+No error
+<li><a href="stuffit5.Error.outOfMemory.html">stuffit5::Error::<b>outOfMemory</b></a>
+Out of memory
+<li><a href="stuffit5.Error.outputError.html">stuffit5::Error::<b>outputError</b></a>
+Output error
+<li><a href="stuffit5.Error.type.html">stuffit5::Error::<b>type</b></a>
+StuffIt Engine error
+<li><a href="stuffit5.Error.unsupportedFormat.html">stuffit5::Error::<b>unsupportedFormat</b></a>
+Unsupported archive format
+<li><a href="stuffit5.Error.unsupportedMethod.html">stuffit5::Error::<b>unsupportedMethod</b></a>
+Unsupported compression or encoding method
+<li><a href="stuffit5.Format.arc.html">stuffit5::Format::<b>arc</b></a>
+Arc archive format
+<li><a href="stuffit5.Format.arj.html">stuffit5::Format::<b>arj</b></a>
+Arj archive format
+<li><a href="stuffit5.Format.bin.html">stuffit5::Format::<b>bin</b></a>
+MacBinary encoded file format
+<li><a href="stuffit5.Format.binData.html">stuffit5::Format::<b>binData</b></a>
+The data fork of a MacBinary file
+<li><a href="stuffit5.Format.binInfo.html">stuffit5::Format::<b>binInfo</b></a>
+MacBinary file information
+<li><a href="stuffit5.Format.binRsrc.html">stuffit5::Format::<b>binRsrc</b></a>
+The resource fork of a MacBinary file
+<li><a href="stuffit5.Format.btoa.html">stuffit5::Format::<b>btoa</b></a>
+btoa encoded file format
+<li><a href="stuffit5.Format.bz2.html">stuffit5::Format::<b>bz2</b></a>
+bzip2 archive format
+<li><a href="stuffit5.Format.compact.html">stuffit5::Format::<b>compact</b></a>
+Unix compact file format
+<li><a href="stuffit5.Format.compress.html">stuffit5::Format::<b>compress</b></a>
+Unix compress file format
+<li><a href="stuffit5.Format.cpt.html">stuffit5::Format::<b>cpt</b></a>
+Compact Pro archive format
+<li><!2><a href="#DOC.137">stuffit5::Format::descriptions</a> Descriptions storage
+<li><a href="stuffit5.Format.empty.html">stuffit5::Format::<b>empty</b></a>
+An empty file
+<li><a href="stuffit5.Format.eof.html">stuffit5::Format::<b>eof</b></a>
+End of file
+<li><a href="stuffit5.Format.first.html">stuffit5::Format::<b>first</b></a>
+First (lowest) format code
+<li><a href="stuffit5.Format.freeze.html">stuffit5::Format::<b>freeze</b></a>
+Unix freeze file format
+<li><a href="stuffit5.Format.gz.html">stuffit5::Format::<b>gz</b></a>
+gzip compressed file format
+<li><a href="stuffit5.Format.ha.html">stuffit5::Format::<b>ha</b></a>
+Ha archive format
+<li><a href="stuffit5.Format.hqx.html">stuffit5::Format::<b>hqx</b></a>
+BinHex encoded file format
+<li><a href="stuffit5.Format.last.html">stuffit5::Format::<b>last</b></a>
+Last (highest) format code
+<li><a href="stuffit5.Format.lha.html">stuffit5::Format::<b>lha</b></a>
+Lha archive format
+<li><a href="stuffit5.Format.mime.html">stuffit5::Format::<b>mime</b></a>
+MIME encoded message (file) format
+<li><!2><a href="#DOC.136">stuffit5::Format::names</a> Names storage
+<li><a href="stuffit5.Format.pack.html">stuffit5::Format::<b>pack</b></a>
+Unix pack file format
+<li><a href="stuffit5.Format.pf.html">stuffit5::Format::<b>pf</b></a>
+Private File archive format
+<li><a href="stuffit5.Format.rar.html">stuffit5::Format::<b>rar</b></a>
+Rar archive format
+<li><a href="stuffit5.Format.sco.html">stuffit5::Format::<b>sco</b></a>
+SCO Unix compress file format
+<li><a href="stuffit5.Format.sit.html">stuffit5::Format::<b>sit</b></a>
+StuffIt archive format
+<li><a href="stuffit5.Format.sit5.html">stuffit5::Format::<b>sit5</b></a>
+StuffIt 5
+<li><a href="stuffit5.Format.sitseg.html">stuffit5::Format::<b>sitseg</b></a>
+The first segment of a segmented StuffIt archive format
+<li><a href="stuffit5.Format.sitsegN.html">stuffit5::Format::<b>sitsegN</b></a>
+Subsequent segment of a segmented StuffIt archive format
+<li><a href="stuffit5.Format.tar.html">stuffit5::Format::<b>tar</b></a>
+Unix tar archive format
+<li><!2><a href="#DOC.100">stuffit5::Format::type</a> Underlying type
+<li><a href="stuffit5.Format.unknown.html">stuffit5::Format::<b>unknown</b></a>
+Unknown, unrecognized format
+<li><a href="stuffit5.Format.uu.html">stuffit5::Format::<b>uu</b></a>
+Unix uuencoded file format
+<li><a href="stuffit5.Format.zip.html">stuffit5::Format::<b>zip</b></a>
+Zip archive format
+<li><a href="stuffit5.MacBinaryOutput.automatic.html">stuffit5::MacBinaryOutput::<b>automatic</b></a>
+Two-fork files are output in MacBinary format
+<li><a href="stuffit5.MacBinaryOutput.off.html">stuffit5::MacBinaryOutput::<b>off</b></a>
+No files are output in MacBinary format
+<li><a href="stuffit5.MacBinaryOutput.on.html">stuffit5::MacBinaryOutput::<b>on</b></a>
+All files are output in MacBinary format
+<li><!2><a href="#DOC.174">stuffit5::MacBinaryOutput::type</a> Underlying type
+<li><a href="stuffit5.StuffIt5CompressionLevel.arsenic.html">stuffit5::StuffIt5CompressionLevel::<b>arsenic</b></a>
+StuffIt5 Deluxe 5
+<li><a href="stuffit5.StuffIt5CompressionLevel.deluxe.html">stuffit5::StuffIt5CompressionLevel::<b>deluxe</b></a>
+StuffIt5 Deluxe 3
+<li><a href="stuffit5.StuffIt5CompressionLevel.maximum.html">stuffit5::StuffIt5CompressionLevel::<b>maximum</b></a>
+Maximum compression level
+<li><a href="stuffit5.StuffIt5CompressionLevel.minimum.html">stuffit5::StuffIt5CompressionLevel::<b>minimum</b></a>
+Minimum StuffIt5 compression level
+<li><a href="stuffit5.StuffIt5CompressionLevel.none.html">stuffit5::StuffIt5CompressionLevel::<b>none</b></a>
+StuffIt5 no-compression level
+<li><a href="stuffit5.StuffItCompressionLevel.deluxe.html">stuffit5::StuffItCompressionLevel::<b>deluxe</b></a>
+StuffIt Deluxe compression level
+<li><a href="stuffit5.StuffItCompressionLevel.maximum.html">stuffit5::StuffItCompressionLevel::<b>maximum</b></a>
+Maximum compression level
+<li><a href="stuffit5.StuffItCompressionLevel.minimum.html">stuffit5::StuffItCompressionLevel::<b>minimum</b></a>
+Minimum StuffIt compression level
+<li><a href="stuffit5.StuffItCompressionLevel.none.html">stuffit5::StuffItCompressionLevel::<b>none</b></a>
+StuffIt no-compression level
+<li><a href="stuffit5.TextConversion.automatic.html">stuffit5::TextConversion::<b>automatic</b></a>
+Text files are converted
+<li><a href="stuffit5.TextConversion.off.html">stuffit5::TextConversion::<b>off</b></a>
+No files are converted
+<li><a href="stuffit5.TextConversion.on.html">stuffit5::TextConversion::<b>on</b></a>
+All files are converted
+<li><!2><a href="#DOC.236">stuffit5::TextConversion::type</a> Underlying type
+<li><!2><a href="#DOC.246">stuffit5::TextType::cr</a> The text file format with carriage return (CR) end-of-lines
+<li><!2><a href="#DOC.247">stuffit5::TextType::crlf</a> The text file format with carriage return (CR) and line feed (LF)
+end-of-lines
+<li><!2><a href="#DOC.245">stuffit5::TextType::lf</a> The text file format with line feed (LF) end-of-lines
+<li><!2><a href="#DOC.249">stuffit5::TextType::mac</a> The Macintosh text file format with carriage return (CR) end-of-lines
+<li><!2><a href="#DOC.251">stuffit5::TextType::native</a> The text file format of the operating system on which the engine is running
+<li><!2><a href="#DOC.244">stuffit5::TextType::type</a> Underlying type
+<li><!2><a href="#DOC.248">stuffit5::TextType::unixx</a> The UNIX text file format with line feed (LF) end-of-lines
+<li><!2><a href="#DOC.250">stuffit5::TextType::windows</a> The DOS/Windows text file format with carriage return (CR) and line feed
+(LF) end-of-lines
+<li><!2><a href="#DOC.321">stuffit5::ZipCompressionLevel::eight</a> Zip compression level eight
+<li><!2><a href="#DOC.318">stuffit5::ZipCompressionLevel::five</a> Zip compression level five
+<li><!2><a href="#DOC.317">stuffit5::ZipCompressionLevel::four</a> Zip compression level four
+<li><a href="stuffit5.ZipCompressionLevel.maximum.html">stuffit5::ZipCompressionLevel::<b>maximum</b></a>
+Maximum compression level
+<li><a href="stuffit5.ZipCompressionLevel.minimum.html">stuffit5::ZipCompressionLevel::<b>minimum</b></a>
+Minimum Zip compression level
+<li><a href="stuffit5.ZipCompressionLevel.nine.html">stuffit5::ZipCompressionLevel::<b>nine</b></a>
+Zip compression level nine
+<li><a href="stuffit5.ZipCompressionLevel.none.html">stuffit5::ZipCompressionLevel::<b>none</b></a>
+Zip compression level zero
+<li><!2><a href="#DOC.314">stuffit5::ZipCompressionLevel::one</a> Zip compression level one
+<li><!2><a href="#DOC.320">stuffit5::ZipCompressionLevel::seven</a> Zip compression level seven
+<li><!2><a href="#DOC.319">stuffit5::ZipCompressionLevel::six</a> Zip compression level six
+<li><!2><a href="#DOC.316">stuffit5::ZipCompressionLevel::three</a> Zip compression level three
+<li><!2><a href="#DOC.315">stuffit5::ZipCompressionLevel::two</a> Zip compression level two
+<li><!2><a href="#DOC.338">stuffit5_Archive</a> C equivalent of <code>stuffit5::Archive</code>
+<li><!2><a href="#DOC.339">stuffit5_ArchiveInfo</a> C equivalent of <code>stuffit5::ArchiveInfo</code>
+<li><!2><a href="#DOC.43">stuffit5_CompressionLevel_automatic</a> C equivalent of <code>stuffit5::CompressionLevel::automatic</code>
+<li><!2><a href="#DOC.344">stuffit5_CompressionLevel_type</a> C equivalent of <code>stuffit5::CompressionLevel::type</code>
+<li><!2><a href="#DOC.64">stuffit5_Error_aborted</a> C equivalent of <code>stuffit5::Error::aborted</code>
+<li><!2><a href="#DOC.70">stuffit5_Error_badArgument</a> C equivalent of <code>stuffit5::Error::badArgument</code>
+<li><!2><a href="#DOC.69">stuffit5_Error_badData</a> C equivalent of <code>stuffit5::Error::badData</code>
+<li><!2><a href="#DOC.68">stuffit5_Error_badFormat</a> C equivalent of <code>stuffit5::Error::badFormat</code>
+<li><!2><a href="#DOC.71">stuffit5_Error_badPassword</a> C equivalent of <code>stuffit5::Error::badPassword</code>
+<li><!2><a href="#DOC.63">stuffit5_Error_first</a> C equivalent of <code>stuffit5::Error::first</code>
+<li><!2><a href="#DOC.72">stuffit5_Error_inputError</a> C equivalent of <code>stuffit5::Error::inputError</code>
+<li><!2><a href="#DOC.74">stuffit5_Error_last</a> C equivalent of <code>stuffit5::Error::last</code>
+<li><!2><a href="#DOC.62">stuffit5_Error_none</a> C equivalent of <code>stuffit5::Error::none</code>
+<li><!2><a href="#DOC.65">stuffit5_Error_outOfMemory</a> C equivalent of <code>stuffit5::Error::outOfMemory</code>
+<li><!2><a href="#DOC.73">stuffit5_Error_outputError</a> C equivalent of <code>stuffit5::Error::outputError</code>
+<li><!2><a href="#DOC.342">stuffit5_Error_type</a> C equivalent of <code>stuffit5::Error::type</code>
+<li><!2><a href="#DOC.66">stuffit5_Error_unsupportedFormat</a> C equivalent of <code>stuffit5::Error::unsupportedFormat</code>
+<li><!2><a href="#DOC.67">stuffit5_Error_unsupportedMethod</a> C equivalent of <code>stuffit5::Error::unsupportedMethod</code>
+<li><!2><a href="#DOC.348">stuffit5_event_ArchiveChangedNameListener</a> C equivalent of <code>stuffit5::event::ArchiveChangedNameListener</code>
+<li><!2><a href="#DOC.349">stuffit5_event_ArchiveCreateBeginListener</a> C equivalent of <code>stuffit5::event::ArchiveCreateBeginListener</code>
+<li><!2><a href="#DOC.350">stuffit5_event_ArchiveCreateEndListener</a> C equivalent of <code>stuffit5::event::ArchiveCreateEndListener</code>
+<li><!2><a href="#DOC.351">stuffit5_event_ArchiveDecodeBeginListener</a> C equivalent of <code>stuffit5::event::ArchiveDecodeBeginListener</code>
+<li><!2><a href="#DOC.352">stuffit5_event_ArchiveDecodeEndListener</a> C equivalent of <code>stuffit5::event::ArchiveDecodeEndListener</code>
+<li><!2><a href="#DOC.353">stuffit5_event_ArchiveInfoListener</a> C equivalent of <code>stuffit5::event::ArchiveInfoListener</code>
+<li><!2><a href="#DOC.354">stuffit5_event_ArchiveNextListener</a> C equivalent of <code>stuffit5::event::ArchiveNextListener</code>
+<li><!2><a href="#DOC.355">stuffit5_event_ArchiveSizeListener</a> C equivalent of <code>stuffit5::event::ArchiveSizeListener</code>
+<li><!2><a href="#DOC.356">stuffit5_event_ErrorListener</a> C equivalent of <code>stuffit5::event::ErrorListener</code>
+<li><!2><a href="#DOC.357">stuffit5_event_FileChangedNameListener</a> C equivalent of <code>stuffit5::event::FileChangedNameListener</code>
+<li><!2><a href="#DOC.358">stuffit5_event_FileDecodeBeginListener</a> C equivalent of <code>stuffit5::event::FileDecodeBeginListener</code>
+<li><!2><a href="#DOC.359">stuffit5_event_FileDecodeEndListener</a> C equivalent of <code>stuffit5::event::FileDecodeEndListener</code>
+<li><!2><a href="#DOC.360">stuffit5_event_FileDeleteListener</a> C equivalent of <code>stuffit5::event::FileDeleteListener</code>
+<li><!2><a href="#DOC.361">stuffit5_event_FileEncodeBeginListener</a> C equivalent of <code>stuffit5::event::FileEncodeBeginListener</code>
+<li><!2><a href="#DOC.362">stuffit5_event_FileEncodeEndListener</a> C equivalent of <code>stuffit5::event::FileEncodeEndListener</code>
+<li><!2><a href="#DOC.363">stuffit5_event_FileInfoListener</a> C equivalent of <code>stuffit5::event::FileInfoListener</code>
+<li><!2><a href="#DOC.364">stuffit5_event_FileNewNameListener</a> C equivalent of <code>stuffit5::event::FileNewNameListener</code>
+<li><!2><a href="#DOC.365">stuffit5_event_FileScanStepListener</a> C equivalent of <code>stuffit5::event::FileScanStepListener</code>
+<li><!2><a href="#DOC.366">stuffit5_event_FolderDecodeBeginListener</a> C equivalent of <code>stuffit5::event::FolderDecodeBeginListener</code>
+<li><!2><a href="#DOC.367">stuffit5_event_FolderDecodeEndListener</a> C equivalent of <code>stuffit5::event::FolderDecodeEndListener</code>
+<li><!2><a href="#DOC.368">stuffit5_event_FolderEncodeBeginListener</a> C equivalent of <code>stuffit5::event::FolderEncodeBeginListener</code>
+<li><!2><a href="#DOC.369">stuffit5_event_FolderEncodeEndListener</a> C equivalent of <code>stuffit5::event::FolderEncodeEndListener</code>
+<li><!2><a href="#DOC.370">stuffit5_event_FolderInfoListener</a> C equivalent of <code>stuffit5::event::FolderInfoListener</code>
+<li><!2><a href="#DOC.371">stuffit5_event_FolderScanStepListener</a> C equivalent of <code>stuffit5::event::FolderScanStepListener</code>
+<li><!2><a href="#DOC.372">stuffit5_event_ProgressFilesBeginListener</a> C equivalent of <code>stuffit5::event::ProgressFilesBeginListener</code>
+<li><!2><a href="#DOC.373">stuffit5_event_ProgressFilesEndListener</a> C equivalent of <code>stuffit5::event::ProgressFilesEndListener</code>
+<li><!2><a href="#DOC.374">stuffit5_event_ProgressFilesMoveListener</a> C equivalent of <code>stuffit5::event::ProgressFilesMoveListener</code>
+<li><!2><a href="#DOC.375">stuffit5_event_ProgressScanBeginListener</a> C equivalent of <code>stuffit5::event::ProgressScanBeginListener</code>
+<li><!2><a href="#DOC.376">stuffit5_event_ProgressScanEndListener</a> C equivalent of <code>stuffit5::event::ProgressScanEndListener</code>
+<li><!2><a href="#DOC.377">stuffit5_event_ProgressScanStepListener</a> C equivalent of <code>stuffit5::event::ProgressScanStepListener</code>
+<li><!2><a href="#DOC.378">stuffit5_event_ProgressSizeBeginListener</a> C equivalent of <code>stuffit5::event::ProgressSizeBeginListener</code>
+<li><!2><a href="#DOC.379">stuffit5_event_ProgressSizeEndListener</a> C equivalent of <code>stuffit5::event::ProgressSizeEndListener</code>
+<li><!2><a href="#DOC.380">stuffit5_event_ProgressSizeMoveListener</a> C equivalent of <code>stuffit5::event::ProgressSizeMoveListener</code>
+<li><!2><a href="#DOC.340">stuffit5_FileInfo</a> C equivalent of <code>stuffit5::FileInfo</code>
+<li><!2><a href="#DOC.341">stuffit5_FolderInfo</a> C equivalent of <code>stuffit5::FolderInfo</code>
+<li><!2><a href="#DOC.145">stuffit5_Format_arc</a> C equivalent of <code>stuffit5::Format::arc</code>
+<li><!2><a href="#DOC.146">stuffit5_Format_arj</a> C equivalent of <code>stuffit5::Format::arj</code>
+<li><!2><a href="#DOC.161">stuffit5_Format_bin</a> C equivalent of <code>stuffit5::Format::bin</code>
+<li><!2><a href="#DOC.163">stuffit5_Format_binData</a> C equivalent of <code>stuffit5::Format::binData</code>
+<li><!2><a href="#DOC.162">stuffit5_Format_binInfo</a> C equivalent of <code>stuffit5::Format::binInfo</code>
+<li><!2><a href="#DOC.164">stuffit5_Format_binRsrc</a> C equivalent of <code>stuffit5::Format::binRsrc</code>
+<li><!2><a href="#DOC.158">stuffit5_Format_btoa</a> C equivalent of <code>stuffit5::Format::btoa</code>
+<li><!2><a href="#DOC.169">stuffit5_Format_bz2</a> C equivalent of <code>stuffit5::Format::bz2</code>
+<li><!2><a href="#DOC.154">stuffit5_Format_compact</a> C equivalent of <code>stuffit5::Format::compact</code>
+<li><!2><a href="#DOC.151">stuffit5_Format_compress</a> C equivalent of <code>stuffit5::Format::compress</code>
+<li><!2><a href="#DOC.143">stuffit5_Format_cpt</a> C equivalent of <code>stuffit5::Format::cpt</code>
+<li><!2><a href="#DOC.139">stuffit5_Format_empty</a> C equivalent of <code>stuffit5::Format::empty</code>
+<li><!2><a href="#DOC.140">stuffit5_Format_eof</a> C equivalent of <code>stuffit5::Format::eof</code>
+<li><!2><a href="#DOC.141">stuffit5_Format_first</a> C equivalent of <code>stuffit5::Format::first</code>
+<li><!2><a href="#DOC.155">stuffit5_Format_freeze</a> C equivalent of <code>stuffit5::Format::freeze</code>
+<li><!2><a href="#DOC.150">stuffit5_Format_gz</a> C equivalent of <code>stuffit5::Format::gz</code>
+<li><!2><a href="#DOC.148">stuffit5_Format_ha</a> C equivalent of <code>stuffit5::Format::ha</code>
+<li><!2><a href="#DOC.157">stuffit5_Format_hqx</a> C equivalent of <code>stuffit5::Format::hqx</code>
+<li><!2><a href="#DOC.170">stuffit5_Format_last</a> C equivalent of <code>stuffit5::Format::last</code>
+<li><!2><a href="#DOC.147">stuffit5_Format_lha</a> C equivalent of <code>stuffit5::Format::lha</code>
+<li><!2><a href="#DOC.159">stuffit5_Format_mime</a> C equivalent of <code>stuffit5::Format::mime</code>
+<li><!2><a href="#DOC.153">stuffit5_Format_pack</a> C equivalent of <code>stuffit5::Format::pack</code>
+<li><!2><a href="#DOC.167">stuffit5_Format_pf</a> C equivalent of <code>stuffit5::Format::pf</code>
+<li><!2><a href="#DOC.149">stuffit5_Format_rar</a> C equivalent of <code>stuffit5::Format::rar</code>
+<li><!2><a href="#DOC.152">stuffit5_Format_sco</a> C equivalent of <code>stuffit5::Format::sco</code>
+<li><!2><a href="#DOC.142">stuffit5_Format_sit</a> C equivalent of <code>stuffit5::Format::sit</code>
+<li><!2><a href="#DOC.168">stuffit5_Format_sit5</a> C equivalent of <code>stuffit5::Format::sit5</code>
+<li><!2><a href="#DOC.165">stuffit5_Format_sitseg</a> C equivalent of <code>stuffit5::Format::sitseg</code>
+<li><!2><a href="#DOC.166">stuffit5_Format_sitsegN</a> C equivalent of <code>stuffit5::Format::sitsegN</code>
+<li><!2><a href="#DOC.160">stuffit5_Format_tar</a> C equivalent of <code>stuffit5::Format::tar</code>
+<li><!2><a href="#DOC.343">stuffit5_Format_type</a> C equivalent of <code>stuffit5::Format::type</code>
+<li><!2><a href="#DOC.138">stuffit5_Format_unknown</a> C equivalent of <code>stuffit5::Format::unknown</code>
+<li><!2><a href="#DOC.156">stuffit5_Format_uu</a> C equivalent of <code>stuffit5::Format::uu</code>
+<li><!2><a href="#DOC.144">stuffit5_Format_zip</a> C equivalent of <code>stuffit5::Format::zip</code>
+<li><!2><a href="#DOC.180">stuffit5_MacBinaryOutput_automatic</a> C equivalent of <code>stuffit5::MacBinaryOutput::automatic</code>
+<li><!2><a href="#DOC.178">stuffit5_MacBinaryOutput_off</a> C equivalent of <code>stuffit5::MacBinaryOutput::off</code>
+<li><!2><a href="#DOC.179">stuffit5_MacBinaryOutput_on</a> C equivalent of <code>stuffit5::MacBinaryOutput::on</code>
+<li><!2><a href="#DOC.345">stuffit5_MacBinaryOutput_type</a> C equivalent of <code>stuffit5::MacBinaryOutput::type</code>
+<li><!2><a href="#DOC.336">stuffit5_Reader</a> C equivalent of <code>stuffit5::Reader</code>
+<li><!2><a href="#DOC.224">stuffit5_StuffIt5CompressionLevel_arsenic</a> C equivalent of <code>stuffit5::StuffIt5CompressionLevel::arsenic</code>
+<li><!2><a href="#DOC.223">stuffit5_StuffIt5CompressionLevel_deluxe</a> C equivalent of <code>stuffit5::StuffIt5CompressionLevel::deluxe</code>
+<li><!2><a href="#DOC.225">stuffit5_StuffIt5CompressionLevel_maximum</a> C equivalent of <code>stuffit5::StuffIt5CompressionLevel::maximum</code>
+<li><!2><a href="#DOC.221">stuffit5_StuffIt5CompressionLevel_minimum</a> C equivalent of <code>stuffit5::StuffIt5CompressionLevel::minimum</code>
+<li><!2><a href="#DOC.222">stuffit5_StuffIt5CompressionLevel_none</a> C equivalent of <code>stuffit5::StuffIt5CompressionLevel::none</code>
+<li><!2><a href="#DOC.233">stuffit5_StuffItCompressionLevel_deluxe</a> C equivalent of <code>stuffit5::StuffItCompressionLevel::deluxe</code>
+<li><!2><a href="#DOC.234">stuffit5_StuffItCompressionLevel_maximum</a> C equivalent of <code>stuffit5::StuffItCompressionLevel::maximum</code>
+<li><!2><a href="#DOC.231">stuffit5_StuffItCompressionLevel_minimum</a> C equivalent of <code>stuffit5::StuffItCompressionLevel::minimum</code>
+<li><!2><a href="#DOC.232">stuffit5_StuffItCompressionLevel_none</a> C equivalent of <code>stuffit5::StuffItCompressionLevel::none</code>
+<li><!2><a href="#DOC.242">stuffit5_TextConversion_automatic</a> C equivalent of <code>stuffit5::TextConversion::automatic</code>
+<li><!2><a href="#DOC.240">stuffit5_TextConversion_off</a> C equivalent of <code>stuffit5::TextConversion::off</code>
+<li><!2><a href="#DOC.241">stuffit5_TextConversion_on</a> C equivalent of <code>stuffit5::TextConversion::on</code>
+<li><!2><a href="#DOC.346">stuffit5_TextConversion_type</a> C equivalent of <code>stuffit5::TextConversion::type</code>
+<li><!2><a href="#DOC.253">stuffit5_TextType_cr</a> C equivalent of <code>stuffit5::TextType::cr</code>
+<li><!2><a href="#DOC.254">stuffit5_TextType_crlf</a> C equivalent of <code>stuffit5::TextType::crlf</code>
+<li><!2><a href="#DOC.252">stuffit5_TextType_lf</a> C equivalent of <code>stuffit5::TextType::lf</code>
+<li><!2><a href="#DOC.256">stuffit5_TextType_mac</a> C equivalent of <code>stuffit5::TextType::mac</code>
+<li><!2><a href="#DOC.258">stuffit5_TextType_native</a> C equivalent of <code>stuffit5::TextType::native</code>
+<li><!2><a href="#DOC.347">stuffit5_TextType_type</a> C equivalent of <code>stuffit5::TextType::type</code>
+<li><!2><a href="#DOC.255">stuffit5_TextType_unixx</a> C equivalent of <code>stuffit5::TextType::unixx</code>
+<li><!2><a href="#DOC.257">stuffit5_TextType_windows</a> C equivalent of <code>stuffit5::TextType::windows</code>
+<li><!2><a href="#DOC.337">stuffit5_Writer</a> C equivalent of <code>stuffit5::Writer</code>
+<li><!2><a href="#DOC.333">stuffit5_ZipCompressionLevel_eight</a> C equivalent of <code>stuffit5::ZipCompressionLevel::eight</code>
+<li><!2><a href="#DOC.330">stuffit5_ZipCompressionLevel_five</a> C equivalent of <code>stuffit5::ZipCompressionLevel::five</code>
+<li><!2><a href="#DOC.329">stuffit5_ZipCompressionLevel_four</a> C equivalent of <code>stuffit5::ZipCompressionLevel::four</code>
+<li><!2><a href="#DOC.335">stuffit5_ZipCompressionLevel_maximum</a> C equivalent of <code>stuffit5::ZipCompressionLevel::maximum</code>
+<li><!2><a href="#DOC.324">stuffit5_ZipCompressionLevel_minimum</a> C equivalent of <code>stuffit5::ZipCompressionLevel::minimum</code>
+<li><!2><a href="#DOC.334">stuffit5_ZipCompressionLevel_nine</a> C equivalent of <code>stuffit5::ZipCompressionLevel::nine</code>
+<li><!2><a href="#DOC.325">stuffit5_ZipCompressionLevel_none</a> C equivalent of <code>stuffit5::ZipCompressionLevel::none</code>
+<li><!2><a href="#DOC.326">stuffit5_ZipCompressionLevel_one</a> C equivalent of <code>stuffit5::ZipCompressionLevel::one</code>
+<li><!2><a href="#DOC.332">stuffit5_ZipCompressionLevel_seven</a> C equivalent of <code>stuffit5::ZipCompressionLevel::seven</code>
+<li><!2><a href="#DOC.331">stuffit5_ZipCompressionLevel_six</a> C equivalent of <code>stuffit5::ZipCompressionLevel::six</code>
+<li><!2><a href="#DOC.328">stuffit5_ZipCompressionLevel_three</a> C equivalent of <code>stuffit5::ZipCompressionLevel::three</code>
+<li><!2><a href="#DOC.327">stuffit5_ZipCompressionLevel_two</a> C equivalent of <code>stuffit5::ZipCompressionLevel::two</code>
+</ul>
+<p><i><a href="hierarchy.html">Class Hierarchy</a><br><a href="diagrams.html">Class Diagrams</a></i>
+<hr>
+
+<table><tr valign=top><td><img src="images/aladdin-logo.gif"></td>
+<td>Copyright &copy;1995-2001 <a href="http://www.aladdinsys.com/">Aladdin Systems, Inc.</a>
+<br>All Rights reserved.</font></td></tr></table>
+
+<p>$Id: indexFooter.html,v 1.2 2001/03/16 01:13:14 serge Exp $
+
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

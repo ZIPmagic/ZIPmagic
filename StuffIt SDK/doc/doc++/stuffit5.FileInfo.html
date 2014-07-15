@@ -1,0 +1,203 @@
+<html><head><title>stuffit5::FileInfo</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2> class  stuffit5::FileInfo</font></b><blockquote>
+File information
+</blockquote>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Fields</h5><DD><dt><a href="#DOC.77.1"></a><!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   <b>name</b> </b>
+ <dd><i>Current <i>absolute</i> path name of the file being processed</i>
+<dt><a href="#DOC.77.2"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;std::wstring&gt;   <b>unicodeName</b> </b>
+ <dd><i>Current Unicode <i>file</i> name (not the <i>path</i> name) of the
+file being processed</i>
+<dt><a href="#DOC.77.3"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   <b>compressedSize</b> </b>
+ <dd><i><b>In a reader:</b> Compressed size of the file (in the archive)</i>
+<dt><a href="#DOC.77.4"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   <b>uncompressedSize</b> </b>
+ <dd><i><b>In a reader:</b> Uncompressed size of the (original) file</i>
+<dt><a href="#DOC.77.5"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   <b>modificationTime</b> </b>
+ <dd><i><b>In a reader:</b> Modification date in UNIX format (32-bit integer equal
+to the number of seconds since midnight, January 1, 1970, GMT</i>
+<dt><a href="#DOC.77.6"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;<!1><a href="format.data.OSType.html">format::data::OSType</a> &gt;   <b>macType</b> </b>
+ <dd><i><b>In a reader:</b> Macintosh file type, four characters</i>
+<dt><a href="#DOC.77.7"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;<!1><a href="format.data.OSType.html">format::data::OSType</a> &gt;   <b>macCreator</b> </b>
+ <dd><i><b>In a reader:</b> Macintosh file creator, four characters</i>
+<dt><a href="#DOC.77.8"></a><!1><a href="un.property.html">un::property</a>  &lt;bool&gt;   <b>isEncrypted</b> </b>
+ <dd><i><b>In a reader:</b> True if the file is encrypted, and a password or
+a key is required to expand it</i>
+<dt><a href="#DOC.77.9"></a><!1><a href="un.property.html">un::property</a>  &lt;bool&gt;   <b>outputIsMacBinary</b> </b>
+ <dd><i><b>In a reader:</b> True if the file will be output in MacBinary
+encoded format</i>
+</DL><DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.77.10"></a> <b>FileInfo</b>() </b>
+ <dd><i>Default constructor</i>
+<dt><a href="#DOC.77.11"></a>void  <b>reset</b>() </b>
+ <dd><i>Resets all properties, marks all optional properties as unavailable</i>
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+File information.
+
+<p>Each <code>stuffit5::Reader</code> and <code>stuffit5::Writer</code> has one
+instance of this class that stores information about each file being read or written.
+
+<p>This class allows access to file <i>properties</i> through accessor and mutator
+functions. Some of the properties are optional.
+
+<p>File properties are available during archive decoding and creation. They are
+available at the time of <code>FileInfo</code>, <code>FileDecodeBegin</code> and
+<code>FileEncodeBegin</code> event callbacks.
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="FileInfo">
+<A NAME ="DOC.77.10">
+<DT><TT><b>  FileInfo()</b></TT>
+<DD>Default constructor
+<dl></DL><P>
+<A NAME="name">
+<A NAME ="DOC.77.1">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   name</b></TT>
+<DD>Current <i>absolute</i> path name of the file being processed.
+
+<p><b>In a reader:</b> The accessor returns (during scan and decoding
+phases) the absolute path name of the output file being scanned or
+decoded by the reader, at the time of the call. Undefined when no
+archive scanning or decoding is taking place.
+
+<p>The mutator assigns the path name of the file that is being decoded
+by the reader; it sets the final path name of the file. The path name
+may be absolute or relative to the current directory. This can be used
+to control the name of each output file. It has effect only during the
+decoding phase and only if it used before the output file is open. For
+example, it can be used in the <code>FileDecodeBegin</code> event
+callback to rename output files, or to redirect them to a location
+different from the destination folder the reader has been assigned.
+
+<p><b>In a writer:</b> The accessor returns, during the archive creation
+phase, the path name of the input file being added to the archive by the
+writer. Undefined when no archive creation is taking place.
+
+<p>The mutator assigns the new path name of the file that is being added
+to the archive by the writer. The path name may be absolute or relative.
+If the input file is not open yet, the last chance to change its name or
+location (i.e., replace the "proposed" file and add a different file) is
+during the <code>FileEncodeBegin</code> event callback.
+<dl></DL><P>
+<A NAME="unicodeName">
+<A NAME ="DOC.77.2">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;std::wstring&gt;   unicodeName</b></TT>
+<DD>Current Unicode <i>file</i> name (not the <i>path</i> name) of the
+file being processed.
+
+<p><b>In a reader:</b> The accessor returns (during the scan and the
+decoding phases) the Unicode name of the output file being scanned or
+decoded by the reader, at the time of the call. Undefined when no
+archive scanning or decoding is taking place. Unicode file names are
+available only in StuffIt5 archives that store Unicode names.
+
+<p>The mutator assigns the name of the output file. It has effect only
+during the decoding phase and only if it used before the output file is
+open. For example, it can be used in the <code>FileDecodeBegin</code>
+event callback to rename output files, or to redirect them to a location
+different from the destination file the reader has been assigned.
+
+<p><b>In a writer:</b> The mutator assigns the Unicode file name. The
+name is not a complete path name, but just the file name to be stored in
+the archive. The name can be changed during the
+<code>FileEncodeBegin</code> event callback.
+
+<p>The complete path name is available through the <code>name()</code>
+property, and contains the UTF8-encoded file name from the archive; the
+file name part may be replaced (through the <code>name</code> mutator by
+a name acceptable to the target system and based on the Unicode file
+name.
+<dl></DL><P>
+<A NAME="compressedSize">
+<A NAME ="DOC.77.3">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   compressedSize</b></TT>
+<DD><b>In a reader:</b> Compressed size of the file (in the archive).
+Available in most (but not all) formats.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="uncompressedSize">
+<A NAME ="DOC.77.4">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   uncompressedSize</b></TT>
+<DD><b>In a reader:</b> Uncompressed size of the (original) file.
+Available in most (but not all) formats.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="modificationTime">
+<A NAME ="DOC.77.5">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   modificationTime</b></TT>
+<DD><b>In a reader:</b> Modification date in UNIX format (32-bit integer equal
+to the number of seconds since midnight, January 1, 1970, GMT. Available in
+StuffIt and StuffIt5 readers.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="macType">
+<A NAME ="DOC.77.6">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;<!1><a href="format.data.OSType.html">format::data::OSType</a> &gt;   macType</b></TT>
+<DD><b>In a reader:</b> Macintosh file type, four characters. Available
+in StuffIt, StuffItSegment, MacBinary, and BinHex formats.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="macCreator">
+<A NAME ="DOC.77.7">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;<!1><a href="format.data.OSType.html">format::data::OSType</a> &gt;   macCreator</b></TT>
+<DD><b>In a reader:</b> Macintosh file creator, four characters.
+Available in StuffIt, StuffItSegment, MacBinary, and BinHex formats.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="isEncrypted">
+<A NAME ="DOC.77.8">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;bool&gt;   isEncrypted</b></TT>
+<DD><b>In a reader:</b> True if the file is encrypted, and a password or
+a key is required to expand it. If there is only one password (or key)
+per archive, the archive's password (or key) should be established by
+the time file information is available.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="outputIsMacBinary">
+<A NAME ="DOC.77.9">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;bool&gt;   outputIsMacBinary</b></TT>
+<DD><b>In a reader:</b> True if the file will be output in MacBinary
+encoded format. Indicates that reader output is a MacBinary file
+generated by the reader. Does not indicate that the original file is a
+MacBinary file.
+
+<p>Unlike other properties in this class, this indication is available
+only at the time of <code>FileDecodeBegin</code> event callbacks, not at
+the time of <code>FileInfo</code> event callbacks.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="reset">
+<A NAME ="DOC.77.11">
+<DT><TT><b> void  reset()</b></TT>
+<DD>Resets all properties, marks all optional properties as unavailable
+<dl></DL><P></DL>
+<hr>
+ <DL><DT><b>This class has no subclasses.</b></DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.12.2.1 $, $Date: 2001/07/05 23:32:33 $
+</DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

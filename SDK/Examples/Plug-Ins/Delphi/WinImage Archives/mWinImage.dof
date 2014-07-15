@@ -1,0 +1,103 @@
+[FileVersion]
+Version=6.0
+[Compiler]
+A=8
+B=0
+C=0
+D=0
+E=0
+F=0
+G=1
+H=1
+I=1
+J=1
+K=0
+L=0
+M=0
+N=1
+O=1
+P=1
+Q=0
+R=0
+S=0
+T=0
+U=0
+V=1
+W=0
+X=1
+Y=0
+Z=1
+ShowHints=1
+ShowWarnings=1
+UnitAliases=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+[Linker]
+MapFile=0
+OutputObjs=0
+ConsoleApp=1
+DebugInfo=0
+RemoteSymbols=0
+MinStackSize=16384
+MaxStackSize=1048576
+ImageBase=4194304
+ExeDescription=
+[Directories]
+OutputDir=
+UnitOutputDir=
+PackageDLLOutputDir=
+PackageDCPOutputDir=
+SearchPath=
+Packages=Vcl40;Vclx40;Vcldb40;vcldbx40;VclSmp40;Qrpt40;TeeUI40;teedb40;tee40;Dss40;ibevnt40;Vclmid40;NMFast40;Inetdb40;Inet40;EQPack1_4;EQPack2_4;tziptv4;msipak4
+Conditionals=
+DebugSourceDirs=
+UsePackages=0
+[Parameters]
+RunParams=
+HostApplication=D:\Program Files\MimarSinan\Codex Suite 2002\Skins\Visual Archive Studio\mVAS.exe
+Launcher=
+UseLauncher=0
+DebugCWD=
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=E:\Codex Suite\Plug-Ins\SZDD\
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=0
+Release=2002
+Build=132
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=1
+Locale=1033
+CodePage=1252
+[Version Info Keys]
+CompanyName=MimarSinan International
+FileDescription=WinImage Archives Codex Plug-In
+FileVersion=1.0.2002.132
+InternalName=Codex Suite Power Toy featuring WinImage by Gilles Vollant
+LegalCopyright=Copyright© 1992-2002 MimarSinan International. All rights reserved.
+LegalTrademarks=MimarSinan and Codex are trademarks or registered trademarks of MimarSinan International.
+OriginalFilename=mWinImage.dll
+ProductName=MimarSinan Codex Suite 2002
+ProductVersion=10, 0, 0, 2002
+Comments=
+[Excluded Packages]
+e:\packages\elpack6\Code\dceldbD6.bpl=EldoS DB-Aware Controls (Design-time)
+e:\packages\elpack6\Code\dcelppD6.bpl=EldoS Professional Components (Design-time)
+e:\packages\elpack6\Code\dclelpD6.bpl=EldoS Visual Components (Design-time)
+[HistoryLists\hlUnitAliases]
+Count=1
+Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+[HistoryLists\hlSearchPath]
+Count=7
+Item0=c:\Program Files\Borland\Delphi6\Source\Vcl;e:\packages\units;e:\codex suite\api\codex
+Item1=c:\Program Files\Borland\Delphi6\Source\Vcl;e:\packages\units;e:\codex suite\api\codex;E:\Codex Suite\API\CodexShellHandler
+Item2=c:\Program Files\Borland\Delphi6\Source\Vcl;e:\Packages\Units;e:\packages\eqpack;e:\codex suite\api\codex;E:\Codex Suite\API\CodexShellHandler
+Item3=e:\codex suite\api\codex;c:\Program Files\Borland\Delphi6\Source\Vcl;e:\packages\units;
+Item4=e:\packages\units
+Item5=D:\Program Files\xptheme;D:\Program Files\Borland\CBuilder6\Projects\Convenience\Delphi
+Item6=D:\Program Files\xptheme

@@ -1,0 +1,239 @@
+<html><body>
+
+<h3>Introduction</h3>
+
+<p>The StuffIt Engine allows developers to incorporate compression and
+decompression of files in several compressed and encoded formats into any
+file-based application. Use of the engine requires only minimal knowledge of the
+underlying formats. Compressors and decompressors can be implemented in a few
+lines of code. The additional advantage of using the StuffIt Engine is that all
+formats it supports use the same interface, so once support of a single format
+is implemented, it takes a trivial amount of work to add other formats.
+
+<p>The engine performs three functions: determining file types based on their
+contents (classifying); creating archives from original files (encoding,
+stuffing), and re-creating original files from archives (decoding, expanding).
+All operations are handled by calls to the engine functions described in this
+guide.
+
+<p>The engine's design is based on two conflicting goals: ease of use and great
+control over details of decoding and encoding processes. Using the StuffIt
+Engine, it is easy to write applications that perform tasks similar to what many
+archivers do, yet require very little code. For more runtime control, the engine
+has an option of using event callback functions. Normally, however, all or most
+event callbacks are left unused, leaving you with a very simple interface to the
+engine.
+
+<h4>Contents of this SDK</h4>
+
+<p>This version of the StuffIt Engine includes static and dynamic libraries
+for Win32, Linux, and Solaris platforms. There is one SDK archive per platform.
+
+<p>This SDK contains the following directories:
+
+<p><table width=100% bgcolor=#ffffff cellpadding=2 cellspacing=1 border=0>
+
+<tr bgcolor=#c0c0c0><td valign=top><a href="../doc/"><b>doc/</b></td>
+
+<td><a href="../doc/index.html">Documentation</a> for StuffIt Engine and sample
+applications.</td></tr>
+
+<tr bgcolor=#c0c0c0><td valign=top><a href="../src/"><b>src/</b></td>
+
+<td>Headers and sample sources. Contains the following directories:
+
+<ul>
+<li><b>algorithm/</b> - algorithm-related classes (keys, passwords)
+<li><b>app/</b> - application sources for stuff and unstuff
+<li><b>format/</b> - format-related classes
+<li><b>io/</b> - I/O-related classes
+<li><b>sample/</b> - sample sources
+<li><b>stream/</b> - stream classes
+<li><b>stuffit5/</b> - StuffIt Engine C/C++ headers
+<li><b>stuffit5/event/</b> - StuffIt Engine C++ event callback headers
+<li><b>stuffit5/excepion/</b> - StuffIt Engine C++ exception headers
+<li><b>un/</b> - general-purpose classes
+<li><b>un/gcc/</b> - gcc/egcs specific headers
+<li><b>un/msvc/</b> - Visual C++ specific headers
+<li><b>util/</b> - utility classes
+<li><b>util/command/</b> - command-line parsing classes
+</ul>
+
+</td></tr>
+
+<tr bgcolor=#c0c0c0><td valign=top><a href="../linux/"><b>linux/</b>
+<br><a href="../solaris/"><b>solaris/</b></td>
+
+<td>Linux and Solaris sample projects:
+
+<ul><li><b>Makefile</b> - the main makefile containing all samples
+<li><b>make/*.make</b> - individual sample makefiles</ul>
+
+<p>See also: <a href="../doc/samples.html">Samples</a>.
+</td></tr>
+
+<tr bgcolor=#c0c0c0><td valign=top><a href="../linux/bin/"><b>linux/bin/</b>
+<a href="../solaris/bin/"><b>solaris/bin/</b></td>
+
+<td>Linux and Solaris sample executables:
+
+<ul>
+<li><b>stuff</b> - archive creator
+<li><b>unstuff</b> - archive expander
+</ul>
+
+</td></tr>
+
+<tr bgcolor=#c0c0c0><td valign=top><a href="../linux/lib/"><b>linux/lib/</b>
+<br><a href="../solaris/lib/"><b>solaris/lib/</b></td>
+
+<td>Linux and Solaris StuffIt Engine library:
+
+<ul>
+<li><b>libstuffit5.engine.a</b> - static library
+<li><b>libstuffit5.engine-5.1.so</b> - shared library
+</ul>
+
+</td></tr>
+
+<tr bgcolor=#c0c0c0><td valign=top><a href="../win32/"><b>win32/</b></td>
+
+<td>Win32 sample projects:
+
+<ul><li><b>samples.dsw</b> - the workspace containing all samples
+<li><b>project/*.dsp</b> - individual sample projects</ul>
+
+<p>See also: <a href="../doc/samples.html">Samples</a>.
+</td></tr>
+
+<tr bgcolor=#c0c0c0><td valign=top><a href="../win32/bin/"><b>win32/bin/</b></td>
+
+<td>StuffIt Engine library and sample executables (for dynamically linked
+"Multithreaded DLL" C/C++ runtime):
+
+<ul>
+<li><b>stuffit5.engine-5.1.dll</b> - shared (dynamic-link) library
+<li><b>stuffit5.engine-5.1.lib</b> - import library for <b>stuffit5.engine-5.1.dll</b>
+<li><b>stuff.exe, unstuff.exe</b> - sample applications
+<li><b>register.exe</b> - StuffIt Engine registration application (see the REGISTRATION file
+in the root directory of the SDK)
+</ul>
+
+</td></tr>
+
+<tr bgcolor=#c0c0c0><td valign=top><a href="../win32/binS/"><b>win32/binS/</b></td>
+
+<td>StuffIt Engine library and sample executables (for statically linked
+"Multithreaded" C/C++ runtime):
+
+<ul>
+<li><b>stuffit5.engineS-5.1.dll</b> - shared (dynamic-link) library
+<li><b>stuffit5.engineS-5.1.lib</b> - import library for <b>stuffit5.engineS-5.1.dll</b>
+<li><b>stuffit5.engineS.lib</b> - static library for statically linked "Multithreaded" C/C++ runtime
+<li><b>stuffS.exe, unstuffS.exe</b> - sample statically-linked applications
+</ul>
+
+</td></tr>
+
+<tr bgcolor=#c0c0c0><td valign=top><a href="../win32/binT/"><b>win32/binT/</b></td>
+
+<td>Self-extracting executables:
+
+<ul>
+<li><b>seasit5T-5.1.exe, seazip-5.1.exe</b> - self-extracting executables
+</ul>
+
+</td></tr>
+
+<tr bgcolor=#c0c0c0><td valign=top><a href="../win32/redist/"><b>win32/binT/</b></td>
+
+<td>Redistributable libraries and executables:
+
+<ul>
+<li><b>MACDRAPI.DLL</b> - MacDrive 2000 API, needed for HFS volume support
+(this component is optional)
+<li><b>MSVCRT.DLL, MSVCP60.DLL</b> - Dynamic-link C and C++ runtime libraries
+(required for the StuffIt Engine dynamically linked with "Multithreaded DLL" C/C++ runtime)
+</ul>
+
+</td></tr>
+
+</table>
+
+<h4>Preliminaries</h4>
+
+<h5>Terminology</h5>
+
+<p>The following terms are used in this document.
+
+<p><i>Compression</i> is a process of transforming data into a more compact
+representation. <i>Decompression</i> is a process of restoring the original
+data given its compressed representation. <i>Encryption</i> is a data
+transformation applied with the purpose of concealing data.
+<i>Decryption</i> is a process of recovering the original data from its
+encrypted representation.
+
+<p>An <i>archive</i> is a file containg one or more files, normally in
+compressed form. Examples of archives are Zip (.zip), gzip (.gz), tar
+(.tar), and StuffIt (.sit, .sea) files. An <i>encoded file</i> is one or
+more files that have been transformed into a different form for storage
+or transmission. Examples of encoded files are uuencoded files, BinHex
+(.hqx) files, and MacBinary (.bin) files. Most encoded formats (such as
+BinHex, MacBinary, and uuencode) and some compressed formats (such as
+gzip) are only capable of storing single files.
+
+<p><i>Encoding</i> and <i>writing</i> are used to describe the process of
+creating archives or encoded files. Compression and encryption are two
+particular cases of encoding and may or may not be a part of this
+process. <i>Decoding</i> and <i>reading</i> are used to describe the process
+of reading archives or encoded files and re-creating the original files
+contained in them. Decompression and decryption may be part of this
+process.
+
+<h5>Archive and File Properties</h5>
+
+<p>The following is a general description of some properties of archives
+and files that are important for the engine.
+
+<p>Archives contain <i>items</i> (such as <i>files</i> and <i>folders</i>), that
+are hierarchically arranged in a <i>tree structure</i> (similar to a
+filesystem tree). Archives may contain one or more items at the <i>root
+level</i>. File items have bodies (the file body, or the file's forks in
+case of Macintosh files) and attributes (such as size or sizes,
+timestamps or filesystem attributes). Folder items do not have bodies,
+but do have attributes.
+
+<p>In most cases archive structure reflects the structure of the part of
+a filesystem that was put into the archive. This structure is saved as
+the archive is created and items put into it, and restored as the
+archive is decoded, and original items are recreated.
+
+<p>Both creation (encoding) of an archive and decoding of the files
+contained in it results in new filesystem objects being created. The
+location where these objects are created is the <i>destination</i> of the
+reader or writer operation. The destination is often referred to as a
+<i>destination folder</i>; if the destination is a volume, its root folder
+is the destination folder.
+
+<h4>Engine Components</h4>
+
+<p>The StuffIt Engine is delivered as both static and dynamic-link
+libraries, with interfaces for C and C++ languages. The base interface
+is a set of C types, functions, and event callback prototypes. The C
+language was chosen for the base interface because of its greater
+portability at the object code level. The C++ interface can be extended
+and customized by inheritance and virtual function mechanisms.
+
+<p>The C and C++ interfaces can be used with both static and
+dynamic-link libraries.
+
+<hr>
+
+<table><tr valign=top><td><img src="images/aladdin-logo.gif"></td>
+<td>Copyright &copy;1995-2001 <a href="http://www.aladdinsys.com/">Aladdin Systems, Inc.</a>
+<br>All Rights reserved.</font></td></tr></table>
+
+<p>$Id: introduction.html,v 1.4 2001/03/16 01:13:14 serge Exp $
+
+</body></html>
+

@@ -1,0 +1,188 @@
+This file briefly describes changes in StuffIt Engine SDK builds.
+
+Build 5.1.6.582 2001/07/05 (status: stable, urgency: low)
+    Windows, Linux, and Solaris build. Merges Solaris branch changes
+    (build 581) into the 5.1.6 branch (build 568).
+
+Build 5.1.6.581 2001/03/22 (status: stable, urgency: low)
+    Fixed register program. Moved util::StringTokenizer to un::tokenizer.
+
+Build 5.1.6.578 2001/03/22 (status: experimental, urgency: low)
+Build 5.1.6.577 2001/03/22 (status: experimental, urgency: low)
+Build 5.1.6.576 2001/03/22 (status: experimental, urgency: low)
+Build 5.1.6.575 2001/03/20 (status: experimental, urgency: low)
+    Build numbers 563-574 reserved for a branch. Bug fix: classifier had a problem
+    with suspected arj headers close to the end of the buffer. Additional options
+    in the stuff applications: --mac-type, --mac-creator.
+
+Build 5.1.6.568 2001/06/06 (status: stable, urgency: medium)
+    Fixes a non-NT problem with file sharing during timestamp access.
+
+Build 5.1.6.567 2001/06/05 (status: stable, urgency: medium)
+    Fixes: 1) version number display in samples, 2) a timestamp access problem that
+    caused archive creation failures, 3) event forwarding to C callbacks. Adds:
+    1) read/write access to return-receipt archive flag in sit5 format,
+    2) access to file sizes and modification time during scan and decode (zip format).
+
+Build 5.1.6.566 2001/05/10 (status: stable, urgency: low)
+    Fixes a problem with opening network shared folders (when trying
+    to set timestamps).
+
+Build 5.1.6.565 2001/05/09 (status: stable, urgency: low)
+    Does not reopen the first segment and adds progress in sitseg reader.
+    Correctly creates directories on network shares.
+
+Build 5.1.6.564 2001/04/24 (status: stable, urgency: low)
+    Adds progress feedback in compression method 8 in arc.
+
+Build 5.1.6.563 2001/04/17 (status: stable, urgency: high)
+    Removes a potential loop during reading arj archive headers. Reverses
+    the order of bytes in format::data::OSType when initialized through value().
+
+Build 5.1.6.562 2001/03/17 (status: stable, urgency: high)
+Build 5.1.5.561 2001/03/17 (status: stable, urgency: high)
+Build 5.1.6.560 2001/03/17 (status: stable, urgency: high)
+    Faster isp (method 13) compression in the sit5 format. Corrections to
+    ArchiveInfo and FileInfo size reporting (sit5 was reporting the same size
+    for both in the fielInfo event; ArchiveInfo sizes are now explicitly optional).
+    Patchlevel bumped up to 6 due to additional interfaces.
+
+Build 5.1.5.559 2001/03/15 (status: stable, urgency: high)
+    UPX compression turned off on Win32 to allow GetProcAddress to work.
+    StuffIt temporary files are now located in the temporary
+    directory, as defined by environment variables TEMP and TMP.
+    Updates documentation.
+
+Build 5.1.5.558 2001/03/14 (status: stable, urgency: medium)
+Build 5.1.5.557 2001/03/10 (status: experimental, urgency: low)
+    MacBinary output is now possible for non-Macintosh files without
+    a resource fork. Smaller SEA sizes.
+
+Build 5.1.5.556 2001/03/08 (status: experimental, urgency: low)
+    Supports more variations of arj and mime formats.
+
+Build 5.1.5.555 2001/03/06 (status: experimental, urgency: low)
+    Bug fixes. TextType::unix changed to TextType::unixx, Version::major
+    to Version::majorv, Version::minor to Version::minorv (to avoid conflicts
+    with gcc preprocessor symbols).
+
+Build 5.1.4.553 2001/02/27 (status: experimental, urgency: low)
+    Version resource is back in the Windows shared libraries.
+
+Build 5.1.4.552 2001/02/24 (status: experimental, urgency: low)
+Build 5.1.4.551 2001/02/24 (status: experimental, urgency: low)
+    Adds modification date to file information.
+
+Build 5.1.4.550 2001/02/22 (status: experimental, urgency: low)
+Build 5.1.4.549 2001/02/22 (status: experimental, urgency: low)
+Build 5.1.4.548 2001/02/16 (status: experimental, urgency: low)
+Build 5.1.4.547 2001/02/10 (status: experimental, urgency: low)
+Build 5.1.4.546 2001/02/08 (status: experimental, urgency: low)
+    Restores sitsegN format code use in the sitseg classifier.
+    Removes code that allowed zero CRCs in sitseg headers.
+    stuffit5::Writer generates Evacuation and UnsupportedFormat
+    exceptions to match stuffit5::Reader behavior.
+
+Build 5.1.4.545 2001/02/04 (status: experimental, urgency: low)
+    Zip SEA asks for a password when expanding an encrypted zip archive.
+    gz reader now uses the file name stored in the header, when available.
+    MacDrive API shared library added to redistributable library directory.
+
+Build 5.1.4.543 2001/01/26 (status: experimental, urgency: low)
+    Bug fixes: arc reader. bin classifier more tolerant of zero CRCs.
+    Added io::Exception to the SDK.
+
+Build 5.1.4.542 2001/01/26 (status: experimental, urgency: low)
+    A fully tested Linux build.
+
+Build 5.1.4.541 2001/01/20 (status: experimental, urgency: low)
+    Minor bug fixes.
+
+Build 5.1.4.540 2001/01/19 (status: experimental, urgency: high)
+    Adds HFS (MacDrive) and NTFS (Services for Macintosh) support.
+
+Build 5.1.3.535 2001/01/17 (status: experimental, urgency: low)
+    Minor bug fixes.
+
+Build 5.1.3.534 2000/12/22 (status: experimental, urgency: low)
+    Corrects Unicode name availability indicators in sit5. Fixes registration
+    check by removing dependency on static variable initialization order.
+
+Build 5.1.3.533 2000/12/12 (status: experimental, urgency: low)
+    Uses upx 1.04. Additional registration option (through library patch).
+
+Build 5.1.3.532 2000/12/12 (status: experimental, urgency: low)
+Build 5.1.3.531 2000/12/12 (status: experimental, urgency: low)
+    Added redistributable C and C++ shared runtime libraries to the SDK.
+
+Build 5.1.3.530 2000/12/08 (status: experimental, urgency: medium)
+    Fix for a bug introduced in (now recalled) build 529.
+
+Build 5.1.3.529 2000/11/30 (status: experimental, urgency: low)
+    Bug fixes.
+
+Build 5.1.3.528 2000/11/29 (status: experimental, urgency: low)
+    Corrected incorrect stream positioning when mime items begin in the middle
+    of a file. uu reader now positions at the first character *past* the end
+    of the last line to help speed up subsequent classification. sitseg reader
+    now correctly outputs the data fork before the rsrc fork when creating
+    MacBinary files.
+
+Build 5.1.3.527 2000/11/16 (status: experimental, urgency: low)
+    Fixes to support double-byte foreign languages (such as Kanji).
+
+Build 5.1.2.526 2000/11/11 (status: experimental, urgency: low)
+    Disabled the "run" functionality in the SEAs.
+
+Build 5.1.2.525 2000/10/12 (status: experimental, urgency: low)
+    bin and hqx writers no longer store full pathnames in archive headers.
+    Name in the bin header does not have a .bin extension.
+    Smaller SEAs.
+
+Build 5.1.2.524 2000/09/30 (status: experimental, urgency: low)
+    Adds zip encryption and decryption.
+
+Build 5.1.2.523 2000/09/27 (status: experimental, urgency: low)
+
+Build 5.1.2.522 2000/09/23 (status: experimental, urgency: medium)
+    Segment size supported by writer.
+
+Build 5.1.2.521 2000/09/23 (status: experimental, urgency: low)
+Build 5.1.2.520 2000/09/22 (status: experimental, urgency: low)
+
+Build 5.1.2.519 2000/09/15 (status: experimental, urgency: medium)
+    Runtime version support.
+
+Build 5.1.1.518 2000/09/13 (status: experimental, urgency: low)
+    Added a few missing event listener add/remove functions in the C interface.
+
+Build 5.1.1.516 2000/09/12 (status: experimental, urgency: low)
+    Different linking of Linux executables.
+
+Build 5.1.1.515 2000/08/30 (status: stable, urgency: low)
+Build 5.1.1.514 2000/08/25  (status: stable, urgency: high)
+    bz2 reader. Updated doc++ and general documentation.
+    stuff and unstuff list their options when invoked without arguments.
+
+Build 5.1.1.513 2000/08/23  (status: stable, urgency: high)
+    Runs fine with a missing .key file. unstuff no longer generates license
+    reminders. Linux build looks for the .key file in all directories in the PATH.
+
+Build 5.1.1.512 2000/08/22 (status: stable, urgency: high)
+    Windows executables and shared libraries are compressed to reduce size.
+    Linux executables are statically linked and compressed and should run
+    on any i386 Linux with kernel version 2.0+ (all distributions since about
+    mid-1996). The new registration scheme is based on old-style serial numbers,
+    but uses a versioned format and an external key file.
+
+Build 5.1.0.511 2000/08/03 (status: experimental, urgency: low)
+    Smaller SEAs, more inline code.
+
+Build 5.1.0.510 2000/08/01 (status: experimental, urgency: high)
+    Version 5.1.0 separates formats into independent libraries, making
+    the engine a multi-library release. C interface calls changed to match
+    C++ calls. SEA sizes significantly reduced. Linux build includes statically
+    linked executables.
+
+$Id: CHANGES,v 1.144.2.10 2001/07/06 19:19:42 serge Exp $
+

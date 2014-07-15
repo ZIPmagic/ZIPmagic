@@ -1,0 +1,98 @@
+<html><head><title>stuffit5::exception::Exception</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2> class  stuffit5::exception::Exception</font>: public <!1><a href="un.exception.html">un::exception</a> </b><blockquote>
+StuffIt Engine exception
+</blockquote>
+<hr>
+<h4>Inheritance:</h4>
+<applet code="ClassDiagram.class" width=600 height=293>
+<param name=classes value="Mstd::exception,M,Cun::exception,Mun.exception.html,Cstuffit5::exception::Exception,Mstuffit5.exception.Exception.html,Cstuffit5::exception::UnsupportedMethod,Mstuffit5.exception.UnsupportedMethod.html,Cstuffit5::exception::UnsupportedFormat,Mstuffit5.exception.UnsupportedFormat.html,Cstuffit5::exception::Output,Mstuffit5.exception.Output.html,Cstuffit5::exception::Input,Mstuffit5.exception.Input.html,Cstuffit5::exception::Evacuation,Mstuffit5.exception.Evacuation.html,Cstuffit5::exception::BadPassword,Mstuffit5.exception.BadPassword.html,Cstuffit5::exception::BadFormat,Mstuffit5.exception.BadFormat.html,Cstuffit5::exception::BadData,Mstuffit5.exception.BadData.html,Cstuffit5::exception::BadArgument,Mstuffit5.exception.BadArgument.html">
+<param name=before value="M,M,M,M|_,MR_,MR_,MR_,MR_,MR_,MR_,MR_,Mr_">
+<param name=after value="Md_SP,Md_,M,M,M,M,M,M,M,M,M,M">
+<param name=indent value="0,1,2,2,2,2,2,2,2,2,2,2">
+<param name=arrowdir value="down">
+</applet>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.488.1"></a> <b>Exception</b>(const std::string& <!2><a href="un.exception.html#DOC.497.3">reason</a> , const std::string& <!2><a href="un.exception.html#DOC.497.4">type</a>  = "StuffIt Engine") </b>
+ <dd><i>Constructor</i>
+<dt><a href="#DOC.488.2"></a> <b>Exception</b>(const std::string& <!2><a href="un.exception.html#DOC.497.3">reason</a> ) </b>
+ <dd><i>Constructor</i>
+<dt><a href="#DOC.488.3"></a> <b>Exception</b>(const <!2><a href="stuffit5.exception.Exception.html#DOC.488.1">Exception</a> & e) </b>
+ <dd><i>Copy constructor</i>
+<dt><a href="#DOC.488.4"></a>virtual  <b>~Exception</b>() </b>
+ <dd><i>Destructor</i>
+</DL></DL>
+<p><b>Inherited from <a href="un.exception.html"> un::exception:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Fields</h5><DD><dt>const  <!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   <b>reason</b>
+<dt>const  <!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   <b>type</b>
+</DL><DL>
+<DT><h5>Public Methods</h5><DD><dt> <b>exception</b>(const std::string& <!2><a href="un.exception.html#DOC.497.3">reason</a> , const std::string& <!2><a href="un.exception.html#DOC.497.4">type</a>  = "un")
+<dt> <b>exception</b>(const <!2><a href="un.exception.html#DOC.497.1">exception</a> & e)
+<dt>virtual  <b>~exception</b>()
+<dt>virtual  const  char*  <b>what</b>() const 
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+StuffIt Engine exception.
+
+<p>The base class of all exception classes used to transmit engine error
+information.
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="Exception">
+<A NAME ="DOC.488.1">
+<DT><TT><b>  Exception(const std::string& <!2><a href="un.exception.html#DOC.497.3">reason</a> , const std::string& <!2><a href="un.exception.html#DOC.497.4">type</a>  = "StuffIt Engine")</b></TT>
+<DD>Constructor. Sets the exception type and the error message.
+
+<dl><DT><b>Parameters:</b><DD><b>type</b> -  exception type
+<br><b>reason</b> -  error message<br></DL><P>
+<A NAME="Exception">
+<A NAME ="DOC.488.2">
+<DT><TT><b>  Exception(const std::string& <!2><a href="un.exception.html#DOC.497.3">reason</a> )</b></TT>
+<DD>Constructor. Sets the error message.
+
+<dl><DT><b>Parameters:</b><DD><b>reason</b> -  error message<br></DL><P>
+<A NAME="Exception">
+<A NAME ="DOC.488.3">
+<DT><TT><b>  Exception(const <!2><a href="stuffit5.exception.Exception.html#DOC.488.1">Exception</a> & e)</b></TT>
+<DD>Copy constructor
+<dl></DL><P>
+<A NAME="~Exception">
+<A NAME ="DOC.488.4">
+<DT><TT><b> virtual  ~Exception()</b></TT>
+<DD>Destructor
+<dl></DL><P></DL>
+<hr>
+<dl><dt><b>Subclasses:
+</b><dd><a href="stuffit5.exception.UnsupportedMethod.html">stuffit5::exception::UnsupportedMethod</a><br>
+<a href="stuffit5.exception.UnsupportedFormat.html">stuffit5::exception::UnsupportedFormat</a><br>
+<a href="stuffit5.exception.Output.html">stuffit5::exception::Output</a><br>
+<a href="stuffit5.exception.Input.html">stuffit5::exception::Input</a><br>
+<a href="stuffit5.exception.Evacuation.html">stuffit5::exception::Evacuation</a><br>
+<a href="stuffit5.exception.BadPassword.html">stuffit5::exception::BadPassword</a><br>
+<a href="stuffit5.exception.BadFormat.html">stuffit5::exception::BadFormat</a><br>
+<a href="stuffit5.exception.BadData.html">stuffit5::exception::BadData</a><br>
+<a href="stuffit5.exception.BadArgument.html">stuffit5::exception::BadArgument</a><br>
+</DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.2.2.1 $, $Date: 2001/07/05 23:32:38 $
+</DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

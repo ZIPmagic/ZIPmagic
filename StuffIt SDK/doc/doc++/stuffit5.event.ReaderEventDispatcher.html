@@ -1,0 +1,269 @@
+<html><head><title>stuffit5::event::ReaderEventDispatcher</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2> class  stuffit5::event::ReaderEventDispatcher</font>: public <!1><a href="stuffit5.event.ArchiveDecodeBeginDispatcher.html">stuffit5::event::ArchiveDecodeBeginDispatcher</a> , public <!1><a href="stuffit5.event.ArchiveDecodeEndDispatcher.html">stuffit5::event::ArchiveDecodeEndDispatcher</a> , public <!1><a href="stuffit5.event.ArchiveInfoDispatcher.html">stuffit5::event::ArchiveInfoDispatcher</a> , public <!1><a href="stuffit5.event.ArchiveNextDispatcher.html">stuffit5::event::ArchiveNextDispatcher</a> , public <!1><a href="stuffit5.event.ErrorDispatcher.html">stuffit5::event::ErrorDispatcher</a> , public <!1><a href="stuffit5.event.FileChangedNameDispatcher.html">stuffit5::event::FileChangedNameDispatcher</a> , public <!1><a href="stuffit5.event.FileDecodeBeginDispatcher.html">stuffit5::event::FileDecodeBeginDispatcher</a> , public <!1><a href="stuffit5.event.FileDecodeEndDispatcher.html">stuffit5::event::FileDecodeEndDispatcher</a> , public <!1><a href="stuffit5.event.FileDeleteDispatcher.html">stuffit5::event::FileDeleteDispatcher</a> , public <!1><a href="stuffit5.event.FileInfoDispatcher.html">stuffit5::event::FileInfoDispatcher</a> , public <!1><a href="stuffit5.event.FileNewNameDispatcher.html">stuffit5::event::FileNewNameDispatcher</a> , public <!1><a href="stuffit5.event.FolderDecodeBeginDispatcher.html">stuffit5::event::FolderDecodeBeginDispatcher</a> , public <!1><a href="stuffit5.event.FolderDecodeEndDispatcher.html">stuffit5::event::FolderDecodeEndDispatcher</a> , public <!1><a href="stuffit5.event.FolderInfoDispatcher.html">stuffit5::event::FolderInfoDispatcher</a> , public <!1><a href="stuffit5.event.ProgressFilesBeginDispatcher.html">stuffit5::event::ProgressFilesBeginDispatcher</a> , public <!1><a href="stuffit5.event.ProgressFilesEndDispatcher.html">stuffit5::event::ProgressFilesEndDispatcher</a> , public <!1><a href="stuffit5.event.ProgressFilesMoveDispatcher.html">stuffit5::event::ProgressFilesMoveDispatcher</a> , public <!1><a href="stuffit5.event.ProgressScanBeginDispatcher.html">stuffit5::event::ProgressScanBeginDispatcher</a> , public <!1><a href="stuffit5.event.ProgressScanEndDispatcher.html">stuffit5::event::ProgressScanEndDispatcher</a> , public <!1><a href="stuffit5.event.ProgressScanStepDispatcher.html">stuffit5::event::ProgressScanStepDispatcher</a> , public <!1><a href="stuffit5.event.ProgressSizeBeginDispatcher.html">stuffit5::event::ProgressSizeBeginDispatcher</a> , public <!1><a href="stuffit5.event.ProgressSizeEndDispatcher.html">stuffit5::event::ProgressSizeEndDispatcher</a> , public <!1><a href="stuffit5.event.ProgressSizeMoveDispatcher.html">stuffit5::event::ProgressSizeMoveDispatcher</a> </b><blockquote>
+Reader event dispatcher: combines multiple reader event dispatcher interfaces
+</blockquote>
+<hr>
+<h4>Inheritance:</h4>
+<applet code="ClassDiagram.class" width=600 height=605>
+<param name=classes value="Cstuffit5::event::ProgressSizeMoveDispatcher,Mstuffit5.event.ProgressSizeMoveDispatcher.html,Cstuffit5::event::ProgressSizeEndDispatcher,Mstuffit5.event.ProgressSizeEndDispatcher.html,Cstuffit5::event::ProgressSizeBeginDispatcher,Mstuffit5.event.ProgressSizeBeginDispatcher.html,Cstuffit5::event::ProgressScanStepDispatcher,Mstuffit5.event.ProgressScanStepDispatcher.html,Cstuffit5::event::ProgressScanEndDispatcher,Mstuffit5.event.ProgressScanEndDispatcher.html,Cstuffit5::event::ProgressScanBeginDispatcher,Mstuffit5.event.ProgressScanBeginDispatcher.html,Cstuffit5::event::ProgressFilesMoveDispatcher,Mstuffit5.event.ProgressFilesMoveDispatcher.html,Cstuffit5::event::ProgressFilesEndDispatcher,Mstuffit5.event.ProgressFilesEndDispatcher.html,Cstuffit5::event::ProgressFilesBeginDispatcher,Mstuffit5.event.ProgressFilesBeginDispatcher.html,Cstuffit5::event::FolderInfoDispatcher,Mstuffit5.event.FolderInfoDispatcher.html,Cstuffit5::event::FolderDecodeEndDispatcher,Mstuffit5.event.FolderDecodeEndDispatcher.html,Cstuffit5::event::FolderDecodeBeginDispatcher,Mstuffit5.event.FolderDecodeBeginDispatcher.html,Cstuffit5::event::FileNewNameDispatcher,Mstuffit5.event.FileNewNameDispatcher.html,Cstuffit5::event::FileInfoDispatcher,Mstuffit5.event.FileInfoDispatcher.html,Cstuffit5::event::FileDeleteDispatcher,Mstuffit5.event.FileDeleteDispatcher.html,Cstuffit5::event::FileDecodeEndDispatcher,Mstuffit5.event.FileDecodeEndDispatcher.html,Cstuffit5::event::FileDecodeBeginDispatcher,Mstuffit5.event.FileDecodeBeginDispatcher.html,Cstuffit5::event::FileChangedNameDispatcher,Mstuffit5.event.FileChangedNameDispatcher.html,Cstuffit5::event::ErrorDispatcher,Mstuffit5.event.ErrorDispatcher.html,Cstuffit5::event::ArchiveNextDispatcher,Mstuffit5.event.ArchiveNextDispatcher.html,Cstuffit5::event::ArchiveInfoDispatcher,Mstuffit5.event.ArchiveInfoDispatcher.html,Cstuffit5::event::ArchiveDecodeEndDispatcher,Mstuffit5.event.ArchiveDecodeEndDispatcher.html,Cstuffit5::event::ArchiveDecodeBeginDispatcher,Mstuffit5.event.ArchiveDecodeBeginDispatcher.html,Cstuffit5::event::ReaderEventDispatcher,Mstuffit5.event.ReaderEventDispatcher.html,Cstuffit5::Reader,Mstuffit5.Reader.html">
+<param name=before value="M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M^_">
+<param name=after value="Ml_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,ML_,MD_,M,M">
+<param name=indent value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1">
+<param name=arrowdir value="down">
+</applet>
+<p><b>Inherited from <a href="stuffit5.event.ArchiveDecodeBeginDispatcher.html"> stuffit5::event::ArchiveDecodeBeginDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addArchiveDecodeBeginListener</b>(<!1><a href="stuffit5.event.ArchiveDecodeBeginListener.html">stuffit5::event::ArchiveDecodeBeginListener</a> * l)
+<dt>void  <b>removeArchiveDecodeBeginListener</b>(<!1><a href="stuffit5.event.ArchiveDecodeBeginListener.html">stuffit5::event::ArchiveDecodeBeginListener</a> * l)
+<dt>bool  <b>fireArchiveDecodeBeginEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ArchiveDecodeBeginListener.html">stuffit5::event::ArchiveDecodeBeginListener</a> *&gt;   <b>archiveDecodeBeginListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ArchiveDecodeEndDispatcher.html"> stuffit5::event::ArchiveDecodeEndDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addArchiveDecodeEndListener</b>(<!1><a href="stuffit5.event.ArchiveDecodeEndListener.html">stuffit5::event::ArchiveDecodeEndListener</a> * l)
+<dt>void  <b>removeArchiveDecodeEndListener</b>(<!1><a href="stuffit5.event.ArchiveDecodeEndListener.html">stuffit5::event::ArchiveDecodeEndListener</a> * l)
+<dt>void  <b>fireArchiveDecodeEndEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ArchiveDecodeEndListener.html">stuffit5::event::ArchiveDecodeEndListener</a> *&gt;   <b>archiveDecodeEndListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ArchiveInfoDispatcher.html"> stuffit5::event::ArchiveInfoDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addArchiveInfoListener</b>(<!1><a href="stuffit5.event.ArchiveInfoListener.html">stuffit5::event::ArchiveInfoListener</a> * l)
+<dt>void  <b>removeArchiveInfoListener</b>(<!1><a href="stuffit5.event.ArchiveInfoListener.html">stuffit5::event::ArchiveInfoListener</a> * l)
+<dt>bool  <b>fireArchiveInfoEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ArchiveInfoListener.html">stuffit5::event::ArchiveInfoListener</a> *&gt;   <b>archiveInfoListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ArchiveNextDispatcher.html"> stuffit5::event::ArchiveNextDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addArchiveNextListener</b>(<!1><a href="stuffit5.event.ArchiveNextListener.html">stuffit5::event::ArchiveNextListener</a> * l)
+<dt>void  <b>removeArchiveNextListener</b>(<!1><a href="stuffit5.event.ArchiveNextListener.html">stuffit5::event::ArchiveNextListener</a> * l)
+<dt>bool  <b>fireArchiveNextEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ArchiveNextListener.html">stuffit5::event::ArchiveNextListener</a> *&gt;   <b>archiveNextListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ErrorDispatcher.html"> stuffit5::event::ErrorDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addErrorListener</b>(<!1><a href="stuffit5.event.ErrorListener.html">stuffit5::event::ErrorListener</a> * l)
+<dt>void  <b>removeErrorListener</b>(<!1><a href="stuffit5.event.ErrorListener.html">stuffit5::event::ErrorListener</a> * l)
+<dt>bool  <b>fireErrorEvent</b>(<!1><a href="stuffit5.Error.type.html">stuffit5::Error::type</a>  error)
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ErrorListener.html">stuffit5::event::ErrorListener</a> *&gt;   <b>errorListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.FileChangedNameDispatcher.html"> stuffit5::event::FileChangedNameDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addFileChangedNameListener</b>(<!1><a href="stuffit5.event.FileChangedNameListener.html">stuffit5::event::FileChangedNameListener</a> * l)
+<dt>void  <b>removeFileChangedNameListener</b>(<!1><a href="stuffit5.event.FileChangedNameListener.html">stuffit5::event::FileChangedNameListener</a> * l)
+<dt>void  <b>fireFileChangedNameEvent</b>(const char* <!1><a href="stuffit5.Error.name.html">name</a> )
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.FileChangedNameListener.html">stuffit5::event::FileChangedNameListener</a> *&gt;   <b>fileChangedNameListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.FileDecodeBeginDispatcher.html"> stuffit5::event::FileDecodeBeginDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addFileDecodeBeginListener</b>(<!1><a href="stuffit5.event.FileDecodeBeginListener.html">stuffit5::event::FileDecodeBeginListener</a> * l)
+<dt>void  <b>removeFileDecodeBeginListener</b>(<!1><a href="stuffit5.event.FileDecodeBeginListener.html">stuffit5::event::FileDecodeBeginListener</a> * l)
+<dt>bool  <b>fireFileDecodeBeginEvent</b>(uint32_t position)
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.FileDecodeBeginListener.html">stuffit5::event::FileDecodeBeginListener</a> *&gt;   <b>fileDecodeBeginListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.FileDecodeEndDispatcher.html"> stuffit5::event::FileDecodeEndDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addFileDecodeEndListener</b>(<!1><a href="stuffit5.event.FileDecodeEndListener.html">stuffit5::event::FileDecodeEndListener</a> * l)
+<dt>void  <b>removeFileDecodeEndListener</b>(<!1><a href="stuffit5.event.FileDecodeEndListener.html">stuffit5::event::FileDecodeEndListener</a> * l)
+<dt>void  <b>fireFileDecodeEndEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.FileDecodeEndListener.html">stuffit5::event::FileDecodeEndListener</a> *&gt;   <b>fileDecodeEndListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.FileDeleteDispatcher.html"> stuffit5::event::FileDeleteDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addFileDeleteListener</b>(<!1><a href="stuffit5.event.FileDeleteListener.html">stuffit5::event::FileDeleteListener</a> * l)
+<dt>void  <b>removeFileDeleteListener</b>(<!1><a href="stuffit5.event.FileDeleteListener.html">stuffit5::event::FileDeleteListener</a> * l)
+<dt>bool  <b>fireFileDeleteEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.FileDeleteListener.html">stuffit5::event::FileDeleteListener</a> *&gt;   <b>fileDeleteListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.FileInfoDispatcher.html"> stuffit5::event::FileInfoDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addFileInfoListener</b>(<!1><a href="stuffit5.event.FileInfoListener.html">stuffit5::event::FileInfoListener</a> * l)
+<dt>void  <b>removeFileInfoListener</b>(<!1><a href="stuffit5.event.FileInfoListener.html">stuffit5::event::FileInfoListener</a> * l)
+<dt>bool  <b>fireFileInfoEvent</b>(uint32_t position)
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.FileInfoListener.html">stuffit5::event::FileInfoListener</a> *&gt;   <b>fileInfoListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.FileNewNameDispatcher.html"> stuffit5::event::FileNewNameDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addFileNewNameListener</b>(<!1><a href="stuffit5.event.FileNewNameListener.html">stuffit5::event::FileNewNameListener</a> * l)
+<dt>void  <b>removeFileNewNameListener</b>(<!1><a href="stuffit5.event.FileNewNameListener.html">stuffit5::event::FileNewNameListener</a> * l)
+<dt>void  <b>fireFileNewNameEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.FileNewNameListener.html">stuffit5::event::FileNewNameListener</a> *&gt;   <b>fileNewNameListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.FolderDecodeBeginDispatcher.html"> stuffit5::event::FolderDecodeBeginDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addFolderDecodeBeginListener</b>(<!1><a href="stuffit5.event.FolderDecodeBeginListener.html">stuffit5::event::FolderDecodeBeginListener</a> * l)
+<dt>void  <b>removeFolderDecodeBeginListener</b>(<!1><a href="stuffit5.event.FolderDecodeBeginListener.html">stuffit5::event::FolderDecodeBeginListener</a> * l)
+<dt>bool  <b>fireFolderDecodeBeginEvent</b>(uint32_t position)
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.FolderDecodeBeginListener.html">stuffit5::event::FolderDecodeBeginListener</a> *&gt;   <b>folderDecodeBeginListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.FolderDecodeEndDispatcher.html"> stuffit5::event::FolderDecodeEndDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addFolderDecodeEndListener</b>(<!1><a href="stuffit5.event.FolderDecodeEndListener.html">stuffit5::event::FolderDecodeEndListener</a> * l)
+<dt>void  <b>removeFolderDecodeEndListener</b>(<!1><a href="stuffit5.event.FolderDecodeEndListener.html">stuffit5::event::FolderDecodeEndListener</a> * l)
+<dt>void  <b>fireFolderDecodeEndEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.FolderDecodeEndListener.html">stuffit5::event::FolderDecodeEndListener</a> *&gt;   <b>folderDecodeEndListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.FolderInfoDispatcher.html"> stuffit5::event::FolderInfoDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addFolderInfoListener</b>(<!1><a href="stuffit5.event.FolderInfoListener.html">stuffit5::event::FolderInfoListener</a> * l)
+<dt>void  <b>removeFolderInfoListener</b>(<!1><a href="stuffit5.event.FolderInfoListener.html">stuffit5::event::FolderInfoListener</a> * l)
+<dt>bool  <b>fireFolderInfoEvent</b>(uint32_t position)
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.FolderInfoListener.html">stuffit5::event::FolderInfoListener</a> *&gt;   <b>folderInfoListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ProgressFilesBeginDispatcher.html"> stuffit5::event::ProgressFilesBeginDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addProgressFilesBeginListener</b>(<!1><a href="stuffit5.event.ProgressFilesBeginListener.html">stuffit5::event::ProgressFilesBeginListener</a> * l)
+<dt>void  <b>removeProgressFilesBeginListener</b>(<!1><a href="stuffit5.event.ProgressFilesBeginListener.html">stuffit5::event::ProgressFilesBeginListener</a> * l)
+<dt>void  <b>fireProgressFilesBeginEvent</b>(uint32_t files)
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ProgressFilesBeginListener.html">stuffit5::event::ProgressFilesBeginListener</a> *&gt;   <b>progressFilesBeginListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ProgressFilesEndDispatcher.html"> stuffit5::event::ProgressFilesEndDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addProgressFilesEndListener</b>(<!1><a href="stuffit5.event.ProgressFilesEndListener.html">stuffit5::event::ProgressFilesEndListener</a> * l)
+<dt>void  <b>removeProgressFilesEndListener</b>(<!1><a href="stuffit5.event.ProgressFilesEndListener.html">stuffit5::event::ProgressFilesEndListener</a> * l)
+<dt>void  <b>fireProgressFilesEndEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ProgressFilesEndListener.html">stuffit5::event::ProgressFilesEndListener</a> *&gt;   <b>progressFilesEndListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ProgressFilesMoveDispatcher.html"> stuffit5::event::ProgressFilesMoveDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addProgressFilesMoveListener</b>(<!1><a href="stuffit5.event.ProgressFilesMoveListener.html">stuffit5::event::ProgressFilesMoveListener</a> * l)
+<dt>void  <b>removeProgressFilesMoveListener</b>(<!1><a href="stuffit5.event.ProgressFilesMoveListener.html">stuffit5::event::ProgressFilesMoveListener</a> * l)
+<dt>bool  <b>fireProgressFilesMoveEvent</b>(uint32_t files)
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ProgressFilesMoveListener.html">stuffit5::event::ProgressFilesMoveListener</a> *&gt;   <b>progressFilesMoveListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ProgressScanBeginDispatcher.html"> stuffit5::event::ProgressScanBeginDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addProgressScanBeginListener</b>(<!1><a href="stuffit5.event.ProgressScanBeginListener.html">stuffit5::event::ProgressScanBeginListener</a> * l)
+<dt>void  <b>removeProgressScanBeginListener</b>(<!1><a href="stuffit5.event.ProgressScanBeginListener.html">stuffit5::event::ProgressScanBeginListener</a> * l)
+<dt>void  <b>fireProgressScanBeginEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ProgressScanBeginListener.html">stuffit5::event::ProgressScanBeginListener</a> *&gt;   <b>progressScanBeginListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ProgressScanEndDispatcher.html"> stuffit5::event::ProgressScanEndDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addProgressScanEndListener</b>(<!1><a href="stuffit5.event.ProgressScanEndListener.html">stuffit5::event::ProgressScanEndListener</a> * l)
+<dt>void  <b>removeProgressScanEndListener</b>(<!1><a href="stuffit5.event.ProgressScanEndListener.html">stuffit5::event::ProgressScanEndListener</a> * l)
+<dt>void  <b>fireProgressScanEndEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ProgressScanEndListener.html">stuffit5::event::ProgressScanEndListener</a> *&gt;   <b>progressScanEndListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ProgressScanStepDispatcher.html"> stuffit5::event::ProgressScanStepDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addProgressScanStepListener</b>(<!1><a href="stuffit5.event.ProgressScanStepListener.html">stuffit5::event::ProgressScanStepListener</a> * l)
+<dt>void  <b>removeProgressScanStepListener</b>(<!1><a href="stuffit5.event.ProgressScanStepListener.html">stuffit5::event::ProgressScanStepListener</a> * l)
+<dt>bool  <b>fireProgressScanStepEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ProgressScanStepListener.html">stuffit5::event::ProgressScanStepListener</a> *&gt;   <b>progressScanStepListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ProgressSizeBeginDispatcher.html"> stuffit5::event::ProgressSizeBeginDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addProgressSizeBeginListener</b>(<!1><a href="stuffit5.event.ProgressSizeBeginListener.html">stuffit5::event::ProgressSizeBeginListener</a> * l)
+<dt>void  <b>removeProgressSizeBeginListener</b>(<!1><a href="stuffit5.event.ProgressSizeBeginListener.html">stuffit5::event::ProgressSizeBeginListener</a> * l)
+<dt>void  <b>fireProgressSizeBeginEvent</b>(size_t <!2><a href="#DOC.8">size</a> )
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ProgressSizeBeginListener.html">stuffit5::event::ProgressSizeBeginListener</a> *&gt;   <b>progressSizeBeginListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ProgressSizeEndDispatcher.html"> stuffit5::event::ProgressSizeEndDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addProgressSizeEndListener</b>(<!1><a href="stuffit5.event.ProgressSizeEndListener.html">stuffit5::event::ProgressSizeEndListener</a> * l)
+<dt>void  <b>removeProgressSizeEndListener</b>(<!1><a href="stuffit5.event.ProgressSizeEndListener.html">stuffit5::event::ProgressSizeEndListener</a> * l)
+<dt>void  <b>fireProgressSizeEndEvent</b>()
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ProgressSizeEndListener.html">stuffit5::event::ProgressSizeEndListener</a> *&gt;   <b>progressSizeEndListeners</b>
+</DL></DL>
+<p><b>Inherited from <a href="stuffit5.event.ProgressSizeMoveDispatcher.html"> stuffit5::event::ProgressSizeMoveDispatcher:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt>void  <b>addProgressSizeMoveListener</b>(<!1><a href="stuffit5.event.ProgressSizeMoveListener.html">stuffit5::event::ProgressSizeMoveListener</a> * l)
+<dt>void  <b>removeProgressSizeMoveListener</b>(<!1><a href="stuffit5.event.ProgressSizeMoveListener.html">stuffit5::event::ProgressSizeMoveListener</a> * l)
+<dt>bool  <b>fireProgressSizeMoveEvent</b>(size_t <!2><a href="#DOC.8">size</a> )
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt>std::list &lt;<!1><a href="stuffit5.event.ProgressSizeMoveListener.html">stuffit5::event::ProgressSizeMoveListener</a> *&gt;   <b>progressSizeMoveListeners</b>
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+Reader event dispatcher: combines multiple reader event dispatcher interfaces.
+
+
+
+</blockquote>
+<DL>
+</DL>
+<hr>
+<dl><dt><b>Subclasses:
+</b><dd><a href="stuffit5.Reader.html">stuffit5::Reader</a><br>
+</DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.2.2.1 $, $Date: 2001/07/05 23:32:37 $
+</DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

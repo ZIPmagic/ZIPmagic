@@ -1,0 +1,267 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+101 DIALOG DISCARDABLE  0, 0, 201, 183
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Macintosh Archives Extract Settings:"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",109,87,162,50,14
+    PUSHBUTTON      "&Cancel",110,144,162,50,14
+    LTEXT           "Use password:",IDC_STATIC,7,7,48,8
+    EDITTEXT        101,7,17,187,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Overwrite files:",IDC_STATIC,7,92,47,8
+    CONTROL         "&Extract with folder names",102,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,38,187,10
+    CONTROL         "Create &folders with suffix:",103,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,54,187,10
+    EDITTEXT        104,19,68,175,14,ES_AUTOHSCROLL
+    CONTROL         "&Never",105,"Button",BS_AUTORADIOBUTTON,7,106,35,10
+    CONTROL         "A&sk",106,"Button",BS_AUTORADIOBUTTON,7,119,28,10
+    CONTROL         "&Always",107,"Button",BS_AUTORADIOBUTTON,7,131,38,10
+    CONTROL         "Auto &rename",108,"Button",BS_AUTORADIOBUTTON,7,144,56,
+                    10
+END
+
+102 DIALOG DISCARDABLE  0, 0, 248, 74
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Un-Stuffing..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Cancel",102,191,44,50,14
+    CONTROL         "Progress1",101,"msctls_progress32",WS_BORDER,7,46,179,9
+    LTEXT           "Warming up...",103,7,59,234,8
+    CONTROL         "Animate1",104,"SysAnimate32",ACS_TRANSPARENT | 
+                    ACS_AUTOPLAY | WS_TABSTOP,7,7,234,36
+END
+
+103 DIALOGEX 0, 0, 201, 149
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Macintosh Archives Compress Settings:"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",105,87,128,50,14
+    PUSHBUTTON      "&Cancel",106,144,128,50,14
+    LTEXT           "Use password:",IDC_STATIC,7,7,48,8
+    EDITTEXT        101,7,17,187,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Stuff-It Compression Strength:",IDC_STATIC,7,36,94,8
+    COMBOBOX        102,35,50,159,92,CBS_DROPDOWNLIST | CBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "ZIP Compression Strength:",IDC_STATIC,7,72,85,8
+    COMBOBOX        103,35,86,159,149,CBS_DROPDOWNLIST | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Preserve relative folder names",104,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,7,110,187,10
+    ICON            101,IDC_STATIC,7,47,20,20,SS_SUNKEN,WS_EX_TRANSPARENT
+    ICON            102,IDC_STATIC,7,82,20,20,SS_SUNKEN,WS_EX_TRANSPARENT
+END
+
+104 DIALOG DISCARDABLE  0, 0, 248, 74
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Stuffing..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Cancel",102,191,44,50,14
+    CONTROL         "Progress1",101,"msctls_progress32",WS_BORDER,7,46,179,9
+    LTEXT           "Warming up...",103,7,59,234,8
+    CONTROL         "Animate1",104,"SysAnimate32",ACS_TRANSPARENT | 
+                    ACS_AUTOPLAY | WS_TABSTOP,7,6,234,36
+END
+
+105 DIALOG DISCARDABLE  0, 0, 233, 167
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Extended Archives Plug-In"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",102,176,146,50,14
+    CONTROL         101,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,7,7,74,103
+    LTEXT           "Macintosh Archives",111,85,7,63,8
+    LTEXT           "Codex Plug-In Technology 2.0 Compliant",IDC_STATIC,85,
+                    16,129,8
+    LTEXT           "Developed for MimarSinan International by Iskender Yigitel.",
+                    IDC_STATIC,85,89,141,17
+    LTEXT           "An example Codex Plug-In written in Visual C++. Full source code available. Requires the Stuff-It Engine SDK provided by Aladdin Systems, Inc.",
+                    IDC_STATIC,85,56,140,34
+    LTEXT           "Engine Version:",100,7,115,50,8
+    LTEXT           "You MUST already hold a valid (evaluation) license for the StuffIt Engine SDK provided by Aladdin Systems, Inc.",
+                    IDC_STATIC,7,126,219,16
+    LTEXT           "9.9.9.9",101,60,115,166,8
+    CONTROL         102,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_SUNKEN,148,26,78,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    101, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    102, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    103, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+
+    104, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 67
+    END
+
+    105, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+103 DLGINIT
+BEGIN
+    102, 0x403, 27, 0
+0x7241, 0x6573, 0x696e, 0x2063, 0x6228, 0x7365, 0x2c74, 0x7620, 0x7265, 
+0x6973, 0x6e6f, 0x3520, 0x292b, "\000" 
+    102, 0x403, 26, 0
+0x6544, 0x756c, 0x6578, 0x2820, 0x6f67, 0x646f, 0x202c, 0x6576, 0x7372, 
+0x6f69, 0x206e, 0x2b33, 0x0029, 
+    102, 0x403, 15, 0
+0x6f4e, 0x656e, 0x2820, 0x6166, 0x7473, 0x7365, 0x2974, "\000" 
+    103, 0x403, 9, 0
+0x2039, 0x6228, 0x7365, 0x2974, "\000" 
+    103, 0x403, 2, 0
+0x0038, 
+    103, 0x403, 2, 0
+0x0037, 
+    103, 0x403, 2, 0
+0x0036, 
+    103, 0x403, 9, 0
+0x2035, 0x6728, 0x6f6f, 0x2964, "\000" 
+    103, 0x403, 2, 0
+0x0034, 
+    103, 0x403, 2, 0
+0x0033, 
+    103, 0x403, 2, 0
+0x0032, 
+    103, 0x403, 12, 0
+0x2031, 0x6628, 0x7361, 0x6574, 0x7473, 0x0029, 
+    103, 0x403, 9, 0
+0x2030, 0x6e28, 0x6e6f, 0x2965, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+101                     ICON    DISCARDABLE     "121.ico"
+103                     ICON    DISCARDABLE     "100.ico"
+102                     ICON    DISCARDABLE     "122.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+101                     BITMAP  DISCARDABLE     "171.bmp"
+102                     BITMAP  DISCARDABLE     "CodexPlugInTechnology.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

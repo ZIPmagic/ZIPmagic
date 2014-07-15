@@ -1,0 +1,161 @@
+<html><head><title>un::property</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2>template &lt;typename value_type&gt;   class  un::property</font></b><blockquote>
+A property is an aspect of an object
+</blockquote>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.499.5"></a> <b>property</b>() </b>
+ <dd><i>Default constructor</i>
+<dt><a href="#DOC.499.1"></a> <b>property</b>(const value_type& value) </b>
+ <dd><i>Conversion constructor</i>
+<dt><a href="#DOC.499.6"></a> <b>~property</b>() </b>
+ <dd><i>Destructor</i>
+<dt><a href="#DOC.499.2"></a>value_type&  <b>operator)</b>() </b>
+ <dd><i>Accessor (get)</i>
+<dt><a href="#DOC.499.3"></a>const  value_type&  <b>operator)</b>() const  </b>
+ <dd><i>Const accessor (get)</i>
+<dt><a href="#DOC.499.4"></a>void  <b>operator)</b>(const value_type& value) </b>
+ <dd><i>Mutator (set)</i>
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+A property is an aspect of an object. The property idiom maintains the value
+of a property in a member variable, hidden behind accessor and mutator functions
+that <i>get</i> and <i>set</i> it. It uses a C++ template to generate access functions
+automatically.
+
+<p>This class greatly simplifies the tedious process of writing access methods used
+to encapsulate class data and decouple class interface from its implementation.
+Classes become not only easier to write but also easier to read and understand.
+
+<p><b>Example.</b> Suppose that the name property of class <code>Being</code>
+has type <code>std::string</code>. Then we can define:
+
+<pre>
+// A non-anthropocentric version of Person, as in: spokesbeing, gentlebeing, chairbeing.
+class Being {
+public:
+std::string name() { return name_; } // accessor
+void name(const std::string& s) { name_ = s; } // mutator
+
+private:
+std::string name_; // variable
+};
+</pre>
+
+<p>The <code>un::property</code> template defined below allows us to
+rewrite the previous <code>Being</code> class as:
+
+<pre>
+class Being {
+public:
+un::property&lt;std::string&gt; name;
+};
+</pre>
+
+<p>This class has a single member called <code>name</code> of type
+<code>un::property&lt;std::string&gt;</code>. The property defines a hidden
+variable and its accessor and mutator. <code>un::property</code> captures
+the variable: other member functions of <code>Being</code> - if there were any -
+could not access it. The new class behaves just as its predecessor did, but is easier
+to understand because the reader sees one <code>un::property</code> in place
+of three assorted members.
+
+<p>All of <code>un::property</code>'s functions are inlined, therefore the space
+and time cost of the template ought to be zero.
+
+<p><b>Why use the property idiom?</b> The property idiom hides a variable, then
+immediately provides read and write access to it. Why not simply expose the
+variable? There are two reasons. We do not want clients having to remember which
+features are accessed as variables and which as properties. Accessing all as
+properties provides a uniform interface. We may wish to change the way that a
+property works. For example, we may wish to trap access to the variable, or even
+to simulate its existence. Properties provide the means to do so without
+modifying client code.
+
+<p><b>Constant properties.</b> The <code>un::property</code> template can
+use <code>const</code> to make a constant property, for example:
+
+<pre>
+class Being {
+public:
+Being(const Date& d) : date_of_birth(d) { }
+const un::property&lt;Date&gt; date_of_birth;
+};
+</pre>
+
+<p>The <code>date_of_birth</code> <code>un::property</code> is initialized
+by the constructor, as the underlying variable was. How do <code>const</code>
+properties work? The accessor operator is <code>const</code>, so can be called on
+<code>const</code> properties, whereas the mutator isn't, so can't be.
+
+<p><b>References:</b>
+
+<ul><li>Colin Hastie, <i>Patterns in Practice: A property template for C++</i>,
+C++ Report, November 1995.
+
+<li>J. O. Coplien, <i>Advanced C++ Programming Styles and Idioms</i>,
+Addison-Wesley, Reading, MA, 1992, p. 38-45.</ul>
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="property">
+<A NAME ="DOC.499.5">
+<DT><TT><b>  property()</b></TT>
+<DD>Default constructor
+<dl></DL><P>
+<A NAME="property">
+<A NAME ="DOC.499.1">
+<DT><TT><b>  property(const value_type& value)</b></TT>
+<DD>Conversion constructor. Initializes the value.
+
+<dl><DT><b>Parameters:</b><DD><b>t</b> -  initial value of the property<br></DL><P>
+<A NAME="~property">
+<A NAME ="DOC.499.6">
+<DT><TT><b>  ~property()</b></TT>
+<DD>Destructor
+<dl></DL><P>
+<A NAME="operator)">
+<A NAME ="DOC.499.2">
+<DT><TT><b> value_type&  operator)()</b></TT>
+<DD>Accessor (get). Has no arguments, and returns the reference to the
+property, as held by the variable.
+
+<dl><dt><b>Returns:</b><dd>non-const reference to the property value
+</DL><P>
+<A NAME="operator)">
+<A NAME ="DOC.499.3">
+<DT><TT><b> const  value_type&  operator)() const </b></TT>
+<DD>Const accessor (get). Has no arguments, and returns the const reference
+to the property, as held by the variable.
+
+<dl><dt><b>Returns:</b><dd>const reference to the property value
+</DL><P>
+<A NAME="operator)">
+<A NAME ="DOC.499.4">
+<DT><TT><b> void  operator)(const value_type& value)</b></TT>
+<DD>Mutator (set). Returns nothing, and has one argument - the new value
+of the property - which it assigns to the variable.
+
+<dl><DT><b>Parameters:</b><DD><b>t</b> -  new value of the property<br></DL><P></DL>
+<hr>
+ <DL><DT><b>This class has no subclasses.</b></DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.1 $, $Date: 2001/03/03 00:03:47 $
+
+<DT><b>See Also:</b><DD><!1><a href="un.opt_property.html">un::opt_property</a> <br></DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

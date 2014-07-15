@@ -1,0 +1,250 @@
+<html><head><title>stuffit5::ArchiveInfo</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2> class  stuffit5::ArchiveInfo</font></b><blockquote>
+Archive information
+</blockquote>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Fields</h5><DD><dt><a href="#DOC.22.1"></a><!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   <b>name</b> </b>
+ <dd><i>Path name of the archive</i>
+<dt><a href="#DOC.22.2"></a><!1><a href="un.property.html">un::property</a>  &lt;uint32_t&gt;   <b>position</b> </b>
+ <dd><i>Current archive position</i>
+<dt><a href="#DOC.22.3"></a><!1><a href="un.property.html">un::property</a>  &lt;<!2><a href="#DOC.100">stuffit5::Format::type</a> &gt;   <b>format</b> </b>
+ <dd><i>Format of the archive that is open in the reader or writer</i>
+<dt><a href="#DOC.22.4"></a><!1><a href="un.property.html">un::property</a>  &lt;uint32_t&gt;   <b>items</b> </b>
+ <dd><i><b>In a reader:</b> Number of items in the archive</i>
+<dt><a href="#DOC.22.5"></a><!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   <b>rootName</b> </b>
+ <dd><i><b>In a reader:</b> Name of the single item at the root level of the
+archive, or an empty string if there is more than one such item</i>
+<dt><a href="#DOC.22.6"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   <b>compressedSize</b> </b>
+ <dd><i><b>In a reader:</b> Total compressed size of all items in the
+archive, excluding headers</i>
+<dt><a href="#DOC.22.7"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   <b>uncompressedSize</b> </b>
+ <dd><i><b>In a reader:</b> Total uncompressed size of all items in the
+archive</i>
+<dt><a href="#DOC.22.8"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   <b>segmentID</b> </b>
+ <dd><i><b>In a reader:</b> Segment ID</i>
+<dt><a href="#DOC.22.9"></a><!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   <b>segmentNumber</b> </b>
+ <dd><i><b>In a reader:</b> Archive sequence number</i>
+<dt><a href="#DOC.22.10"></a><!1><a href="un.property.html">un::property</a>  &lt;bool&gt;   <b>isEncrypted</b> </b>
+ <dd><i><b>In a reader:</b> Indicates that the archive is encrypted, i</i>
+</DL><DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.22.11"></a> <b>ArchiveInfo</b>() </b>
+ <dd><i>Default constructor</i>
+<dt><a href="#DOC.22.12"></a>void  <b>reset</b>() </b>
+ <dd><i>Resets all properties, marks all optional properties as unavailable</i>
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+Archive information.
+
+<p>Each <code>stuffit5::Reader</code> and <code>stuffit5::Writer</code> has one
+instance of this class that stores information about the archive being read or written.
+
+<p>This class allows access to archive <i>properties</i> through accessor and mutator
+functions. Some of the properties are optional.
+
+<p>In a reader, archive properties are available after archive classification or
+archive scan, until the archive is closed.
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="ArchiveInfo">
+<A NAME ="DOC.22.11">
+<DT><TT><b>  ArchiveInfo()</b></TT>
+<DD>Default constructor
+<dl></DL><P>
+<A NAME="name">
+<A NAME ="DOC.22.1">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   name</b></TT>
+<DD>Path name of the archive.
+
+<p><b>In a reader:</b> The accessor returns the path name of the archive
+that is open in the reader. The mutator assigns the new path name of the
+archive to be decoded. The path name may be absolute or relative; it is
+the final path name of the archive to be created.
+
+<p>This function can control the name of the next archive segment to be
+processed, in multi-segment formats (such as StuffItSegment). It has
+effect only during the decoding phase and only when used inside the
+<code>ArchiveNext</code> event callback.
+
+<p><b>In a writer:</b> The accessor returns the path name of the archive
+that is open in the writer. The mutator assigns the new archive name as
+long as the archive is not yet open. The last chance to rename or
+relocate it is during the <code>ArchiveCreateBegin</code> event
+callback.
+<dl></DL><P>
+<A NAME="position">
+<A NAME ="DOC.22.2">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;uint32_t&gt;   position</b></TT>
+<DD>Current archive position.
+
+<p><b>In a reader:</b> The accessor returns the offset from the
+beginning of the input file, at which the reader is processing the
+archive. Initially, when the reader is created, it is 0. This is the
+position at which classification, scan, and decoding begin.
+
+<p>After each archive is decoded, archive position is updated to point
+to the first byte past the end of the processed archive. This allows
+reading to continue from the same input file if it contains concatenated
+archives.
+
+<p>If only <code>decode()</code> calls are used to process the archive,
+archive position is used internally, and there is no need to get or set
+its value. Repeated calls to <code>decode()</code> process one archive
+at a time until the end of file is reached.
+
+<p>This property is most useful during the classification phase. If
+classification is done with a separate call to <code>classify()</code>,
+more control can be achieved over the classification process by setting
+the archive position (and classifier span) properties.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="format">
+<A NAME ="DOC.22.3">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;<!2><a href="#DOC.100">stuffit5::Format::type</a> &gt;   format</b></TT>
+<DD>Format of the archive that is open in the reader or writer.
+
+<p><b>In a reader:</b> Assigned as soon as archive classification is
+complete. If <code>classify()</code> is called explicitly, the format is
+available at the time it issues the <code>ArchiveInfo</code> event
+callback, or at the time it returns if no event callback is made. If
+<code>classify()</code> is called internally, the format is available
+between the time of the <code>ArchiveDecodeBegin</code> event and the
+time of the <code>ArchiveDecodeEnd</code> event.
+
+<p><b>In a writer:</b> The accessor returns the format of the archive
+that is going to be or is being created by the writer. Always defined.
+If an archive is open in the writer at the time of the call, the return
+value is its format; otherwise, it is the format of the next archive to
+be created.
+
+<p>The mutator assigns the new archive format to be created by the
+writer. The format applies to the next archive to be created. <p>If
+archive format is not assigned, the default format is StuffIt. The
+writer will create StuffIt archives unless instructed otherwise.
+
+<p>This function can assign the archive format as long as the archive is
+not open yet. The last chance to change the format is during the
+<code>ArchiveCreateBegin</code> event callback.
+
+<p>This member function effectively changes the format of the new
+archive. It cannot change the format of an already open archive and
+therefore has no effect once the archive is created.
+<dl></DL><P>
+<A NAME="items">
+<A NAME ="DOC.22.4">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;uint32_t&gt;   items</b></TT>
+<DD><b>In a reader:</b> Number of items in the archive. The total number
+of files (and in case of StuffIt and StuffIt5 formats, the total number
+of files <i>and</i> folders). In a reader, available from the time of
+the archive scan completion to the time the archive is closed.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="rootName">
+<A NAME ="DOC.22.5">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   rootName</b></TT>
+<DD><b>In a reader:</b> Name of the single item at the root level of the
+archive, or an empty string if there is more than one such item.
+Available from the time of the archive scan completion to the time the
+archive is closed.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="compressedSize">
+<A NAME ="DOC.22.6">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   compressedSize</b></TT>
+<DD><b>In a reader:</b> Total compressed size of all items in the
+archive, excluding headers. Equal to the size of the archive; may be
+slightly less than the size of the input file when it contains a single
+archive, and may be significantly less than the size of the input file
+if it contains multiple concatenated archives.
+
+<p>Available from the time of the archive scan completion to the time
+the archive is closed. If the size has not been determined, equals to
+the unsigned equivalent of <code>-1</code>, or <code>0xffffffff</code>.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="uncompressedSize">
+<A NAME ="DOC.22.7">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   uncompressedSize</b></TT>
+<DD><b>In a reader:</b> Total uncompressed size of all items in the
+archive. Equals to the sum of sizes of all files that will be created in
+the decoding phase.
+
+<p>Available from the time of the archive scan completion to the time
+the archive is closed. If the size has not been determined, equals to
+the unsigned equivalent of <code>-1</code>, or <code>0xffffffff</code>.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="segmentID">
+<A NAME ="DOC.22.8">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   segmentID</b></TT>
+<DD><b>In a reader:</b> Segment ID. Available only for StuffItSegment
+archives. Segmented archives consist of multiple parts. Each part
+carries an ID that is a number randomly generated for each archive and
+is the same for all segments of the archive.
+
+<p>This property may be used to establish that an archive segment
+belongs to the correct set of segments.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="segmentNumber">
+<A NAME ="DOC.22.9">
+<DT><TT><b> <!1><a href="un.opt_property.html">un::opt_property</a>  &lt;uint32_t&gt;   segmentNumber</b></TT>
+<DD><b>In a reader:</b> Archive sequence number. Available only for
+StuffItSegment archives. Each segment carries a sequence number that
+determines the segment's position in the sequence of segments that
+constitutes the segmented archive.
+
+<p>This property may be used to establish that an archive segment is the
+next segment in a sequence of segments.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="isEncrypted">
+<A NAME ="DOC.22.10">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;bool&gt;   isEncrypted</b></TT>
+<DD><b>In a reader:</b> Indicates that the archive is encrypted, i.e.,
+contains one or more encrypted items. Some archive formats require all
+items to be encrypted, some allow items to be selectively encrypted. In
+either case, if this function returns <code>true</code>, a password or a
+key will be required to completely expand the archive.
+
+<p>If there is only one password (or key) per archive, this function may
+be used to establish that there is a need to ask the user for a password
+as soon as archive information is available, before processing of
+individual items begins.
+
+<p><b>In a writer:</b> Unused.
+<dl></DL><P>
+<A NAME="reset">
+<A NAME ="DOC.22.12">
+<DT><TT><b> void  reset()</b></TT>
+<DD>Resets all properties, marks all optional properties as unavailable
+<dl></DL><P></DL>
+<hr>
+ <DL><DT><b>This class has no subclasses.</b></DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.10.2.1 $, $Date: 2001/07/05 23:32:33 $
+</DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

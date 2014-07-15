@@ -1,0 +1,192 @@
+# Microsoft Developer Studio Generated Dependency File, included by stuff.mak
+
+..\..\..\src\app\stuff\stuff.main.cpp : \
+	"..\..\..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"..\..\..\src\algorithm\Key.h"\
+	"..\..\..\src\algorithm\Password.h"\
+	"..\..\..\src\algorithm\RandomizedKey.h"\
+	"..\..\..\src\app\option\TextType.h"\
+	"..\..\..\src\app\stuff\BehavedWriter.h"\
+	"..\..\..\src\app\stuff\ChattyWriter.h"\
+	"..\..\..\src\app\stuff\QuietWriter.h"\
+	"..\..\..\src\app\stuff\ThreadedWriter.h"\
+	"..\..\..\src\app\stuff\Writer.h"\
+	"..\..\..\src\format\data\OSType.h"\
+	"..\..\..\src\stream\ArrayInput.h"\
+	"..\..\..\src\stream\common.h"\
+	"..\..\..\src\stream\FilterInput.h"\
+	"..\..\..\src\stream\HexInput.h"\
+	"..\..\..\src\stream\Input.h"\
+	"..\..\..\src\stuffit5\ArchiveInfo.h"\
+	"..\..\..\src\stuffit5\bool.h"\
+	"..\..\..\src\stuffit5\common.h"\
+	"..\..\..\src\stuffit5\CompressionLevel.h"\
+	"..\..\..\src\stuffit5\event\ArchiveChangedNameDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ArchiveChangedNameListener.h"\
+	"..\..\..\src\stuffit5\event\ArchiveCreateBeginDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ArchiveCreateBeginListener.h"\
+	"..\..\..\src\stuffit5\event\ArchiveCreateEndDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ArchiveCreateEndListener.h"\
+	"..\..\..\src\stuffit5\event\ArchiveSizeDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ArchiveSizeListener.h"\
+	"..\..\..\src\stuffit5\event\ErrorDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ErrorListener.h"\
+	"..\..\..\src\stuffit5\event\FileDeleteDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FileDeleteListener.h"\
+	"..\..\..\src\stuffit5\event\FileEncodeBeginDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FileEncodeBeginListener.h"\
+	"..\..\..\src\stuffit5\event\FileEncodeEndDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FileEncodeEndListener.h"\
+	"..\..\..\src\stuffit5\event\FileScanStepDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FileScanStepListener.h"\
+	"..\..\..\src\stuffit5\event\FolderEncodeBeginDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FolderEncodeBeginListener.h"\
+	"..\..\..\src\stuffit5\event\FolderEncodeEndDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FolderEncodeEndListener.h"\
+	"..\..\..\src\stuffit5\event\FolderScanStepDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FolderScanStepListener.h"\
+	"..\..\..\src\stuffit5\event\Listener.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesBeginDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesBeginListener.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesEndDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesEndListener.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesMoveDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesMoveListener.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeBeginDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeBeginListener.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeEndDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeEndListener.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeMoveDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeMoveListener.h"\
+	"..\..\..\src\stuffit5\event\WriterEventDispatcher.h"\
+	"..\..\..\src\stuffit5\exception\BadArgument.h"\
+	"..\..\..\src\stuffit5\exception\Exception.h"\
+	"..\..\..\src\stuffit5\FileInfo.h"\
+	"..\..\..\src\stuffit5\FolderInfo.h"\
+	"..\..\..\src\stuffit5\Format.h"\
+	"..\..\..\src\stuffit5\TextType.h"\
+	"..\..\..\src\stuffit5\Writer.h"\
+	"..\..\..\src\un\array.h"\
+	"..\..\..\src\un\auto_ptr.h"\
+	"..\..\..\src\un\config.h"\
+	"..\..\..\src\un\endianness.h"\
+	"..\..\..\src\un\exception.h"\
+	"..\..\..\src\un\gcc\wstring.h"\
+	"..\..\..\src\un\hint.h"\
+	"..\..\..\src\un\opt_property.h"\
+	"..\..\..\src\un\property.h"\
+	"..\..\..\src\un\stdint.h"\
+	"..\..\..\src\un\structure.h"\
+	"..\..\..\src\un\tokenizer.h"\
+	"..\..\..\src\un\warnings.h"\
+	"..\..\..\src\util\command\Command.h"\
+	"..\..\..\src\util\command\CommandElement.h"\
+	"..\..\..\src\util\command\CommandElementLess.h"\
+	"..\..\..\src\util\command\CommandException.h"\
+	"..\..\..\src\util\command\CommandLine.h"\
+	"..\..\..\src\util\command\CommandSynonym.h"\
+	"..\..\..\src\util\System.h"\
+	
+
+..\..\..\src\app\stuff\ThreadedWriter.cpp : \
+	"..\..\..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"..\..\..\src\algorithm\Key.h"\
+	"..\..\..\src\algorithm\Password.h"\
+	"..\..\..\src\algorithm\RandomizedKey.h"\
+	"..\..\..\src\app\stuff\ThreadedWriter.h"\
+	"..\..\..\src\app\stuff\Writer.h"\
+	"..\..\..\src\format\data\OSType.h"\
+	"..\..\..\src\stuffit5\ArchiveInfo.h"\
+	"..\..\..\src\stuffit5\bool.h"\
+	"..\..\..\src\stuffit5\common.h"\
+	"..\..\..\src\stuffit5\CompressionLevel.h"\
+	"..\..\..\src\stuffit5\event\ArchiveChangedNameDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ArchiveChangedNameListener.h"\
+	"..\..\..\src\stuffit5\event\ArchiveCreateBeginDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ArchiveCreateBeginListener.h"\
+	"..\..\..\src\stuffit5\event\ArchiveCreateEndDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ArchiveCreateEndListener.h"\
+	"..\..\..\src\stuffit5\event\ArchiveSizeDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ArchiveSizeListener.h"\
+	"..\..\..\src\stuffit5\event\ErrorDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ErrorListener.h"\
+	"..\..\..\src\stuffit5\event\FileDeleteDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FileDeleteListener.h"\
+	"..\..\..\src\stuffit5\event\FileEncodeBeginDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FileEncodeBeginListener.h"\
+	"..\..\..\src\stuffit5\event\FileEncodeEndDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FileEncodeEndListener.h"\
+	"..\..\..\src\stuffit5\event\FileScanStepDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FileScanStepListener.h"\
+	"..\..\..\src\stuffit5\event\FolderEncodeBeginDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FolderEncodeBeginListener.h"\
+	"..\..\..\src\stuffit5\event\FolderEncodeEndDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FolderEncodeEndListener.h"\
+	"..\..\..\src\stuffit5\event\FolderScanStepDispatcher.h"\
+	"..\..\..\src\stuffit5\event\FolderScanStepListener.h"\
+	"..\..\..\src\stuffit5\event\Listener.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesBeginDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesBeginListener.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesEndDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesEndListener.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesMoveDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressFilesMoveListener.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeBeginDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeBeginListener.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeEndDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeEndListener.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeMoveDispatcher.h"\
+	"..\..\..\src\stuffit5\event\ProgressSizeMoveListener.h"\
+	"..\..\..\src\stuffit5\event\WriterEventDispatcher.h"\
+	"..\..\..\src\stuffit5\exception\BadArgument.h"\
+	"..\..\..\src\stuffit5\exception\Exception.h"\
+	"..\..\..\src\stuffit5\FileInfo.h"\
+	"..\..\..\src\stuffit5\FolderInfo.h"\
+	"..\..\..\src\stuffit5\Format.h"\
+	"..\..\..\src\stuffit5\TextType.h"\
+	"..\..\..\src\stuffit5\Writer.h"\
+	"..\..\..\src\un\config.h"\
+	"..\..\..\src\un\exception.h"\
+	"..\..\..\src\un\gcc\wstring.h"\
+	"..\..\..\src\un\opt_property.h"\
+	"..\..\..\src\un\property.h"\
+	"..\..\..\src\un\stdint.h"\
+	"..\..\..\src\un\structure.h"\
+	"..\..\..\src\un\warnings.h"\
+	"..\..\..\src\util\System.h"\
+	
+
+..\..\..\src\un\un.tokenizer.cpp : \
+	"..\..\..\src\un\config.h"\
+	"..\..\..\src\un\stdint.h"\
+	"..\..\..\src\un\tokenizer.h"\
+	"..\..\..\src\un\warnings.h"\
+	
+
+..\..\..\src\util\util.System.w32.cpp : \
+	"..\..\..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"..\..\..\src\util\System.h"\
+	
+
+..\..\..\src\util\command\command.CommandElement.cpp : \
+	"..\..\..\src\un\config.h"\
+	"..\..\..\src\un\property.h"\
+	"..\..\..\src\un\tokenizer.h"\
+	"..\..\..\src\un\warnings.h"\
+	"..\..\..\src\util\command\CommandElement.h"\
+	"..\..\..\src\util\command\CommandElementLess.h"\
+	
+
+..\..\..\src\util\command\command.CommandLine.cpp : \
+	"..\..\..\src\un\config.h"\
+	"..\..\..\src\un\exception.h"\
+	"..\..\..\src\un\property.h"\
+	"..\..\..\src\un\tokenizer.h"\
+	"..\..\..\src\un\warnings.h"\
+	"..\..\..\src\util\command\Command.h"\
+	"..\..\..\src\util\command\CommandElement.h"\
+	"..\..\..\src\util\command\CommandElementLess.h"\
+	"..\..\..\src\util\command\CommandException.h"\
+	"..\..\..\src\util\command\CommandLine.h"\
+	"..\..\..\src\util\command\CommandSynonym.h"\
+	

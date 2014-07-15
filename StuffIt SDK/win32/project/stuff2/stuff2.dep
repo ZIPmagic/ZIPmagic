@@ -1,0 +1,14 @@
+# Microsoft Developer Studio Generated Dependency File, included by stuff2.mak
+
+..\..\..\src\sample\stuff2\stuff2.c : \
+	"..\..\..\src\stuffit5\ArchiveInfo.h"\
+	"..\..\..\src\stuffit5\bool.h"\
+	"..\..\..\src\stuffit5\common.h"\
+	"..\..\..\src\stuffit5\event\ArchiveCreateBeginListener.h"\
+	"..\..\..\src\stuffit5\event\ArchiveCreateEndListener.h"\
+	"..\..\..\src\stuffit5\event\FileEncodeBeginListener.h"\
+	"..\..\..\src\stuffit5\FileInfo.h"\
+	"..\..\..\src\stuffit5\Writer.h"\
+	"..\..\..\src\un\config.h"\
+	"..\..\..\src\un\stdint.h"\
+	

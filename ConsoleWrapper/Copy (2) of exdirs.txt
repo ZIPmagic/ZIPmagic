@@ -1,0 +1,4 @@
+MimarSinan Ace
+"D:\Visual Codec Studio\Plugins\MimarSinan ACE Wrapper\ace32.exe" a -r c:\*.* f:\Desktop\try.ace
+1
+3

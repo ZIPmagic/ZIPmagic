@@ -1,0 +1,7 @@
+EXPORTS
+  GetArchiveInfo
+  GetArchiveError
+  ShowPlugInAbout
+  CodexStandardFunction
+  CodexRegisterPlugIn
+  CodexUnRegisterPlugIn

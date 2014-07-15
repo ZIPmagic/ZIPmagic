@@ -1,0 +1,3 @@
+MimarSinan Ace
+"D:\Visual Codec Studio\Plugins\MimarSinan RAR Wrapper\rar.exe" x "f:\Desktop\fdfs.rar" f:\Desktop\
+1

@@ -1,0 +1,306 @@
+ALADDIN SYSTEMS, INC.
+SOFTWARE TECHNOLOGY LICENSE AGREEMENT
+
+AGREEMENT made of this __ day of ____________, 2001 by and between Aladdin
+Systems, Inc., a Delaware corporation, with its principal place of business at
+245 Westridge Drive, Watsonville, CA 95076, ("Aladdin") and
+________________________ with a place of business at _________________
+____________________________________________________ ("Licensee").
+
+1.  LICENSE
+
+1.1  Software License.  Aladdin hereby grants to the Licensee, a non-exclusive,
+non-transferable license (the "License") to use and distribute the computer
+program modules described in Schedule A attached hereto (the "Software"), for
+the purpose of distributing Licensee's own computer software (the "Licensee's
+Software") and to copy and distribute those portions of the StuffIt Engine which
+are automatically embedded into Licensee's Software, either on a commercial or
+non-commercial basis, as defined here, subject to the terms and conditions set
+forth herein.
+
+1.2  Initial Term.  The term of this License shall commence upon the execution
+hereof and shall remain in effect for the period of one (1) year from the
+Distribution Commencement Date set forth in Schedule A, unless terminated sooner
+pursuant to the provisions of this Agreement.
+
+1.3  Acceptance.  The Software shall be deemed accepted by Licensee upon
+delivery unless Licensee provides Aladdin within two (2) weeks thereinafter with
+a written description of any bona fide defects.
+
+1.4  License Fee and Payment.  Licensee shall be responsible for the payment of
+licensee fees as set forth on Schedule A. The License Fee shall be paid by
+Licensee upon the execution hereof.
+
+1.5  Renewal Terms.  This Agreement shall be automatically renewed for
+additional one (1) year periods unless either party notifies the other, in
+writing, of their desire to discontinue this Agreement at least thirty (30) days
+prior to the expiration of a term of this Agreement.  The license fee for each
+renewal term shall be Aladdin's then current fees for the Software.  The license
+fee for each such renewal term shall be raised no more than ten (10%) percent
+from the previous year's licensing fee.  Aladdin shall invoice Licensee thirty
+(30) days in advance of the expiration of a renewal term for the license fee due
+for the next renewal term.  Each such invoice shall be payable within thirty
+(30) days from the receipt of Aladdin's invoice.  Overdue balances shall bear
+interest at the rate of one and one-half percent (1 1/2%) per month from the
+original due date of the invoice.
+
+2.  SCOPE OF USE
+
+2.1  Use of Software.  Licensee may duplicate the Software for inclusion in
+Licensee's Products as specified in Schedule A hereto and may distribute the
+Software in connection therewith.  Licensee shall not modify, translate,
+decompile nor create or attempt to create, by reverse engineering or otherwise,
+the source code from the object code supplied hereunder or adapt the Software in
+any way or use it to create a derivative work.  No portion of Ithe StuffIt
+Engine shall be distributed to any third party except as automatically embedded
+in Licensee's Software. Any updates, revisions, enhancements, additions or
+conversions to the Software supplied by Licensor under this or separate
+Agreement shall become a part of, and subject to, this Agreement and License.
+Licensee shall not distribute Licensee's Software utilizing the StuffIt Engine
+prior to the Distribution Commencement Date.
+
+2.2  Copyright Notices.  Licensee shall not alter or change Aladdin's copyright
+notices as stated in the Software.  Licensee shall include a copyright notice,
+in direct proximity to Licensee's own copyright notice, in substantially the
+following form:  "Portions of this software are Copyright (c)1990-2001 Aladdin
+Systems, Inc."  Aladdin's copyright notice shall be either: (a) displayed
+prominently during initial (installer) system start-up, or (b) placed in the
+software documentation distributed with Licensee's Software.
+
+2.3  Commercial and Non-Commercial Use.  In the event that Licensee's Software
+is distributed for consideration of any kind or distributed to any third party
+which is not part of Licensee's organization, corporation or company, Licensee's
+Software shall be deemed to be "commercially distributed".  In the event that
+Licensee's Software is commercially distributed, Licensee shall be bound by
+those additional provisions of this Agreement which pertain to commercially
+distributed software.  Licensee shall set forth on Schedule "A" whether the
+Licensee's Software shall be distributed commercially or for noncommercial use.
+
+3. RIGHTS AND OBLIGATIONS
+
+3.1  Proprietary Rights.  Aladdin represents that it is the owner of the
+Software and that it has the right to grant the License.  Aladdin represents and
+Licensee acknowledges that the Software is the sole and exclusive property of
+Aladdin, including all applicable rights to patents, copyrights, trademarks and
+trade secrets inherent therein and appurtenant thereto and Licensee agrees not
+to challenge Aladdin's rights thereto. Licensee acknowledges that it is not
+purchasing title to the Software, but is rather being granted a license to use
+and distribute the Software.
+
+3.2  Application and Use; Confidentiality.  Licensee shall not sell, transfer,
+disclose, publish, display or otherwise make available to others any portion of
+the Software except as provided for herein.  Licensee agrees to secure and
+protect the Software in a manner consistent with the maintenance of Aladdin's
+rights therein and to take appropriate action by instruction or agreement with
+its employees who are permitted access to the Software to satisfy its
+obligations hereunder.  Licensee shall use its best efforts to assist Aladdin in
+identifying and preventing any unauthorized use or disclosure of the Software or
+any portions thereof or any of the algorithms or logic contained therein.
+Without limitation of the foregoing, Licensee shall advise Aladdin immediately
+in the event Licensee learns of or has reason to believe that any person who
+Licensee has given access to the Software, or any portion thereof, has violated
+or intends to violate the terms of this Agreement or any related non-disclosure
+agreement and the Licensee will, at Licensee's expense, cooperate with Aladdin
+in seeking injunctive or other equitable relief in the name of Licensee or
+Aladdin against any such person.  Licensee agrees to maintain the
+confidentiality of any information regarding the business affairs, property or
+method of operation, or other information relating to Aladdin, obtained by
+Licensee during the term of this Agreement. Both parties agree to maintain the
+confidentiality of any information regarding the business affairs, property or
+method of operation, or other information relating to the other party, obtained
+by one of the parties during the term of this Agreement.
+
+3.3  Warranties.  EXCEPT AS EXPRESSLY SET FORTH HEREIN, ALADDIN MAKES NO
+WARRANTIES, EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  In the
+event Aladdin fails to remedy material defects in the Software, Licensee's sole
+remedy shall be to receive a refund of any license fees paid hereunder for the
+current term of this License.
+
+3.4  Limitation of Liability.  ALADDIN SHALL HAVE NO LIABILITY WITH RESPECT TO
+ITS OBLIGATIONS UNDER THIS AGREEMENT OR OTHERWISE TO LICENSEE OR ANY SUB-
+LICENSEES FOR SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES
+EVEN IF ALADDIN HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  IN NO
+EVENT SHALL ALADDIN'S LIABILITY FOR ANY REASON AND UPON ANY CAUSE OF ACTION
+WHATSOEVER EXCEED THE PAYMENTS MADE BY LICENSEE TO ALADDIN UNDER THIS AGREEMENT.
+
+3.5  Termination.  In addition to its rights as set forth elsewhere in this
+Agreement, Aladdin shall have the right to terminate this Agreement upon thirty
+(30) days written notice to Licensee upon:
+
+(a)  violation or breach by Licensee, its officers or employees of any
+provisions of this Agreement, including, but not limited to, payment;
+
+(b)  the termination of the business of the Licensee;
+
+(c)  voluntary or involuntary filing of bankruptcy petition or similar
+proceeding under state law with respect to Licensee; or
+
+(d)  Licensee's becoming insolvent or making any assignment for the benefit of
+creditors.
+
+The termination of this Agreement shall automatically, and without any further
+action by Aladdin, terminate and extinguish this License.  In the event of
+termination of this Agreement pursuant to any provision of this Agreement,
+Licensee shall return to Aladdin, or upon request of Aladdin, destroy all copies
+of the Software in the possession of Licensee and certify in writing that the
+same have been either returned or destroyed.  Notwithstanding the foregoing, all
+provisions hereof relating to confidentiality or non-disclosure shall survive
+the termination or expiration of this Agreement and any third parties to whom
+Licensee has licensed the Licensee's Product may continue to use the Software
+provided that such third party is not in breach of its license agreement with
+Licensee.
+
+3.6  Taxes.  Licensee shall, in addition to the payments required hereunder, pay
+all sales, use, transfer or other taxes and all duties, whether international,
+national, state or local, however designated, which are levied or imposed by
+reason of the transaction contemplated hereby; excluding, however, income taxes
+on profits which may be levied against Aladdin.  Licensee shall reimburse
+Aladdin for any amount of any such taxes or duties paid or accrued by Aladdin as
+a result of this transaction.
+
+3.7  Copies of Licensee's Products.  Licensee shall provide Aladdin, at no
+charge to Aladdin, one copy of each version of Licensee's Products that utilize
+the Software, including any updates, thereto within ten (10) days of Licensee's
+release of such product for sale.
+
+4.  GENERAL
+
+4.1  Entire Agreement.  Each party acknowledges that this Agreement constitutes
+the complete and exclusive statement of the terms and conditions between the
+parties, which supersedes and merges all prior proposals, understandings and all
+other agreements, oral and written, between the parties relating to this
+Agreement.  This Agreement may not be modified or altered except by written
+instrument duly executed by both parties.
+
+4.2  Force Majeure.  Neither party shall be liable to the other for any delay or
+failure to perform due to causes beyond its reasonable control.  Performance
+times shall be considered extended for a period of time equivalent to the time
+lost because of any such delay.
+
+4.3  Governing Law.  This Agreement and performance hereunder shall be governed
+by the laws of the State of California.
+
+4.4  Limitation on Action.  No action, regardless of form, arising out of this
+Agreement may be brought by either party more than two (2) years after the cause
+of action has arisen, with the exception of violation of Aladdin's rights in the
+Software or any other software owned or licensed by Aladdin.
+
+4.5  Enforceability.  If any of the provisions of this Agreement is invalid
+under any applicable statute or rule of law, it is to that extent to be deemed
+omitted.
+
+4.6  Assignment.  Licensee may not assign or sub-license, without prior written
+consent of Aladdin, its rights, duties or obligations under this Agreement, in
+whole or in part, to any person or entity, which consent shall not be
+unreasonably withheld.  Any such attempted assignment or sub-license shall be
+void and shall constitute a material breach of this Agreement.
+
+4.7  Survival.  All provisions of this Agreement relating to confidentiality or
+non-disclosure shall survive the termination of this Agreement.
+
+4.8  Notice.  Any notice provided pursuant to this Agreement shall be in writing
+and shall be deemed given  (i)  if by hand delivery, upon receipt thereof;  (ii)
+if mailed, three (3) days after deposit in the U.S. mail, postage paid,
+certified mail return receipt requested;  (iii)  if mailed by Express Mail or
+Federal Express, one (1) day after deposit therewith postage prepaid.  All
+notices shall be addressed to the parties at the respective addresses indicated
+herein.
+
+4.9  No Waiver.  The waiver or failure of either party to exercise any right in
+any respect provided for herein shall not be deemed a waiver of any further
+right hereunder.
+
+4.10  Remedies.  The rights and remedies of Aladdin set forth in this Agreement
+are not exclusive and are in addition to any other rights and remedies available
+to it in law or in equity.
+
+4.11  Submission Not Binding.  Neither the submission of this Agreement to, nor
+the execution thereof by, the Licensee shall constitute an offer by Aladdin to
+license the Software to the Licensee.  This Agreement shall not be or become
+binding upon Aladdin to any extent or for any purpose unless and until it is
+executed by Aladdin and a fully executed copy thereof is delivered to the
+Licensee.
+
+4.12  Headings.  The heading used in this Agreement are for reference only, do
+not form a part of this Agreement and shall not affect the meaning or
+interpretation of this Agreement.
+
+IN WITNESS WHEREOF, the parties hereto have executed this Agreement by their
+duly authorized representatives as of the date set forth above.
+
+LICENSEE:
+
+______________________________
+Licensee's Authorized Signature
+
+______________________________
+Printed / Typed Name
+
+______________________________
+Title
+
+______________________________
+Date
+
+
+ALADDIN SYSTEMS, INC.
+
+______________________________
+Aladdin's Authorized Signature
+
+______________________________
+Printed / Typed Name
+
+______________________________
+Title
+
+______________________________
+Date
+
+SCHEDULE A
+
+Program Modules
+
+[ ] Registered StuffIt Engine
+[ ] Call the StuffIt Engine
+
+Engine Components
+
+[ ] StuffIt Compression
+[ ] Zip Compression
+[ ] Unix compress Compression
+[ ] MacBinary Encoding
+[ ] BinHex Encoding
+[ ] Uuencode Encoding
+
+[ ] StuffIt Decompression
+[ ] Zip Decompression
+[ ] Gzip Decompression
+[ ] Arj Decompression
+[ ] Arc Decompression
+[ ] Unix compress Decompression
+[ ] MacBinary Decoding
+[ ] BinHex Decoding
+[ ] Btoa Decoding
+[ ] Uuencode Decoding
+[ ] MIME/Base64 Decoding
+
+License Fee
+
+The Licensee will pay a licensing fee of ________________________________
+($__________) dollars.  At signing, the Licensee will remit payment in full.
+
+License Term
+
+Aladdin grants a one (1) year license to the Licensee to distribute the StuffIt
+Engine with the Licensee's "____________________________" software program for
+Windows for the agreed upon cap of ____________units per year.
+
+The Licensee agrees that it will not distribute the StuffIt Engine as a stand-
+alone product, but will include the StuffIt Engine in its commercial software
+program.
+
+This contract will commence on ________________________________, 2001.
+
+ 

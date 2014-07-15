@@ -1,0 +1,197 @@
+<html><head><title>format::data::OSType</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2> class  format::data::OSType</font>: public <!1><a href="format.Header.html">format::Header</a> </b><blockquote>
+Macintosh <code>OSType</code>
+</blockquote>
+<hr>
+<h4>Inheritance:</h4>
+<applet code="ClassDiagram.class" width=600 height=77>
+<param name=classes value="Cun::structure,Mun.structure.html,Cformat::Header,Mformat.Header.html,Cformat::data::OSType,Mformat.data.OSType.html">
+<param name=before value="M,M,M">
+<param name=after value="Md_SP,Md_,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="down">
+</applet>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.6.1"></a> <b>OSType</b>(const char* <!2><a href="#DOC.41">type</a>  = "????") </b>
+ <dd><i>Default constructor</i>
+<dt><a href="#DOC.6.2"></a> <b>OSType</b>(uint32_t <!2><a href="#DOC.41">type</a> ) </b>
+ <dd><i>Construct from a uint23_t value</i>
+<dt><a href="#DOC.6.15"></a> <b>~OSType</b>() </b>
+ <dd><i>Destructor</i>
+<dt><a href="#DOC.6.3"></a>bool  <b>valid</b>() const  </b>
+ <dd><i>Determines if the structure is valid</i>
+<dt><a href="#DOC.6.4"></a>void  <b>read</b>(<!1><a href="stream.Input.html">stream::Input</a> & in, bool verify = true) </b>
+ <dd><i>Reads the structure from an input stream</i>
+<dt><a href="#DOC.6.5"></a>void  <b>write</b>(<!1><a href="stream.Output.html">stream::Output</a> & out) const  </b>
+ <dd><i>Writes the structure to an output stream</i>
+<dt><a href="#DOC.6.6"></a>size_t  <b>size</b>() const  </b>
+ <dd><i>Returns the size of the header</i>
+<dt><a href="#DOC.6.7"></a>static  size_t  <b>fixed_size</b>() </b>
+ <dd><i>Returns the size of the fixed part of the header</i>
+<dt><a href="#DOC.6.8"></a>static  size_t  <b>min_size</b>() </b>
+ <dd><i>Returns the minimum size of the header</i>
+<dt><a href="#DOC.6.9"></a>static  size_t  <b>max_size</b>() </b>
+ <dd><i>Returns the maximum size of the header</i>
+<dt><a href="#DOC.6.10"></a>uint32_t  <b>value</b>() const  </b>
+ <dd><i>Accessor</i>
+<dt><a href="#DOC.6.11"></a>void  <b>value</b>(uint32_t n) </b>
+ <dd><i>Mutator</i>
+<dt><a href="#DOC.6.12"></a>std::string  <b>stringValue</b>() const  </b>
+ <dd><i>Alternative accessor</i>
+<dt><a href="#DOC.6.13"></a>void  <b>stringValue</b>(const std::string& s) </b>
+ <dd><i>Alternative mutator</i>
+</DL><DL>
+<DT><h5>Protected Fields</h5><DD><dt><a href="#DOC.6.16"></a>uint32_t  <b>v</b> </b>
+ <dd><i>The value of either Macintosh type or creator</i>
+</DL><DL>
+<DT><h5>Protected</h5><DD><dt><a href="#DOC.6.14"></a>typedef union   uint32_t  <b>value</b> </b>
+ <dd><i>Data layout</i>
+</DL><dt><a href="#DOC.6.14"></a>typedef union   uint32_t  <b>value</b> </b>
+ <dd><i>Data layout</i>
+</DL><dt><a href="#DOC.6.14"></a>typedef union   uint32_t  <b>value</b> </b>
+ <dd><i>Data layout</i>
+</DL><dt><a href="#DOC.6.14"></a>typedef union   uint32_t  <b>value</b> </b>
+ <dd><i>Data layout</i>
+</DL></DL>
+<p><b>Inherited from <a href="format.Header.html"> format::Header:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt> <b>Header</b>()
+<dt>virtual  <b>~Header</b>()
+</DL></DL>
+<p><b>Inherited from <a href="un.structure.html"> un::structure:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Methods</h5><DD><dt> <b>structure</b>()
+<dt>virtual  <b>~structure</b>()
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+Macintosh <code>OSType</code>. 4 bytes long.
+
+<p>Used for MacOS type and creator file attribute (both are four characters long).
+
+<p>The stored value is dual-typed: it can be interpreted as a 32-bit unsigned
+integer (<code>uint32_t</code>) or as a (four-character) string
+(<code>std::string</code>).
+
+<p>When the value is treated as a string, it must be four characters long and
+(obviously) cannot contain null characters. For types and creators that can
+contain null characters, restrict the use of this class to <code>uint32_t</code>
+based constructor and member functions.
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="OSType">
+<A NAME ="DOC.6.1">
+<DT><TT><b>  OSType(const char* <!2><a href="#DOC.41">type</a>  = "????")</b></TT>
+<DD>Default constructor. Uses four (or all, if less than four) characters
+of the string to assign the type.
+
+<dl><DT><b>Parameters:</b><DD><b>type</b> -  mnemonic for the type to assign<br></DL><P>
+<A NAME="OSType">
+<A NAME ="DOC.6.2">
+<DT><TT><b>  OSType(uint32_t <!2><a href="#DOC.41">type</a> )</b></TT>
+<DD>Construct from a uint23_t value
+<dl><DT><b>Parameters:</b><DD><b>type</b> -  the type to assign<br></DL><P>
+<A NAME="~OSType">
+<A NAME ="DOC.6.15">
+<DT><TT><b>  ~OSType()</b></TT>
+<DD>Destructor
+<dl></DL><P>
+<A NAME="valid">
+<A NAME ="DOC.6.3">
+<DT><TT><b> bool  valid() const </b></TT>
+<DD>Determines if the structure is valid
+<dl><dt><b>Returns:</b><dd><code>true</code> when the structure is valid
+</DL><P>
+<A NAME="read">
+<A NAME ="DOC.6.4">
+<DT><TT><b> void  read(<!1><a href="stream.Input.html">stream::Input</a> & in, bool verify = true)</b></TT>
+<DD>Reads the structure from an input stream
+<dl><DT><b>Parameters:</b><DD><b>in</b> -  an input stream
+<br><b>verify</b> -  verify data if <code>true</code><br></DL><P>
+<A NAME="write">
+<A NAME ="DOC.6.5">
+<DT><TT><b> void  write(<!1><a href="stream.Output.html">stream::Output</a> & out) const </b></TT>
+<DD>Writes the structure to an output stream
+<dl><DT><b>Parameters:</b><DD><b>out</b> -  an output stream<br></DL><P>
+<A NAME="size">
+<A NAME ="DOC.6.6">
+<DT><TT><b> size_t  size() const </b></TT>
+<DD>Returns the size of the header
+<dl><dt><b>Returns:</b><dd>the size of the header
+</DL><P>
+<A NAME="fixed_size">
+<A NAME ="DOC.6.7">
+<DT><TT><b> static  size_t  fixed_size()</b></TT>
+<DD>Returns the size of the fixed part of the header
+<dl><dt><b>Returns:</b><dd>the size of the fixed part of the header
+</DL><P>
+<A NAME="min_size">
+<A NAME ="DOC.6.8">
+<DT><TT><b> static  size_t  min_size()</b></TT>
+<DD>Returns the minimum size of the header
+<dl><dt><b>Returns:</b><dd>the minimum size of the header
+</DL><P>
+<A NAME="max_size">
+<A NAME ="DOC.6.9">
+<DT><TT><b> static  size_t  max_size()</b></TT>
+<DD>Returns the maximum size of the header
+<dl><dt><b>Returns:</b><dd>the maximum size of the header
+</DL><P>
+<A NAME="value">
+<A NAME ="DOC.6.10">
+<DT><TT><b> uint32_t  value() const </b></TT>
+<DD>Accessor
+<dl><dt><b>Returns:</b><dd>the stored value as an integer
+</DL><P>
+<A NAME="value">
+<A NAME ="DOC.6.11">
+<DT><TT><b> void  value(uint32_t n)</b></TT>
+<DD>Mutator
+<dl><DT><b>Parameters:</b><DD><b>s</b> -  the new value as an integer<br></DL><P>
+<A NAME="stringValue">
+<A NAME ="DOC.6.12">
+<DT><TT><b> std::string  stringValue() const </b></TT>
+<DD>Alternative accessor
+<dl><dt><b>Returns:</b><dd>the stored value as a string
+</DL><P>
+<A NAME="stringValue">
+<A NAME ="DOC.6.13">
+<DT><TT><b> void  stringValue(const std::string& s)</b></TT>
+<DD>Alternative mutator
+<dl><DT><b>Parameters:</b><DD><b>s</b> -  the new value as a string<br></DL><P>
+<A NAME="v">
+<A NAME ="DOC.6.16">
+<DT><TT><b> uint32_t  v</b></TT>
+<DD>The value of either Macintosh type or creator
+<dl></DL><P>
+<A NAME="value">
+<A NAME ="DOC.6.14">
+<DT><TT><b> typedef union   uint32_t  value</b></TT>
+<DD>Data layout. For naming and layout reference only. 
+<dl></DL><P></DL>
+<hr>
+ <DL><DT><b>This class has no subclasses.</b></DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.12.2.1 $, $Date: 2001/04/17 19:13:50 $
+</DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>

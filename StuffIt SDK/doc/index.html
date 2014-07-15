@@ -1,0 +1,198 @@
+<html><head><title>StuffIt Engine SDK(tm) for Windows, Linux and Solaris</title></head><body>
+
+<table><tr valign=top>
+
+<td><img src="images/engine-logo.gif"></td>
+
+<td><h2>StuffIt Engine SDK<sup>tm</sup> for Windows, Linux and Solaris</h2>
+<p><b>Version: 5.1</b>
+<table><tr valign=top><td><img src="images/aladdin-logo.gif"></td>
+<td>Copyright &copy;1995-2001 <a href="http://www.aladdinsys.com">Aladdin Systems, Inc.</a>
+<br>All Rights reserved.</font></td></tr></table>
+</td>
+
+</tr></table>
+
+<p>This document gives you general information on this release of Aladdin
+StuffIt Engine SDK 5.1 for Windows, Linux and Solaris.
+
+<h3>Welcome!</h3>
+
+<p><b>This SDK release for Windows, Linux and Solaris is a public beta version.</b> It
+includes static and dynamic libraries and samples. It works with the Visual C++
+6.0 compiler on Win32 systems (Windows 95/98/ME, Windows NT, Windows 2000) and egcs
+1.1/gcc 2.95 on Linux and Solaris.
+
+<p><b>This product must be licensed prior to distribution.</b>
+
+<p>If after evaluating the Aladdin StuffIt Engine SDK you find that you would
+like to incorporate it into your application you must contact us and license
+your use of the SDK. Licensing is very easy. Just contact our Developer Sales
+group at 831-761-6200 or <a
+href="mailto:sdk.sales@aladdinsys.com">sdk.sales@aladdinsys.com</a>.
+
+<p>Registered users are entitled to technical support, upgrades, and special
+offers on Aladdin products.
+
+<h3>Other documents included in this release</h3>
+
+<p><a href="introduction.html"><b>Introduction</b></a>
+
+<p><a href="questions.html"><b>Questions and answers</b></a>
+
+<p><a href="samples.html"><b>Samples</b></a>
+
+<p><a href="doc++/index.html"><b>Reference</b></a>
+
+<ul><li><a href="doc++/hierarchy.html">Class Hierarchy</a>
+<li><a href="doc++/diagrams.html">Class Diagrams</a></ul>
+
+<p><a href="stuff.html"><b>stuff</b> sample application</a>
+
+<p><a href="unstuff.html"><b>unstuff</b> sample application</a>
+
+<h3>Installation</h3>
+
+<p>Install by expanding the stuffitengine-5.*.zip or stuffitengine-5.*.tar.gz
+file into a directory of your choice.
+
+<p>This SDK contains the following directories:
+
+<p><table width=100% bgcolor=#ffffff cellpadding=2 cellspacing=1 border=0>
+<tr bgcolor=#b0b0b0>
+    <td valign=top><b>Directory</b>
+    <td valign=top><b>Windows</b>
+    <td valign=top><b>Linux</b>
+    <td valign=top><b>Solaris</b>
+    <td valign=top><b>Contents</b>
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>doc/
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>Documentation for StuffIt Engine and test applications.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>src/
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>Headers and sample sources.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>linux/, linux/make/
+    <td valign=top>
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>
+    <td valign=top>Linux sample projects.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>linux/bin/
+    <td valign=top>
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>
+    <td valign=top>Linux sample executables.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>linux/lib/
+    <td valign=top>
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>
+    <td valign=top>Linux static and shared library.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>solaris/, solaris/make/
+    <td valign=top>
+    <td valign=top>
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>Solaris sample projects.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>solaris/bin/
+    <td valign=top>
+    <td valign=top>
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>Solaris sample executables.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>solaris/lib/
+    <td valign=top>
+    <td valign=top>
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>Solaris static and shared library.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>win32/, win32/project/
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>
+    <td valign=top>
+    <td valign=top>Win32 sample projects.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>win32/bin/
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>
+    <td valign=top>
+    <td valign=top>Win32 static and shared library and sample executables.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>win32/binS/
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>
+    <td valign=top>
+    <td valign=top>Win32 static and shared library and sample executables, statically
+        linked with C and C++ runtime libraries.
+</tr>
+<tr bgcolor=#c0c0c0>
+    <td valign=top>win32/binT/
+    <td valign=top><img src="images/checkmark.gif">
+    <td valign=top>
+    <td valign=top>
+    <td valign=top>Win32 self-extracting executables.
+</tr>
+</table>
+
+<h3>Potential Conflicts and Workarounds</h3>
+
+<p>No conflicts are known at this time.  Please contact our web site (address
+below) for updates, and answers to frequently asked questions (FAQ's).
+
+<h3>Thank You!</h3>
+
+<p>We at Aladdin Systems would like to thank you for beta testing the StuffIt
+Engine SDK for Windows, Linux and Solaris and for your continued support.
+
+<h3>Contacting Aladdin Systems</h3>
+
+<p>If you would like more information about our other award-winning products, just
+ask us. We have products for both Windows (95, 98, ME, 2000, NT) and Macintosh.
+To learn more about Aladdin's products, visit our Web site listed below.
+
+<p><b>Aladdin Systems, Inc.</b>
+<br>245 Westridge Drive
+<br>Watsonville, CA 95076, USA
+<br>
+<br><b>Telephone</b>: 831-761-6200
+<br><b>Fax</b>: 831-761-6206
+<br><b>Internet</b>: <a href="http://www.aladdinsys.com/">http://www.aladdinsys.com</a>
+<br>
+<br><b>Email</b>:
+<br>Licensing: <a href="mailto:sdk.sales@aladdinsys.com">sdk.sales@aladdinsys.com</a>
+<br>Customer Service: <a href="mailto:service@aladdinsys.com">service@aladdinsys.com</a>
+<br>General Information: <a href="mailto:info@aladdinsys.com">info@aladdinsys.com</a>
+
+<hr>
+
+<table><tr valign=top><td><img src="images/aladdin-logo.gif"></td>
+<td>Copyright &copy;1995-2001 <a href="http://www.aladdinsys.com/">Aladdin Systems, Inc.</a>
+<br>All Rights reserved.</font></td></tr></table>
+
+<p>DropStuff, Expander, StuffIt and the Aladdin logo are trademarks of Aladdin
+Systems, Inc. All other product names are trademarks or registered trademarks of
+their respective holders.
+
+<p>$Id: index.html,v 1.9.2.1 2001/07/05 23:23:35 serge Exp $
+
+</body></html>
+

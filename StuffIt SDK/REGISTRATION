@@ -1,0 +1,52 @@
+StuffIt Engine SDK(tm) registration
+
+You will be provided a registration number and/or a key file.
+
+If you have a key file and don't mind an extra file hanging around, keep it
+together (in the same directory) with the StuffIt Engine shared library or
+any application that is statically linked with the StuffIt Engine.
+
+If you do not have a key file or wish to use your registration number to
+permanently patch the static library or the shared library, follow these
+instructions (we will assume that your registration number is
+LCPC-999-999999):
+
+To apply the registration number to the static library, stuffit5.engineS.lib,
+execute the following command in the win32/binS/ directory:
+    register stuffit5.engineS.lib LCPC-999-999999
+
+In Linux and Solaris, to register libstuffit5.engine.a, execute the following in
+linix/lib/:
+    register libstuffit5.engine.a LCPC-999-999999
+
+To apply the registration number to the shared library, stuffit5.engine-5.1.dll
+or stuffit5.engineS-5.1.dll, execute the following command in the win32/bin/
+or win32/binS directory, respectively:
+    register stuffit5.engine-5.1.dll LCPC-999-999999
+    or
+    register stuffit5.engineS-5.1.dll LCPC-999-999999
+
+In Linux and Solaris, to register libstuffit5.engine-5.1.so, execute the following in
+linix/lib/:
+    register libstuffit5.engine-5.1.so LCPC-999-999999
+
+To apply the registration number to a program.exe executable linked with the
+static engine library, execute the following command:
+    register program.exe LCPC-999-999999
+
+In Linux and Solaris, to register a 'program' executable linked with the static
+engine library, execute the following command:
+    register program LCPC-999-999999
+
+In Linux and Solaris, to register the stuff executable, execute the following
+commands:
+    [../util/]upx -d stuff (if the executable is compressed)
+    register stuff LCPC-999-999999
+    [../util/]upx stuff (to recompress the executable if desired)
+
+upx is an executable compression utility that is needed to decompress and
+recompress the stuff executable. (If you are building stuff yourself as a
+sample, it will be uncompressed.)
+
+$Id: REGISTRATION,v 1.3.2.1 2001/07/05 23:22:38 serge Exp $
+

@@ -1,0 +1,115 @@
+<html><head><title>util::command::Command</title></head>
+<body>
+<i><a href="index.html">Table of Contents</a>
+ <a href="hierarchy.html">Class Hierarchy</a>
+ <a href="diagrams.html">Class Diagrams</a></i>
+<p><b><font size=+2>template &lt;typename T&gt;   class  util::command::Command</font>: public <!1><a href="util.command.CommandElement.html">util::command::CommandElement</a> </b><blockquote>
+A class representing a command-line option
+</blockquote>
+<hr>
+<h4>Inheritance:</h4>
+<applet code="ClassDiagram.class" width=600 height=53>
+<param name=classes value="Cutil::command::CommandElement,Mutil.command.CommandElement.html,Cutil::command::Command,Mutil.command.Command.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="down">
+</applet>
+<hr>
+
+<DL>
+<DL>
+<DT><h5>Public Fields</h5><DD><dt><a href="#DOC.504.7"></a>std::list &lt;<!1><a href="util.command.CommandElement.html">util::command::CommandElement</a> *&gt;   <b>synonyms</b> </b>
+ <dd><i>A bidirectional list of the synonyms for the option</i>
+<dt><a href="#DOC.504.8"></a><!1><a href="un.property.html">un::property</a>  &lt;T&gt;   <b>value</b> </b>
+ <dd><i>The value of the option</i>
+</DL><DL>
+<DT><h5>Public Methods</h5><DD><dt><a href="#DOC.504.1"></a> <b>Command</b>(<!1><a href="util.command.CommandLine.html">util::command::CommandLine</a> & options, const std::string& <!2><a href="#DOC.60">names</a> , const T& <!2><a href="util.command.Command.html#DOC.504.8">value</a> ) </b>
+ <dd><i>A constructor for an 'optional' option</i>
+<dt><a href="#DOC.504.2"></a> <b>Command</b>(<!1><a href="util.command.CommandLine.html">util::command::CommandLine</a> & options, const std::string& <!2><a href="#DOC.60">names</a> ) </b>
+ <dd><i>A constructor for a required option</i>
+<dt><a href="#DOC.504.6"></a> <b>~Command</b>() </b>
+ <dd><i>Destructor</i>
+<dt><a href="#DOC.504.3"></a>void  <b>setSynonyms</b>(const std::string& <!2><a href="#DOC.60">names</a> ) </b>
+ <dd><i>Parse the value of the option from one of the command line arguments</i>
+<dt><a href="#DOC.504.4"></a>void  <b>digest</b>(const std::string& arg) </b>
+ <dd><i>Parse the value of the option from one of the command line arguments</i>
+<dt><a href="#DOC.504.5"></a>void  <b>print</b>(std::ostream& os) </b>
+ <dd><i>Print the value of the option to a stream</i>
+</DL></DL>
+<p><b>Inherited from <a href="util.command.CommandElement.html"> util::command::CommandElement:</a></b>
+
+<DL>
+<DL>
+<DT><h5>Public Fields</h5><DD><dt>mutable  <!1><a href="un.property.html">un::property</a>  &lt;std::string&gt;   <b>name</b>
+<dt>const  <!1><a href="un.property.html">un::property</a>  &lt;bool&gt;   <b>required</b>
+<dt><!1><a href="un.property.html">un::property</a>  &lt;bool&gt;   <b>found</b>
+</DL><DL>
+<DT><h5>Public Methods</h5><DD><dt> <b>CommandElement</b>(const std::string& <!2><a href="#DOC.60">names</a> , bool <!2><a href="util.command.CommandElement.html#DOC.505.5">required</a> )
+<dt>virtual  <b>~CommandElement</b>()
+<dt>friend  std::ostream&  <b>operator&lt;&lt;</b>(std::ostream& os, <!1><a href="util.command.CommandElement.html">util::command::CommandElement</a> & ce)
+</DL></DL>
+<hr>
+<h4>Documentation</h4>
+<blockquote>
+A class representing a command-line option. Contains the <code>value</code>
+member that stores the value of the option.
+
+
+
+</blockquote>
+<DL>
+
+<A NAME="Command">
+<A NAME ="DOC.504.1">
+<DT><TT><b>  Command(<!1><a href="util.command.CommandLine.html">util::command::CommandLine</a> & options, const std::string& <!2><a href="#DOC.60">names</a> , const T& <!2><a href="util.command.Command.html#DOC.504.8">value</a> )</b></TT>
+<DD>A constructor for an 'optional' option. Needs the initial value.
+
+<dl><DT><b>Parameters:</b><DD><b>names</b> -  the (possibly multiple) names of the option, separated by <code>'|'</code>
+<br><b>value</b> -  the initial value of the option; the default value if the option is unused<br></DL><P>
+<A NAME="Command">
+<A NAME ="DOC.504.2">
+<DT><TT><b>  Command(<!1><a href="util.command.CommandLine.html">util::command::CommandLine</a> & options, const std::string& <!2><a href="#DOC.60">names</a> )</b></TT>
+<DD>A constructor for a required option. Does not have the initial value.
+
+<dl><DT><b>Parameters:</b><DD><b>names</b> -  the (possibly multiple) names of the option, separated by <code>'|'</code><br></DL><P>
+<A NAME="~Command">
+<A NAME ="DOC.504.6">
+<DT><TT><b>  ~Command()</b></TT>
+<DD>Destructor
+<dl></DL><P>
+<A NAME="setSynonyms">
+<A NAME ="DOC.504.3">
+<DT><TT><b> void  setSynonyms(const std::string& <!2><a href="#DOC.60">names</a> )</b></TT>
+<DD>Parse the value of the option from one of the command line arguments
+<dl><DT><b>Parameters:</b><DD><b>names</b> -  the names of the options (from a constructor argument)<br></DL><P>
+<A NAME="digest">
+<A NAME ="DOC.504.4">
+<DT><TT><b> void  digest(const std::string& arg)</b></TT>
+<DD>Parse the value of the option from one of the command line arguments
+<dl><DT><b>Parameters:</b><DD><b>arg</b> -  the command line argument to parse (digest)<br></DL><P>
+<A NAME="print">
+<A NAME ="DOC.504.5">
+<DT><TT><b> void  print(std::ostream& os)</b></TT>
+<DD>Print the value of the option to a stream
+<dl><DT><b>Parameters:</b><DD><b>os</b> -  an output stream<br></DL><P>
+<A NAME="synonyms">
+<A NAME ="DOC.504.7">
+<DT><TT><b> std::list &lt;<!1><a href="util.command.CommandElement.html">util::command::CommandElement</a> *&gt;   synonyms</b></TT>
+<DD>A bidirectional list of the synonyms for the option
+<dl></DL><P>
+<A NAME="value">
+<A NAME ="DOC.504.8">
+<DT><TT><b> <!1><a href="un.property.html">un::property</a>  &lt;T&gt;   value</b></TT>
+<DD>The value of the option
+<dl></DL><P></DL>
+<hr>
+ <DL><DT><b>This class has no subclasses.</b></DL>
+<dl><DT><b>Author:</b><DD>serge@aladdinsys.com
+
+<DT><b>Version:</b><DD>$Revision: 1.11.2.1 $, $Date: 2001/07/05 23:35:34 $
+</DL><P>
+<hr>
+<p><i>Generated by <a href="http://www.zib.de/Visual/software/doc++/index.html">doc++</a></i>
+
+</body></html>
